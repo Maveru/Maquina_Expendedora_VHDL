@@ -1,0 +1,16 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Thu Dec 16 13:28:00 2021
+# Process ID: 4840
+# Current directory: D:/UNIVERSIDAD/4 CARRERA/Sistemas Electrnicos Digitales/trabajo/Maquina_Expendedora_VHDL-main/MaquinaExpendedora
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1796 D:\UNIVERSIDAD\4 CARRERA\Sistemas Electrnicos Digitales\trabajo\Maquina_Expendedora_VHDL-main\MaquinaExpendedora\MaquinaExpendedora.xpr
+# Log file: D:/UNIVERSIDAD/4 CARRERA/Sistemas Electrnicos Digitales/trabajo/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/vivado.log
+# Journal file: D:/UNIVERSIDAD/4 CARRERA/Sistemas Electrnicos Digitales/trabajo/Maquina_Expendedora_VHDL-main/MaquinaExpendedora\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {D:/UNIVERSIDAD/4 CARRERA/Sistemas Electrnicos Digitales/trabajo/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.xpr}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1

@@ -2,11 +2,11 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Thu Dec  9 21:02:11 2021
-# Process ID: 2500
-# Current directory: S:/Users/Markv/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1
+# Start of session at: Thu Dec 16 13:08:18 2021
+# Process ID: 2812
+# Current directory: D:/UNIVERSIDAD/4 CARRERA/Sistemas Electrnicos Digitales/trabajo/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1
 # Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
-# Log file: S:/Users/Markv/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1/top.vds
-# Journal file: S:/Users/Markv/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1\vivado.jou
+# Log file: D:/UNIVERSIDAD/4 CARRERA/Sistemas Electrnicos Digitales/trabajo/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1/top.vds
+# Journal file: D:/UNIVERSIDAD/4 CARRERA/Sistemas Electrnicos Digitales/trabajo/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
 source top.tcl -notrace

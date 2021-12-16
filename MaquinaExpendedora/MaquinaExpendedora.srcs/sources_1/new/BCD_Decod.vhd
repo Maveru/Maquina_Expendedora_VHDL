@@ -4,7 +4,7 @@ use IEEE.numeric_std.all;
 
 entity BCD_decoder is
   Port (
-    entrada                        : in  std_logic_vector(7 downto 0); -- N?mero que llega al decodificador para salir en BCD
+    entrada                        : in  std_logic_vector(7 downto 0); -- Número que llega al decodificador para salir en BCD
     S0, S1, S2, S3, S4, S5, S6, S7 : out std_logic_vector(5 downto 0);  -- Cada una de las cifras en BCD que se pasan al display
     Coste                          : in integer
   );

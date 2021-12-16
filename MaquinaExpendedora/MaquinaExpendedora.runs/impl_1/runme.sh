@@ -11,9 +11,9 @@ echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executi
 exit
 
 if [ -z "$PATH" ]; then
-  PATH=S:/Xilinx/Vivado/2021.1/ids_lite/ISE/bin/nt64;S:/Xilinx/Vivado/2021.1/ids_lite/ISE/lib/nt64:S:/Xilinx/Vivado/2021.1/bin
+  PATH=C:/Xilinx/Vivado/2021.1/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2021.1/ids_lite/ISE/lib/nt64:C:/Xilinx/Vivado/2021.1/bin
 else
-  PATH=S:/Xilinx/Vivado/2021.1/ids_lite/ISE/bin/nt64;S:/Xilinx/Vivado/2021.1/ids_lite/ISE/lib/nt64:S:/Xilinx/Vivado/2021.1/bin:$PATH
+  PATH=C:/Xilinx/Vivado/2021.1/ids_lite/ISE/bin/nt64;C:/Xilinx/Vivado/2021.1/ids_lite/ISE/lib/nt64:C:/Xilinx/Vivado/2021.1/bin:$PATH
 fi
 export PATH
 
@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='S:/Users/Markv/MaquinaExpendedora/MaquinaExpendedora.runs/impl_1'
+HD_PWD='D:/UNIVERSIDAD/4 CARRERA/Sistemas Electrnicos Digitales/trabajo/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -41,7 +41,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .init_design.begin.rst
+/bin/touch .write_bitstream.begin.rst
 EAStep vivado -log top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source top.tcl -notrace
 
 

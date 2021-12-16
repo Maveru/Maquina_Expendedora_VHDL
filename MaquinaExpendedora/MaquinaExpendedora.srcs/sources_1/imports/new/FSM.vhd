@@ -32,26 +32,38 @@ begin
  nextstate_decod: process (Botones, current_state)
  begin
     next_state <= current_state;
- case current_state is
-    when S0 =>
-        if Botones(0) = '1' then
-            next_state <= S1;
- end if;
-     when S1 =>
-         if Botones(1) = '1' then
-            next_state <= S2;
- end if;
-     when S2 =>
-         if Botones(2) = '1' then
-           next_state <= S3;
- end if;
-     when S3 =>
-         if Botones(3) = '1' then
-           next_state <= S0;
- end if;
-     when others =>
-         next_state <= S0;
- end case;
+    if current_state = S0 then
+      if Botones(0) = '1' then
+        next_state <= S1;
+      elsif Botones(1) = '1' then
+        next_state <= S2;
+      elsif Botones(2) = '1' then
+        next_state <= S3;
+      end if;
+    end if;
+    if Botones(3) = '1' then
+       next_state <= S0;
+    end if;
+-- case current_state is
+--    when S0 =>
+--        if Botones(0) = '1' then
+--            next_state <= S1;
+-- end if;
+--     when S1 =>
+--         if Botones(1) = '1' then
+--            next_state <= S2;
+-- end if;
+--     when S2 =>
+--         if Botones(2) = '1' then
+--           next_state <= S3;
+-- end if;
+--     when S3 =>
+--         if Botones(3) = '1' then
+--           next_state <= S0;
+-- end if;
+--     when others =>
+--         next_state <= S0;
+-- end case;
  end process;
  
  output_decod: process (current_state)

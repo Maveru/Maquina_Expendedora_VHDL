@@ -1,8 +1,8 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Thu Dec  9 21:04:55 2021
-| Host         : LAPTOP-T044LQ5T running 64-bit major release  (build 9200)
+| Date         : Thu Dec 16 13:12:21 2021
+| Host         : DESKTOP-9L1N67Q running 64-bit major release  (build 9200)
 | Command      : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
 | Design       : top
 | Device       : xc7a100tcsg324-1
@@ -34,12 +34,12 @@ Table of Contents
 -----------------
 TIMING-17#1 Critical Warning
 Non-clocked sequential cell  
-The clock pin Inst_fsm/FSM_sequential_current_state_reg[0]/C is not reached by a timing clock
+The clock pin Inst_fsm/current_state_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#2 Critical Warning
 Non-clocked sequential cell  
-The clock pin Inst_fsm/FSM_sequential_current_state_reg[1]/C is not reached by a timing clock
+The clock pin Inst_fsm/current_state_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#3 Critical Warning

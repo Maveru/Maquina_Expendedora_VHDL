@@ -1,4 +1,4 @@
-
+--Terminar mapeo y crear una entidad para pasar de integer a bin??
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -17,8 +17,10 @@ END top;
 architecture Behavioral of top is
   signal boton_edge: std_logic_vector (Boton'range);
   signal boton_sinc: std_logic_vector (Boton'range);
-
-
+  signal S0, S1, S2, S3, S4, S5, S6, S7:  std_logic_vector(7 downto 0);  
+  signal coste_int: integer;
+  signal coste_bin: std_logic_vector(7 downto 0);
+  
 component BCD_decoder is
     port (
       entrada                        : in  std_logic_vector(7 downto 0); -- No que llega al decodificador para salir en BCD
@@ -38,7 +40,7 @@ component BCD_decoder is
       CLK                            : in  std_logic;
       s0, s1, s2, s3, s4 ,s5, s6 ,s7 : in  std_logic_vector(7 downto 0);  
       display_number                 : out std_logic_vector (7 downto 0); 
-      display_select              : out std_logic_vector (7 downto 0) 
+      display_selection              : out std_logic_vector (7 downto 0) 
     );
   end component;
   
@@ -93,5 +95,33 @@ synchronizers: for i in Boton'range generate -- Obligatorio que lleve nombre Lo 
         Botones => boton_edge,
         LIGHT  => light        
   );
+  Inst_BCD_Decod: BCD_decoder
+    PORT MAP(
+        entrada => coste_bin,
+        S0 =>  S0, 
+        S1 =>  S1,
+        S2 =>  S2,
+        S3 =>  S3,
+        S4 =>  S4,
+        S5 =>  S5,
+        S6 =>  S6,
+        S7 =>  S7,
+    );
+    --Terminar de conectar
+  Inst_DisplayExit: display_exit
+    PORT MAP(
+        CLK    => CLK,
+        S0 =>  S0, 
+        S1 =>  S1,
+        S2 =>  S2,
+        S3 =>  S3,
+        S4 =>  S4,
+        S5 =>  S5,
+        S6 =>  S6,
+        S7 =>  S7,
+        display_number => display_number,
+        display_selection => display_select
+     );  
+         
 
 end Behavioral;

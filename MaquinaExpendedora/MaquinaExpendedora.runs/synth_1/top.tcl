@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "S:/Users/Markv/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1/top.tcl"
+  variable script "D:/UNIVERSIDAD/4 CARRERA/Sistemas Electrnicos Digitales/trabajo/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1/top.tcl"
   variable category "vivado_synth"
 }
 
@@ -71,7 +71,7 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param checkpoint.writeSynthRtdsInDcp 1
-set_param chipscope.maxJobs 1
+set_param synth.incrementalSynthesisCache {D:/UNIVERSIDAD/4 CARRERA/Sistemas Electrnicos Digitales/trabajo/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/.Xil/Vivado-8352-DESKTOP-9L1N67Q/incrSyn}
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
@@ -80,21 +80,21 @@ create_project -in_memory -part xc7a100tcsg324-1
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir S:/Users/Markv/MaquinaExpendedora/MaquinaExpendedora.cache/wt [current_project]
-set_property parent.project_path S:/Users/Markv/MaquinaExpendedora/MaquinaExpendedora.xpr [current_project]
+set_property webtalk.parent_dir {D:/UNIVERSIDAD/4 CARRERA/Sistemas Electrnicos Digitales/trabajo/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.cache/wt} [current_project]
+set_property parent.project_path {D:/UNIVERSIDAD/4 CARRERA/Sistemas Electrnicos Digitales/trabajo/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.xpr} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property board_part_repo_paths {C:/Users/Markv/AppData/Roaming/Xilinx/Vivado/2021.1/xhub/board_store/xilinx_board_store} [current_project]
+set_property board_part_repo_paths {C:/Users/sed/AppData/Roaming/Xilinx/Vivado/2021.1/xhub/board_store/xilinx_board_store} [current_project]
 set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
-set_property ip_output_repo s:/Users/Markv/MaquinaExpendedora/MaquinaExpendedora.cache/ip [current_project]
+set_property ip_output_repo {d:/UNIVERSIDAD/4 CARRERA/Sistemas Electrnicos Digitales/trabajo/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.cache/ip} [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
-  S:/Users/Markv/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/FSM.vhd
-  S:/Users/Markv/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/edgedetector.vhd
-  S:/Users/Markv/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/sincro.vhd
-  S:/Users/Markv/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd
+  {D:/UNIVERSIDAD/4 CARRERA/Sistemas Electrnicos Digitales/trabajo/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/FSM.vhd}
+  {D:/UNIVERSIDAD/4 CARRERA/Sistemas Electrnicos Digitales/trabajo/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/edgedetector.vhd}
+  {D:/UNIVERSIDAD/4 CARRERA/Sistemas Electrnicos Digitales/trabajo/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/sincro.vhd}
+  {D:/UNIVERSIDAD/4 CARRERA/Sistemas Electrnicos Digitales/trabajo/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd}
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -105,8 +105,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc S:/Users/Markv/MaquinaExpendedora/MaquinaExpendedora.srcs/constrs_1/imports/SED/Nexys-4-DDR-Master.xdc
-set_property used_in_implementation false [get_files S:/Users/Markv/MaquinaExpendedora/MaquinaExpendedora.srcs/constrs_1/imports/SED/Nexys-4-DDR-Master.xdc]
+read_xdc {{D:/UNIVERSIDAD/4 CARRERA/Sistemas Electrnicos Digitales/trabajo/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.srcs/constrs_1/imports/SED/Nexys-4-DDR-Master.xdc}}
+set_property used_in_implementation false [get_files {{D:/UNIVERSIDAD/4 CARRERA/Sistemas Electrnicos Digitales/trabajo/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.srcs/constrs_1/imports/SED/Nexys-4-DDR-Master.xdc}}]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

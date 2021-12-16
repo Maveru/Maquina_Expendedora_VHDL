@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Wed Dec 15 20:07:56 2021
+# Process ID: 4516
+# Current directory: E:/Copia Disco F/4 CARRERA/Sistemas Electrnicos Digitales/trabajo/Maquina_Expendedora_VHDL-main/MaquinaExpendedora
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8744 E:\Copia Disco F\4 CARRERA\Sistemas Electrnicos Digitales\trabajo\Maquina_Expendedora_VHDL-main\MaquinaExpendedora\MaquinaExpendedora.xpr
+# Log file: E:/Copia Disco F/4 CARRERA/Sistemas Electrnicos Digitales/trabajo/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/vivado.log
+# Journal file: E:/Copia Disco F/4 CARRERA/Sistemas Electrnicos Digitales/trabajo/Maquina_Expendedora_VHDL-main/MaquinaExpendedora\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {E:/Copia Disco F/4 CARRERA/Sistemas Electrnicos Digitales/trabajo/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.xpr}
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'E:/Copia Disco F/4 CARRERA/Sistemas Electrnicos Digitales/trabajo/Maquina_Expendedora_VHDL-main/MaquinaExpendedora'
+INFO: [Project 1-313] Project file moved from 'S:/Users/Markv/MaquinaExpendedora' since last save.
+WARNING: [filemgmt 56-3] Board Part Repository Path: Could not find the directory 'C:/Users/Markv/AppData/Roaming/Xilinx/Vivado/2021.1/xhub/board_store/xilinx_board_store'.
+WARNING: [filemgmt 56-2] Default IP Output Path : Could not find the directory 'E:/Copia Disco F/4 CARRERA/Sistemas Electrnicos Digitales/trabajo/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.gen/sources_1', nor could it be found using path 'S:/Users/Markv/MaquinaExpendedora/MaquinaExpendedora.gen/sources_1'.
+WARNING: [filemgmt 56-2] IPUserFilesDir: Could not find the directory 'E:/Copia Disco F/4 CARRERA/Sistemas Electrnicos Digitales/trabajo/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.ip_user_files', nor could it be found using path 'S:/Users/Markv/MaquinaExpendedora/MaquinaExpendedora.ip_user_files'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Vivado/2021.1/data/ip'.
+open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1248.828 ; gain = 0.000
+update_compile_order -fileset sources_1

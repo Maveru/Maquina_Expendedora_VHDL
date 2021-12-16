@@ -1,8 +1,8 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Thu Dec  9 21:03:08 2021
-| Host         : LAPTOP-T044LQ5T running 64-bit major release  (build 9200)
+| Date         : Thu Dec 16 13:10:16 2021
+| Host         : DESKTOP-9L1N67Q running 64-bit major release  (build 9200)
 | Command      : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
 | Design       : top
 | Device       : 7a100tcsg324-1
@@ -151,13 +151,13 @@ Table of Contents
 | OBUFT    |   16 |                  IO |
 | FDRE     |   16 |        Flop & Latch |
 | IBUF     |    6 |                  IO |
-| LUT5     |    5 |                 LUT |
 | SRL16E   |    4 |  Distributed Memory |
 | OBUF     |    4 |                  IO |
 | LUT2     |    4 |                 LUT |
+| LUT3     |    3 |                 LUT |
+| LUT6     |    2 |                 LUT |
+| LUT5     |    2 |                 LUT |
 | FDCE     |    2 |        Flop & Latch |
-| LUT6     |    1 |                 LUT |
-| LUT3     |    1 |                 LUT |
 | LUT1     |    1 |                 LUT |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+
