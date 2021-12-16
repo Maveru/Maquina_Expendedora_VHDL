@@ -4,9 +4,8 @@ use IEEE.numeric_std.all;
 
 entity BCD_decoder is
   Port (
-    entrada                        : in  std_logic_vector(7 downto 0); -- Número que llega al decodificador para salir en BCD
-    S0, S1, S2, S3, S4, S5, S6, S7 : out std_logic_vector(5 downto 0);  -- Cada una de las cifras en BCD que se pasan al display
-    Coste                          : in integer
+    entrada                        : in  std_logic_vector(7 downto 0); -- N?mero que llega al decodificador para salir en BCD
+    S0, S1, S2, S3, S4, S5, S6, S7 : out std_logic_vector(5 downto 0)  -- Cada una de las cifras en BCD que se pasan al display
   );
 end entity;
 
@@ -14,9 +13,10 @@ architecture Behavioral of BCD_decoder is
   signal letra0, letra1, letra2, letra3, letra4, letra5, letra6, letra7 : std_logic_vector(5 downto 0);
 begin
   decoder_BCD : process(entrada)
-    
+    variable coste:integer range 0 to 300 :=0;
   begin
- 
+  Coste := to_integer(unsigned(entrada));
+  
   if Coste = 0 then  -- SELECCI?N
       letra0 <= "011011"; -- x"AF" --> R 
       letra1 <= "001110"; -- x"86" --> E      
@@ -57,7 +57,7 @@ begin
       letra6 <= "111111"; -- x"FF" --> NADA
       letra7 <= "111111"; -- x"FF" --> NADA   
                 
-    elsif Coste = 204 then -- ERROR (exceso de importe)    
+    elsif Coste > 100 then -- ERROR (exceso de importe)    
       letra0 <= "001110"; -- x"86" --> E
       letra1 <= "011011"; -- x"AF" --> R       
       letra2 <= "011011"; -- x"AF" --> R 
