@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/UNIVERSIDAD/4 CARRERA/Sistemas Electrnicos Digitales/trabajo/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/impl_1'
+HD_PWD='C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -41,7 +41,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .write_bitstream.begin.rst
+/bin/touch .init_design.begin.rst
 EAStep vivado -log top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source top.tcl -notrace
 
 

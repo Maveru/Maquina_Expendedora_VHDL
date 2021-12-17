@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/UNIVERSIDAD/4 CARRERA/Sistemas Electrnicos Digitales/trabajo/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1'
+HD_PWD='C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

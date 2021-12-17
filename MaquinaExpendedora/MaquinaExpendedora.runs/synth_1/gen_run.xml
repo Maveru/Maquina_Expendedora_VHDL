@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1639656447">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1639745291">
   <File Type="PA-TCL" Name="top.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="top_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="top_reports.tcl"/>
@@ -43,13 +43,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/BCD_a_7segments.vhd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/new/BCD_Decod.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
@@ -58,6 +51,27 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/DisplayExit.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/BCD_a_7segments.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/slave_temp.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/master_temp.vhd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -74,13 +88,14 @@
     <Filter Type="Constrs"/>
     <File Path="$PSRCDIR/constrs_1/imports/SED/Nexys-4-DDR-Master.xdc">
       <FileInfo>
-        <Attr Name="ImportPath" Val="C:/Users/Markv/Desktop/SED/Nexys-4-DDR-Master.xdc"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../Markv/Desktop/SED/Nexys-4-DDR-Master.xdc"/>
         <Attr Name="ImportTime" Val="1628606177"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
       </FileInfo>
     </File>
     <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/SED/Nexys-4-DDR-Master.xdc"/>
       <Option Name="ConstrsType" Val="XDC"/>
     </Config>
   </FileSet>

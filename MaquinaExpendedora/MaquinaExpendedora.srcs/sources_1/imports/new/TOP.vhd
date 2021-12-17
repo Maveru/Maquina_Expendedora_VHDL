@@ -8,7 +8,7 @@ ENTITY top IS
     RESET : in  std_logic;
     CLK   : in  std_logic;
     Boton : in  std_logic_vector(4 downto 0);
-    LIGHT : out std_logic_vector(0 TO 3);
+    LIGHT : out std_logic_vector(0 TO 15);
     display_number    : out std_logic_vector(7 downto 0); -- Display por el que sale el dato
     display_select    : out std_logic_vector(7 downto 0) -- Display por el que sale el dato
   );
@@ -18,13 +18,13 @@ architecture Behavioral of top is
   signal boton_edge: std_logic_vector (Boton'range);
   signal boton_sinc: std_logic_vector (Boton'range);
   signal S0, S1, S2, S3, S4, S5, S6, S7:  std_logic_vector(7 downto 0);  
-  signal coste_int: integer;
-  signal coste_bin: std_logic_vector(7 downto 0);
+  --signal coste_int: integer;
+  signal coste: std_logic_vector(7 downto 0);
   
 component BCD_decoder is
     port (
       entrada                        : in  std_logic_vector(7 downto 0); -- No que llega al decodificador para salir en BCD
-      S0, S1, S2, S3, S4, S5, S6, S7 : out std_logic_vector(5 downto 0)  
+      S0, S1, S2, S3, S4, S5, S6, S7 : out std_logic_vector(7 downto 0)  
     );
   end component;
   
@@ -38,7 +38,7 @@ component BCD_decoder is
   component display_exit is
     Port ( 
       CLK                            : in  std_logic;
-      s0, s1, s2, s3, s4 ,s5, s6 ,s7 : in  std_logic_vector(7 downto 0);  
+      s0, s1, s2, s3, s4 ,s5, s6 ,s7 : in  std_logic_vector(5 downto 0);  
       display_number                 : out std_logic_vector (7 downto 0); 
       display_selection              : out std_logic_vector (7 downto 0) 
     );
@@ -65,7 +65,8 @@ component BCD_decoder is
     RESET : in  std_logic;
     CLK   : in  std_logic;
     Botones: in  std_logic_vector(4 downto 0);
-    LIGHT : out std_logic_vector(0 TO 3)
+    LIGHT : out std_logic_vector(0 TO 15);
+    salida : out std_logic_vector(7 downto 0) -- Poner unsigned mejor? Lo uso para saber que represento y cuanto hay que pagar 
  );
   END COMPONENT;
   
@@ -93,35 +94,36 @@ synchronizers: for i in Boton'range generate -- Obligatorio que lleve nombre Lo 
         RESET  => reset,
         CLK    => CLK,
         Botones => boton_edge,
-        LIGHT  => light        
+        LIGHT  => LIGHT,
+        salida => coste    
   );
-  Inst_BCD_Decod: BCD_decoder
-    PORT MAP(
-        entrada => coste_bin,
-        S0 =>  S0, 
-        S1 =>  S1,
-        S2 =>  S2,
-        S3 =>  S3,
-        S4 =>  S4,
-        S5 =>  S5,
-        S6 =>  S6,
-        S7 =>  S7,
-    );
-    --Terminar de conectar
-  Inst_DisplayExit: display_exit
-    PORT MAP(
-        CLK    => CLK,
-        S0 =>  S0, 
-        S1 =>  S1,
-        S2 =>  S2,
-        S3 =>  S3,
-        S4 =>  S4,
-        S5 =>  S5,
-        S6 =>  S6,
-        S7 =>  S7,
-        display_number => display_number,
-        display_selection => display_select
-     );  
+--  Inst_BCD_Decod: BCD_decoder
+--    PORT MAP(
+--        entrada => coste,
+--        S0 =>  S0, 
+--        S1 =>  S1,
+--        S2 =>  S2,
+--        S3 =>  S3,
+--        S4 =>  S4,
+--        S5 =>  S5,
+--        S6 =>  S6,
+--        S7 =>  S7
+--    );
+--    --Terminar de conectar
+--  Inst_DisplayExit: display_exit
+--    PORT MAP(
+--        CLK    => CLK,
+--        S0 =>  S0, 
+--        S1 =>  S1,
+--        S2 =>  S2,
+--        S3 =>  S3,
+--        S4 =>  S4,
+--        S5 =>  S5,
+--        S6 =>  S6,
+--        S7 =>  S7,
+--        display_number => display_number,
+--        display_selection => display_select
+--     );  
          
 
 end Behavioral;

@@ -2,25 +2,405 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Thu Dec 16 23:29:32 2021
-# Process ID: 13028
-# Current directory: C:/Users/Propietario/Desktop/GIT/Maquina_Expendedora_VHDL/MaquinaExpendedora
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7828 C:\Users\Propietario\Desktop\GIT\Maquina_Expendedora_VHDL\MaquinaExpendedora\MaquinaExpendedora.xpr
-# Log file: C:/Users/Propietario/Desktop/GIT/Maquina_Expendedora_VHDL/MaquinaExpendedora/vivado.log
-# Journal file: C:/Users/Propietario/Desktop/GIT/Maquina_Expendedora_VHDL/MaquinaExpendedora\vivado.jou
+# Start of session at: Fri Dec 17 11:21:11 2021
+# Process ID: 10512
+# Current directory: C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4528 C:\Users\sed\Desktop\54892\Maquina_Expendedora_VHDL-main\MaquinaExpendedora\MaquinaExpendedora.xpr
+# Log file: C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/vivado.log
+# Journal file: C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/Propietario/Desktop/GIT/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.xpr
+open_project C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/Propietario/Desktop/GIT/Maquina_Expendedora_VHDL/MaquinaExpendedora' since last save.
 WARNING: [filemgmt 56-3] Board Part Repository Path: Could not find the directory 'C:/Users/Markv/AppData/Roaming/Xilinx/Vivado/2021.1/xhub/board_store/xilinx_board_store'.
-WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/Propietario/Desktop/GIT/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.gen/sources_1'.
+WARNING: [filemgmt 56-2] Default IP Output Path : Could not find the directory 'C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.gen/sources_1', nor could it be found using path 'C:/Users/Propietario/Desktop/GIT/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.gen/sources_1'.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Vivado/2021.1/data/ip'.
-open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:06 . Memory (MB): peak = 1246.953 ; gain = 0.000
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.1/data/ip'.
+open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:08 . Memory (MB): peak = 1117.199 ; gain = 0.000
 update_compile_order -fileset sources_1
-add_files -norecurse C:/Users/Propietario/Desktop/GIT/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/new/master_temp.vhd
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1
+
+launch_runs synth_1 -jobs 3
+[Fri Dec 17 11:35:39 2021] Launched synth_1...
+Run output will be captured here: C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1
+
+launch_runs synth_1 -jobs 3
+[Fri Dec 17 11:48:16 2021] Launched synth_1...
+Run output will be captured here: C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1
+
+launch_runs synth_1 -jobs 3
+[Fri Dec 17 11:50:17 2021] Launched synth_1...
+Run output will be captured here: C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1
+
+launch_runs synth_1 -jobs 3
+[Fri Dec 17 11:53:28 2021] Launched synth_1...
+Run output will be captured here: C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1
+
+launch_runs synth_1 -jobs 3
+[Fri Dec 17 11:54:36 2021] Launched synth_1...
+Run output will be captured here: C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1
+
+launch_runs synth_1 -jobs 3
+[Fri Dec 17 11:55:40 2021] Launched synth_1...
+Run output will be captured here: C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1/runme.log
 update_compile_order -fileset sources_1
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1
+
+launch_runs synth_1 -jobs 3
+[Fri Dec 17 11:57:38 2021] Launched synth_1...
+Run output will be captured here: C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 3
+[Fri Dec 17 11:58:19 2021] Launched impl_1...
+Run output will be captured here: C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/impl_1/runme.log
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: top
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1551.180 ; gain = 278.887
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:17]
+INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/sincro.vhd:4' bound to instance 'Inst_SYNCHRNZR' of component 'SYNCHRNZR' [C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:76]
+INFO: [Synth 8-638] synthesizing module 'SYNCHRNZR' [C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/sincro.vhd:11]
+INFO: [Synth 8-256] done synthesizing module 'SYNCHRNZR' (1#1) [C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/sincro.vhd:11]
+INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/edgedetector.vhd:24' bound to instance 'Inst_EDGEDTCTR' of component 'EDGEDTCTR' [C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:83]
+INFO: [Synth 8-638] synthesizing module 'EDGEDTCTR' [C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/edgedetector.vhd:31]
+INFO: [Synth 8-256] done synthesizing module 'EDGEDTCTR' (2#1) [C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/edgedetector.vhd:31]
+INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/sincro.vhd:4' bound to instance 'Inst_SYNCHRNZR' of component 'SYNCHRNZR' [C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:76]
+INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/edgedetector.vhd:24' bound to instance 'Inst_EDGEDTCTR' of component 'EDGEDTCTR' [C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:83]
+INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/sincro.vhd:4' bound to instance 'Inst_SYNCHRNZR' of component 'SYNCHRNZR' [C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:76]
+INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/edgedetector.vhd:24' bound to instance 'Inst_EDGEDTCTR' of component 'EDGEDTCTR' [C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:83]
+INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/sincro.vhd:4' bound to instance 'Inst_SYNCHRNZR' of component 'SYNCHRNZR' [C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:76]
+INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/edgedetector.vhd:24' bound to instance 'Inst_EDGEDTCTR' of component 'EDGEDTCTR' [C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:83]
+INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/sincro.vhd:4' bound to instance 'Inst_SYNCHRNZR' of component 'SYNCHRNZR' [C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:76]
+INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/edgedetector.vhd:24' bound to instance 'Inst_EDGEDTCTR' of component 'EDGEDTCTR' [C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:83]
+INFO: [Synth 8-3491] module 'fsm' declared at 'C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/FSM.vhd:6' bound to instance 'Inst_fsm' of component 'fsm' [C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:92]
+INFO: [Synth 8-638] synthesizing module 'fsm' [C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/FSM.vhd:16]
+INFO: [Synth 8-226] default block is never used [C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/FSM.vhd:86]
+INFO: [Synth 8-256] done synthesizing module 'fsm' (3#1) [C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/FSM.vhd:16]
+INFO: [Synth 8-256] done synthesizing module 'top' (4#1) [C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:17]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1585.664 ; gain = 313.371
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1606.992 ; gain = 334.699
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1606.992 ; gain = 334.699
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1606.992 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.srcs/constrs_1/imports/SED/Nexys-4-DDR-Master.xdc]
+Finished Parsing XDC File [C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.srcs/constrs_1/imports/SED/Nexys-4-DDR-Master.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1714.684 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:15 ; elapsed = 00:00:10 . Memory (MB): peak = 1785.945 ; gain = 513.652
+23 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:13 . Memory (MB): peak = 1785.945 ; gain = 668.746
+startgroup
+set_property BITSTREAM.GENERAL.COMPRESS TRUE [get_designs rtl_1]
+endgroup
+startgroup
+set_property BITSTREAM.CONFIG.CONFIGRATE 33 [get_designs rtl_1]
+endgroup
+startgroup
+set_property config_mode SPIx4 [current_design]
+endgroup
+set_property target_constrs_file C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.srcs/constrs_1/imports/SED/Nexys-4-DDR-Master.xdc [current_fileset -constrset]
+save_constraints -force
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+[Fri Dec 17 12:00:44 2021] Launched impl_1...
+Run output will be captured here: C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2021.1
+  **** Build date : Jun 10 2021 at 20:17:23
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2021.1
+  ****** Build date   : May 26 2021-19:32:33
+    **** Build number : 2021.1.1622050353
+      ** Copyright 2017-2021 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 2343.730 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292A8B470A
+open_hw_target: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3532.375 ; gain = 1188.645
+set_property PROGRAM.FILE {C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+[Fri Dec 17 12:03:32 2021] Launched synth_1...
+Run output will be captured here: C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1/runme.log
+[Fri Dec 17 12:03:32 2021] Launched impl_1...
+Run output will be captured here: C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/impl_1/runme.log
+open_run impl_1
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3568.363 ; gain = 0.000
+INFO: [Project 1-479] Netlist was created with Vivado 2021.1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Timing 38-478] Restoring timing data from binary archive.
+INFO: [Timing 38-479] Binary timing data restore complete.
+INFO: [Project 1-856] Restoring constraints from binary archive.
+INFO: [Project 1-853] Binary constraint restore complete.
+Reading XDEF placement.
+Reading placer database...
+Reading XDEF routing.
+Read XDEF File: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.047 . Memory (MB): peak = 4221.992 ; gain = 0.000
+Restored from archive | CPU: 0.000000 secs | Memory: 0.000000 MB |
+Finished XDEF File Restore: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.048 . Memory (MB): peak = 4221.992 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 4221.992 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:12 ; elapsed = 00:00:10 . Memory (MB): peak = 4293.066 ; gain = 725.148
+WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+[Fri Dec 17 12:07:07 2021] Launched synth_1...
+Run output will be captured here: C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1/runme.log
+[Fri Dec 17 12:07:08 2021] Launched impl_1...
+Run output will be captured here: C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+[Fri Dec 17 12:32:41 2021] Launched synth_1...
+Run output will be captured here: C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1/runme.log
+[Fri Dec 17 12:32:41 2021] Launched impl_1...
+Run output will be captured here: C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+[Fri Dec 17 12:36:40 2021] Launched impl_1...
+Run output will be captured here: C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1
+
+launch_runs synth_1 -jobs 3
+[Fri Dec 17 12:38:33 2021] Launched synth_1...
+Run output will be captured here: C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 3
+[Fri Dec 17 12:39:12 2021] Launched impl_1...
+Run output will be captured here: C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1
+
+launch_runs impl_1 -jobs 3
+[Fri Dec 17 12:45:17 2021] Launched synth_1...
+Run output will be captured here: C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1/runme.log
+[Fri Dec 17 12:45:17 2021] Launched impl_1...
+Run output will be captured here: C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/impl_1/runme.log
+reset_run impl_1
+launch_runs impl_1 -jobs 3
+[Fri Dec 17 12:55:56 2021] Launched impl_1...
+Run output will be captured here: C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1
+
+launch_runs synth_1 -jobs 3
+[Fri Dec 17 13:07:49 2021] Launched synth_1...
+Run output will be captured here: C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 3
+[Fri Dec 17 13:08:28 2021] Launched impl_1...
+Run output will be captured here: C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+[Fri Dec 17 13:09:34 2021] Launched impl_1...
+Run output will be captured here: C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1
+
+launch_runs synth_1 -jobs 3
+[Fri Dec 17 13:13:18 2021] Launched synth_1...
+Run output will be captured here: C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+[Fri Dec 17 13:14:07 2021] Launched impl_1...
+Run output will be captured here: C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+[Fri Dec 17 13:18:42 2021] Launched synth_1...
+Run output will be captured here: C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1/runme.log
+[Fri Dec 17 13:18:42 2021] Launched impl_1...
+Run output will be captured here: C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+[Fri Dec 17 13:31:20 2021] Launched synth_1...
+Run output will be captured here: C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1/runme.log
+[Fri Dec 17 13:31:20 2021] Launched impl_1...
+Run output will be captured here: C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+[Fri Dec 17 13:38:43 2021] Launched synth_1...
+Run output will be captured here: C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1/runme.log
+[Fri Dec 17 13:38:43 2021] Launched impl_1...
+Run output will be captured here: C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 3
+[Fri Dec 17 13:48:11 2021] Launched synth_1...
+Run output will be captured here: C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/synth_1/runme.log
+[Fri Dec 17 13:48:11 2021] Launched impl_1...
+Run output will be captured here: C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/Users/sed/Desktop/54892/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
 exit
-INFO: [Common 17-206] Exiting Vivado at Thu Dec 16 23:42:03 2021...
+INFO: [Common 17-206] Exiting Vivado at Fri Dec 17 13:51:53 2021...

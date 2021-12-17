@@ -1,8 +1,8 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Thu Dec 16 13:12:23 2021
-| Host         : DESKTOP-9L1N67Q running 64-bit major release  (build 9200)
+| Date         : Fri Dec 17 13:49:43 2021
+| Host         : DESKTOP-28O1IPC running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file top_timing_summary_routed.rpt -pb top_timing_summary_routed.pb -rpx top_timing_summary_routed.rpx -warn_on_violation
 | Design       : top
 | Device       : 7a100t-csg324
@@ -39,9 +39,11 @@ Timing Summary Report
 | ------------------
 ------------------------------------------------------------------------------------------------
 
-Rule       Severity          Description                  Violations  
----------  ----------------  ---------------------------  ----------  
-TIMING-17  Critical Warning  Non-clocked sequential cell  22          
+Rule       Severity          Description                   Violations  
+---------  ----------------  ----------------------------  ----------  
+TIMING-17  Critical Warning  Non-clocked sequential cell   28          
+LUTAR-1    Warning           LUT drives async reset alert  4           
+TIMING-20  Warning           Non-clocked latch             32          
 
 Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
 
@@ -51,22 +53,46 @@ check_timing report
 
 Table of Contents
 -----------------
-1. checking no_clock (22)
+1. checking no_clock (412)
 2. checking constant_clock (0)
 3. checking pulse_width_clock (0)
-4. checking unconstrained_internal_endpoints (26)
-5. checking no_input_delay (5)
-6. checking no_output_delay (4)
+4. checking unconstrained_internal_endpoints (95)
+5. checking no_input_delay (6)
+6. checking no_output_delay (12)
 7. checking multiple_clock (0)
 8. checking generated_clocks (0)
 9. checking loops (0)
 10. checking partial_input_delay (0)
 11. checking partial_output_delay (0)
-12. checking latch_loops (0)
+12. checking latch_loops (32)
 
-1. checking no_clock (22)
--------------------------
- There are 22 register/latch pins with no clock driven by root clock pin: CLK (HIGH)
+1. checking no_clock (412)
+--------------------------
+ There are 28 register/latch pins with no clock driven by root clock pin: CLK (HIGH)
+
+ There are 32 register/latch pins with no clock driven by root clock pin: Inst_fsm/current_state_reg[0]/Q (HIGH)
+
+ There are 32 register/latch pins with no clock driven by root clock pin: Inst_fsm/current_state_reg[1]/Q (HIGH)
+
+ There are 32 register/latch pins with no clock driven by root clock pin: Inst_fsm/current_state_reg[2]/Q (HIGH)
+
+ There are 32 register/latch pins with no clock driven by root clock pin: synchronizers[0].Inst_EDGEDTCTR/sreg_reg[0]/Q (HIGH)
+
+ There are 32 register/latch pins with no clock driven by root clock pin: synchronizers[0].Inst_EDGEDTCTR/sreg_reg[1]/Q (HIGH)
+
+ There are 32 register/latch pins with no clock driven by root clock pin: synchronizers[0].Inst_EDGEDTCTR/sreg_reg[2]/Q (HIGH)
+
+ There are 32 register/latch pins with no clock driven by root clock pin: synchronizers[1].Inst_EDGEDTCTR/sreg_reg[0]/Q (HIGH)
+
+ There are 32 register/latch pins with no clock driven by root clock pin: synchronizers[1].Inst_EDGEDTCTR/sreg_reg[1]/Q (HIGH)
+
+ There are 32 register/latch pins with no clock driven by root clock pin: synchronizers[1].Inst_EDGEDTCTR/sreg_reg[2]/Q (HIGH)
+
+ There are 32 register/latch pins with no clock driven by root clock pin: synchronizers[2].Inst_EDGEDTCTR/sreg_reg[0]/Q (HIGH)
+
+ There are 32 register/latch pins with no clock driven by root clock pin: synchronizers[2].Inst_EDGEDTCTR/sreg_reg[1]/Q (HIGH)
+
+ There are 32 register/latch pins with no clock driven by root clock pin: synchronizers[2].Inst_EDGEDTCTR/sreg_reg[2]/Q (HIGH)
 
 
 2. checking constant_clock (0)
@@ -79,23 +105,23 @@ Table of Contents
  There are 0 register/latch pins which need pulse_width check
 
 
-4. checking unconstrained_internal_endpoints (26)
+4. checking unconstrained_internal_endpoints (95)
 -------------------------------------------------
- There are 26 pins that are not constrained for maximum delay. (HIGH)
+ There are 95 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
 
-5. checking no_input_delay (5)
+5. checking no_input_delay (6)
 ------------------------------
- There are 5 input ports with no input delay specified. (HIGH)
+ There are 6 input ports with no input delay specified. (HIGH)
 
  There are 0 input ports with no input delay but user has a false path constraint.
 
 
-6. checking no_output_delay (4)
--------------------------------
- There are 4 ports with no output delay specified. (HIGH)
+6. checking no_output_delay (12)
+--------------------------------
+ There are 12 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 
@@ -127,9 +153,9 @@ Table of Contents
  There are 0 ports with partial output delay specified.
 
 
-12. checking latch_loops (0)
-----------------------------
- There are 0 combinational latch loops in the design through latch input
+12. checking latch_loops (32)
+-----------------------------
+ There are 32 combinational latch loops in the design through latch input (HIGH)
 
 
 

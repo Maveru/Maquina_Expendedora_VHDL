@@ -1,8 +1,8 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Thu Dec 16 13:10:16 2021
-| Host         : DESKTOP-9L1N67Q running 64-bit major release  (build 9200)
+| Date         : Fri Dec 17 13:48:45 2021
+| Host         : DESKTOP-28O1IPC running 64-bit major release  (build 9200)
 | Command      : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
 | Design       : top
 | Device       : 7a100tcsg324-1
@@ -30,14 +30,14 @@ Table of Contents
 +----------------------------+------+-------+------------+-----------+-------+
 |          Site Type         | Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*                |   13 |     0 |          0 |     63400 |  0.02 |
-|   LUT as Logic             |    9 |     0 |          0 |     63400 |  0.01 |
-|   LUT as Memory            |    4 |     0 |          0 |     19000 |  0.02 |
+| Slice LUTs*                |  156 |     0 |          0 |     63400 |  0.25 |
+|   LUT as Logic             |  151 |     0 |          0 |     63400 |  0.24 |
+|   LUT as Memory            |    5 |     0 |          0 |     19000 |  0.03 |
 |     LUT as Distributed RAM |    0 |     0 |            |           |       |
-|     LUT as Shift Register  |    4 |     0 |            |           |       |
-| Slice Registers            |   18 |     0 |          0 |    126800 |  0.01 |
-|   Register as Flip Flop    |   18 |     0 |          0 |    126800 |  0.01 |
-|   Register as Latch        |    0 |     0 |          0 |    126800 |  0.00 |
+|     LUT as Shift Register  |    5 |     0 |            |           |       |
+| Slice Registers            |   55 |     0 |          0 |    126800 |  0.04 |
+|   Register as Flip Flop    |   23 |     0 |          0 |    126800 |  0.02 |
+|   Register as Latch        |   32 |     0 |          0 |    126800 |  0.03 |
 | F7 Muxes                   |    0 |     0 |          0 |     31700 |  0.00 |
 | F8 Muxes                   |    0 |     0 |          0 |     15850 |  0.00 |
 +----------------------------+------+-------+------------+-----------+-------+
@@ -50,16 +50,16 @@ Table of Contents
 +-------+--------------+-------------+--------------+
 | Total | Clock Enable | Synchronous | Asynchronous |
 +-------+--------------+-------------+--------------+
-| 0     |            _ |           - |            - |
+| 3     |            _ |           - |            - |
 | 0     |            _ |           - |          Set |
 | 0     |            _ |           - |        Reset |
 | 0     |            _ |         Set |            - |
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
-| 0     |          Yes |           - |          Set |
-| 2     |          Yes |           - |        Reset |
+| 1     |          Yes |           - |          Set |
+| 31    |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 16    |          Yes |       Reset |            - |
+| 20    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -92,7 +92,7 @@ Table of Contents
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |   26 |     0 |          0 |       210 | 12.38 |
+| Bonded IOB                  |   39 |     0 |          0 |       210 | 18.57 |
 | Bonded IPADs                |    0 |     0 |          0 |         2 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         6 |  0.00 |
 | PHASER_REF                  |    0 |     0 |          0 |         6 |  0.00 |
@@ -114,7 +114,7 @@ Table of Contents
 +------------+------+-------+------------+-----------+-------+
 |  Site Type | Used | Fixed | Prohibited | Available | Util% |
 +------------+------+-------+------------+-----------+-------+
-| BUFGCTRL   |    1 |     0 |          0 |        32 |  3.13 |
+| BUFGCTRL   |    2 |     0 |          0 |        32 |  6.25 |
 | BUFIO      |    0 |     0 |          0 |        24 |  0.00 |
 | MMCME2_ADV |    0 |     0 |          0 |         6 |  0.00 |
 | PLLE2_ADV  |    0 |     0 |          0 |         6 |  0.00 |
@@ -148,18 +148,22 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
+| LUT2     |   77 |                 LUT |
+| LUT4     |   35 |                 LUT |
+| LUT1     |   32 |                 LUT |
+| LDCE     |   31 |        Flop & Latch |
+| CARRY4   |   24 |          CarryLogic |
+| FDRE     |   20 |        Flop & Latch |
 | OBUFT    |   16 |                  IO |
-| FDRE     |   16 |        Flop & Latch |
-| IBUF     |    6 |                  IO |
-| SRL16E   |    4 |  Distributed Memory |
-| OBUF     |    4 |                  IO |
-| LUT2     |    4 |                 LUT |
-| LUT3     |    3 |                 LUT |
-| LUT6     |    2 |                 LUT |
-| LUT5     |    2 |                 LUT |
-| FDCE     |    2 |        Flop & Latch |
-| LUT1     |    1 |                 LUT |
-| BUFG     |    1 |               Clock |
+| OBUF     |   16 |                  IO |
+| LUT6     |   16 |                 LUT |
+| LUT5     |   13 |                 LUT |
+| LUT3     |   13 |                 LUT |
+| IBUF     |    7 |                  IO |
+| SRL16E   |    5 |  Distributed Memory |
+| FDCE     |    3 |        Flop & Latch |
+| BUFG     |    2 |               Clock |
+| LDPE     |    1 |        Flop & Latch |
 +----------+------+---------------------+
 
 
