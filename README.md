@@ -4,3 +4,4 @@
 16/12/2021 - Pequeña modificación en FSM. Comienzo del mapeo para transmitir info a displays. Se ha implementado la FSM sobre la placa y se ha comprobado que funciona.
 16/12/2021 - Tesbench Decodificador BCD y se comprueba que la simulación es correcta.
 16/12/2021 - Añadido ejemplo de temporizador
+17/12/2021 - desarrollada un poco más la FSM
