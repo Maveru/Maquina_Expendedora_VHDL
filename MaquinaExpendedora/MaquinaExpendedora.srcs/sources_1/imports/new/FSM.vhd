@@ -1,4 +1,3 @@
-
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.numeric_std.all;
@@ -14,10 +13,12 @@ entity fsm is
 end fsm;
 
 architecture behavioral of fsm is
-     type STATES is (S0, S1, S2, S3, S4); -- S1 FANTA 80CENTS / S2 PEPSi 100 CENTS / S3 AGUA 50 CENTS
+     type STATES is (S0, S1, S2, S3, S4, S5,S6); -- S1 FANTA 80CENTS / S2 PEPSi 100 CENTS / S3 AGUA 50 CENTS / S4 SELECCI�N PRODUCTO / S5 IMPORTE CORRECTO / s6 EXCESO DE DINERO
      signal current_state: STATES := S0;
      signal next_state: STATES;
      signal Coste_i: integer:=0;
+     signal coste_fijo: integer:=0;  -- Varia al meter monedas
+     signal coste_prod: integer:=0;  -- Valor fijo del producto seleccionado, servira para comparar
 begin
     state_register: process (RESET, CLK)
 begin
@@ -30,70 +31,53 @@ begin
  end process;
  
  nextstate_decod: process (Botones, current_state)
- variable coste_fijo: integer;
  begin
     next_state <= current_state;
---1ª implementacion:
--- case current_state is
---    when S0 =>
---        if Botones(0) = '1' then
---            next_state <= S1;
---        end if;
---     when S1 =>
---         if Botones(1) = '1' then
---            next_state <= S2;
---         end if;
---     when S2 =>
---         if Botones(2) = '1' then
---           next_state <= S3;
---         end if;
---     when S3 =>
---         if Botones(3) = '1' then
---           next_state <= S0;
---         end if;
---     when others =>
---         next_state <= S0;
--- end case;
-
---2ª implementacion:
---if current_state = S0 then
---      if Botones(0) = '1' then
---        next_state <= S1;
---      elsif Botones(1) = '1' then
---        next_state <= S2;
---      elsif Botones(2) = '1' then
---        next_state <= S3;
---      end if;
---    end if;
---    if Botones(3) = '1' then
---       next_state <= S0;
---    end if;
-
---3ªimplementacion:
+    
 if current_state = S4 then
-    if Botones(0) = '1' then
-        coste_fijo := coste_fijo -25;
+    if (coste_fijo = 0) then
+       next_state <= S5;
+    elsif (coste_fijo < 0) then
+       next_state <= S6;
+    elsif Botones(0) = '1' then
+        coste_fijo <= coste_fijo -20;
     elsif Botones(1) = '1' then
-         coste_fijo := coste_fijo -50;
+         coste_fijo <= coste_fijo -50;
     elsif Botones(2) = '1' then
-         coste_fijo := coste_fijo -100;
+         coste_fijo <= coste_fijo -100;
+    
     end if;
+
+elsif current_state = S5 then
+       
+       --   COMPLETAR
+       
+elsif current_state = S6 then
+
+     --   COMPLETAR
+     
+     
 else 
     if Botones(0) = '1' then
         next_state <= S1;
-        coste_fijo := 80;
+        coste_fijo <= 80;
+        coste_prod <= 80;
         
     elsif Botones(1) = '1' then
         next_state <= S2;
-        coste_fijo := 100;
+        coste_fijo <= 100;
+        coste_prod <= 100;
+        
     elsif Botones(2) = '1' then
     
         next_state <= S3;
-        coste_fijo := 50;
+        coste_fijo <= 50;
+        coste_prod <= 50;
     elsif Botones(3) = '1' then
         next_state <= S0;
      elsif Botones(4) = '1' then
         next_state <= S4;
+      
      end if;
   end if;
      
@@ -107,20 +91,17 @@ else
  case current_state is
      when S0 =>
         LIGHT(0) <= '1';
-       -- salida <= "00000000";
+        salida <= "00000000";
      when S1 => -- FANTA
         LIGHT(1) <= '1';
-       -- Coste_i <= Coste_i + 80;
-        --salida <= "00110010";
+        salida <= "00110010";
            
      when S2 => -- PEPSI
         LIGHT(2) <= '1';
-        --Coste_i <= Coste_i + 100;
-       --salida <= "01010000";
+       salida <= "01010000";
      when S3 => -- AGUA
         LIGHT(3) <= '1';
-        --Coste_i <= Coste_i + 50;
-       -- salida <= "01100100";
+        salida <= "01100100";
       when S4 => -- Producto Seleccionado
          LIGHT(1) <= '1';
          LIGHT(2) <= '1';
@@ -131,8 +112,11 @@ else
          LIGHT(9) <= '1';
        elsif (Coste_i = 50) then
          LIGHT(8) <= '1';
-       elsif (Coste_i = 0) then
+       elsif (Coste_i = 25) then
          LIGHT(7) <= '1';
+       elsif (Coste_i = 0) then
+         LIGHT(6) <= '1';
+         
     end if;
          
       if (Coste_i < 25) then
@@ -155,11 +139,13 @@ else
          LIGHT(14) <= '1';
          LIGHT(13) <= '1';
          LIGHT(12) <= '1';
-       
-       
+                  
        end if;
-         
-       
+     when S5 =>             -- Estado de importe correcto , falta poner temporizador simulando entrega de producto
+         LIGHT(5) <= '1';
+      when S6 =>             -- Estado de importe incorrecto , falta poner temporizador simulando devolucion dinero
+         LIGHT(4) <= '1';
+         LIGHT(3) <= '1';
      when others =>
         LIGHT <= (OTHERS => '0');
  end case;
