@@ -22,24 +22,31 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 entity EDGEDTCTR is
- port (
- CLK : in std_logic;
- SYNC_IN : in std_logic;
- EDGE : out std_logic
- );
+    port (
+        CLK : in std_logic;         -- entrada de reloj
+        SYNC_IN : in std_logic;     -- entrada sincrona de boton
+        EDGE : out std_logic        -- salida de pulso correcto
+    );
 end EDGEDTCTR;
+
 architecture BEHAVIORAL of EDGEDTCTR is
- signal sreg : std_logic_vector(2 downto 0);
+    signal sreg : std_logic_vector(2 downto 0); -- señal auxiliar que acumula los tres ultimos bits de entrada
+
+-- Al detectar flanco de subida en CLK, asigna a la señal auxiliar sus dos
+-- bits menos significativos concatenados a la nueva entrada. En el momento
+-- que se produce un flanco de bajada y por tanto los dos últimos bits
+-- incorporados son '0', la salida EDGE se pone a 1.
 begin
  process (CLK)
  begin
- if rising_edge(CLK) then
- sreg <= sreg(1 downto 0) & SYNC_IN;
- end if;
+    if rising_edge(CLK) then
+        sreg <= sreg(1 downto 0) & SYNC_IN; 
+    end if;
  end process;
+ 
  with sreg select
- EDGE <= '1' when "100",
- '0' when others;
+    EDGE <= '1' when "100",
+            '0' when others;
 end BEHAVIORAL;
 
 

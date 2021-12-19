@@ -5,12 +5,12 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 ENTITY top IS
   PORT (
-    RESET : in  std_logic;
-    CLK   : in  std_logic;
-    Boton : in  std_logic_vector(4 downto 0);
-    LIGHT : out std_logic_vector(0 TO 15);
-    display_number    : out std_logic_vector(7 downto 0); -- Display por el que sale el dato
-    display_select    : out std_logic_vector(7 downto 0) -- Display por el que sale el dato
+    RESET : in  std_logic;                                  --Boton de reset de la placa
+    CLK   : in  std_logic;                                  --reloj de la placa (100MHz)
+    Boton : in  std_logic_vector(4 downto 0);               --Botones que se usarán para seleccionar bebida e introducir monedas
+    LIGHT : out std_logic_vector(0 TO 15);                  --Leds para saber en que estado esta la fsm, bebida elegida, error, o bebida saliente
+    display_number    : out std_logic_vector(7 downto 0);   --Dato que va a cada Display por cada ciclo de reloj
+    display_select    : out std_logic_vector(7 downto 0)    --Display por el que sale el dato
   );
 END top;
     
