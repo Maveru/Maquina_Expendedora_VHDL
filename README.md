@@ -6,3 +6,4 @@
 16/12/2021 - Añadido ejemplo de temporizador.
 17/12/2021 - Desarrollada un poco más la FSM.
 19/12/2021 - Se ha desarrollado la FSM y se ha creado su Testbench, la simulación funciona correctamente.
+19/12/2021 - Se han añadido los componentes prescaler y timer. Completados todos los ficheros salvo TOP y FSM
