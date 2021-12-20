@@ -7,7 +7,7 @@ entity fsm is
          RESET      : in std_logic;                         -- Reset de la placa 
          CLK        : in std_logic;                         -- Señal de reloj de salida del prescaler 
          Botones    : in std_logic_vector(4 downto 0);      -- Botones para cambiar de estado e introducir monedas 
-         end_timer  : in std_logic;                         -- Entrada que llega del temporizador para indicar que se ha terminado la cuenta
+         end_timer  : in std_logic:='0';                    -- Entrada que llega del temporizador para indicar que se ha terminado la cuenta
          money_ok   : out std_logic;                        -- Salida que pone a contar el temporizador cuando se mete el importe correcto o hay que devolverlo
          delivering : out std_logic;                        -- Led GREEN para indicar que se esta entregando bebida 
          error      : out std_logic;                        -- Led RED para indicar que se ha excedido el importe. Se devuelve el dinero
@@ -23,7 +23,6 @@ architecture behavioral of fsm is
      signal next_state: STATES;                             -- Estado siguiente
      signal Coste_i: integer:=0;                            -- Señal auxiliar para guardar importe restante por introducir
      signal coste_rest: integer:=0;                         -- Varia al meter monedas
-     signal coste_prod: integer:=0;                         -- Valor fijo del producto seleccionado, servira para comparar
 begin
     state_register: process (RESET, CLK)
 begin
@@ -35,61 +34,60 @@ begin
     end if;
  end process;
  
- nextstate_decod: process (Botones, current_state)
+ nextstate_decod: process (Botones, current_state,CLK) 
  begin
     next_state <= current_state;
     
 if current_state = S4 then                  -- bebida seleccionada. Hay que introducir importe
     if (coste_rest = 0) then                -- Importe exacto. Se entregara bebida
        next_state <= S5;
-    elsif (coste_rest < 0) then             -- Importe exacto. Se devolvera importe total
+    elsif (coste_rest < 0) then             -- Importe en exceso. Se devolvera importe total
        next_state <= S6;
     elsif Botones(0) = '1' then             -- Introducimos moneda 20 centimos
-        coste_rest <= coste_rest -20;
+       coste_rest <= coste_rest -20;
     elsif Botones(1) = '1' then             -- Introducimos moneda 50 centimos
-         coste_rest <= coste_rest -50;
+       coste_rest <= coste_rest -50;
     elsif Botones(2) = '1' then             -- Introducimos moneda 100 centimos
-         coste_rest <= coste_rest -100;
-    
+       coste_rest <= coste_rest -100;
     end if;
 
-elsif current_state = S5 then               -- estado para lanzar el temporizador para entregar producto
-        next_state  <= current_state;
+--elsif current_state = S5 then               -- estado para lanzar el temporizador para entregar producto
+--        next_state  <= current_state;
        
-elsif current_state = S6 then               -- estado para lanzar el temporizador para devolver importe
-        next_state  <= current_state;
+--elsif current_state = S6 then               -- estado para lanzar el temporizador para devolver importe
+--        next_state  <= current_state;
 
-elsif current_state = S7 then               -- estado de espera mientras se devuelve dinero
+elsif current_state = S5 then               -- estado de espera mientras se devuelve dinero
         if end_timer = '1' then             -- se termina de devolver dinero
             next_state <= S0;
         end if;
        
-elsif current_state = S8 then               -- estado de espera mientras se entrega producto
+elsif current_state = S6 then               -- estado de espera mientras se entrega producto
         if end_timer = '1' then             -- se termina de entregar bebida
             next_state <= S0;
         end if;
      
-else                                        -- significa que aun estamos seleccionando bebida
+elsif    (current_state = S0 OR current_state = S1 OR current_state = S2   OR current_state = S3) then   -- significa que aun estamos seleccionando bebida
+    
     if Botones(0) = '1' then                -- seleccionamos fanta
         next_state <= S1;
         coste_rest <= 80;
-        coste_prod <= 80;
         
     elsif Botones(1) = '1' then             -- seleccionamos pepsi
         next_state <= S2;
         coste_rest <= 100;
-        coste_prod <= 100;
         
     elsif Botones(2) = '1' then             -- seleccionamos agua
         next_state <= S3;
         coste_rest <= 50;
-        coste_prod <= 50;
+
     elsif Botones(3) = '1' then             -- volvemos a menu inicio
         next_state <= S0;
+        
     elsif Botones(4) = '1' then             -- confirmamos seleccion de bebida
         next_state <= S4;
       
-     end if;
+    end if;
   end if;
      
   Coste_i <= coste_rest ;  
@@ -138,71 +136,70 @@ else                                        -- significa que aun estamos selecci
         salida      <= std_logic_vector(to_unsigned(Coste_i, salida'length));   -- Se muestra en los displays el importe restante     
                         -- se convierte Coste_i (integer) en std_logic_vector
       -- ver 
-        if (Coste_i = 100) then
-         LIGHT(10) <= '1';
-        elsif (Coste_i = 80) then
-         LIGHT(9)   <= '1';
-        elsif (Coste_i = 50) then
-         LIGHT(8)   <= '1';
-        elsif (Coste_i = 25) then
-         LIGHT(7)   <= '1';
-        elsif (Coste_i = 0) then
-         LIGHT(6)   <= '1';
-        end if;
+--        if (Coste_i = 100) then
+--         LIGHT(10) <= '1';
+--        elsif (Coste_i = 80) then
+--         LIGHT(9)   <= '1';
+--        elsif (Coste_i = 50) then
+--         LIGHT(8)   <= '1';
+--        elsif (Coste_i = 25) then
+--         LIGHT(7)   <= '1';
+--        elsif (Coste_i = 0) then
+--         LIGHT(6)   <= '1';
+--        end if;
         
-        if (Coste_i < 25) then
-         LIGHT(15)  <= '0';
-         LIGHT(14)  <= '0';
-         LIGHT(13)  <= '0';
-         LIGHT(12)  <= '1';
-        elsif (Coste_i < 90) then
-         LIGHT(15)  <= '0';
-         LIGHT(14)  <= '0';
-         LIGHT(13)  <= '1';
-         LIGHT(12)  <= '1';
-        elsif(Coste_i < 100) then
-         LIGHT(15)  <= '0';
-         LIGHT(14)  <= '1';
-         LIGHT(13)  <= '1';
-         LIGHT(12)  <= '1';
-        elsif (Coste_i < 200) then
-         LIGHT(15)  <= '1';
-         LIGHT(14)  <= '1';
-         LIGHT(13)  <= '1';
-         LIGHT(12)  <= '1';            
-        end if;
+--        if (Coste_i < 25) then
+--         LIGHT(15)  <= '0';
+--         LIGHT(14)  <= '0';
+--         LIGHT(13)  <= '0';
+--         LIGHT(12)  <= '1';
+--        elsif (Coste_i < 90) then
+--         LIGHT(15)  <= '0';
+--         LIGHT(14)  <= '0';
+--         LIGHT(13)  <= '1';
+--         LIGHT(12)  <= '1';
+--        elsif(Coste_i < 100) then
+--         LIGHT(15)  <= '0';
+--         LIGHT(14)  <= '1';
+--         LIGHT(13)  <= '1';
+--         LIGHT(12)  <= '1';
+--        elsif (Coste_i < 200) then
+--         LIGHT(15)  <= '1';
+--         LIGHT(14)  <= '1';
+--         LIGHT(13)  <= '1';
+--         LIGHT(12)  <= '1';            
+--        end if;
      -- hasta aqui
         
      when S5 =>                             -- Estado para lanzar el temporizador para entregar producto
         LIGHT(5)    <= '1';
-        delivering  <= '0';                 -- No se esta entregando bebida
+        delivering  <= '1';                 -- No se esta entregando bebida
         error       <= '0';                 -- No se esta devolviendo dinero
         money_ok    <= '1';                 -- SI se lanza temporizador
         salida      <= "11111010";          -- codigo para mostrar en displays "GRACIAS" (250 en binario)   
         
       when S6 =>                            -- Estado para lanzar el temporizador para devolver importe
-        LIGHT(4)   <= '1';
-        LIGHT(3)   <= '1';
+        LIGHT(6)   <= '1';
+        --LIGHT(3)   <= '1';
         delivering  <= '0';                 -- No se esta entregando bebida
-        error       <= '0';                 -- No se esta devolviendo dinero
+        error       <= '1';                 -- No se esta devolviendo dinero
         money_ok    <= '1';                 -- SI se lanza temporizador
         salida      <= "11111111";          -- codigo para mostrar en displays "ERROR" (255 en binario)   
       
-      when S7 =>
-        delivering  <= '0';                 -- No se esta entregando bebida
-        error       <= '1';                 -- SI se esta devolviendo dinero. Se enciende LED rojo
-        money_ok    <= '0';                 -- No se lanza temporizador
-        salida      <= "11111111";          -- codigo para mostrar en displays "ERROR" (255 en binario)   
+--      when S7 =>
+--        delivering  <= '0';                 -- No se esta entregando bebida
+--        error       <= '1';                 -- SI se esta devolviendo dinero. Se enciende LED rojo
+--        money_ok    <= '0';                 -- No se lanza temporizador
+--        salida      <= "11111111";          -- codigo para mostrar en displays "ERROR" (255 en binario)   
         
-      when S8 => 
-        delivering  <= '1';                 -- SI se esta entregando bebida
-        error       <= '0';                 -- No se esta devolviendo dinero
-        money_ok    <= '0';                 -- No se lanza temporizador
-        salida      <= "11111010";          -- codigo para mostrar en displays "GRACIAS" (250 en binario)  
+--      when S8 => 
+--        delivering  <= '1';                 -- SI se esta entregando bebida
+--        error       <= '0';                 -- No se esta devolviendo dinero
+--        money_ok    <= '0';                 -- No se lanza temporizador
+--        salida      <= "11111010";          -- codigo para mostrar en displays "GRACIAS" (250 en binario)  
         
      when others =>
         LIGHT <= (OTHERS => '0');
  end case;
-    --Coste <= Coste_i;
  end process;
  end behavioral;
