@@ -44,7 +44,7 @@ begin
   end_temp <= '1' when ticks = 0 else '0';     
   process(clk, reset, start_temp) is
   begin
-        if reset = '1' then
+        if reset = '0' then -- ver 0 o 1 !!!!!
             ticks <=  0;
         elsif rising_edge(clk) then
             if start_temp = '1' then

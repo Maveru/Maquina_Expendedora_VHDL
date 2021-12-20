@@ -2,13 +2,34 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Sun Dec 19 21:02:55 2021
-# Process ID: 4388
-# Current directory: C:/Users/Propietario/Desktop/GIT/Maquina_Expendedora_VHDL/MaquinaExpendedora
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15872 C:\Users\Propietario\Desktop\GIT\Maquina_Expendedora_VHDL\MaquinaExpendedora\MaquinaExpendedora.xpr
-# Log file: C:/Users/Propietario/Desktop/GIT/Maquina_Expendedora_VHDL/MaquinaExpendedora/vivado.log
-# Journal file: C:/Users/Propietario/Desktop/GIT/Maquina_Expendedora_VHDL/MaquinaExpendedora\vivado.jou
+# Start of session at: Mon Dec 20 09:30:03 2021
+# Process ID: 14060
+# Current directory: C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13616 C:\Users\Propietario\Documents\GitHub\Maquina_Expendedora_VHDL\MaquinaExpendedora\MaquinaExpendedora.xpr
+# Log file: C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/vivado.log
+# Journal file: C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/Propietario/Desktop/GIT/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.xpr
+open_project C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.xpr
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.srcs/sim_1/new/DisplayExit_tb.vhd
+update_compile_order -fileset sim_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+launch_simulation
+source top.tcl
+set_property top FSM_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+close_sim
+launch_simulation
+source FSM_tb.tcl
+run all
+close_sim
+set_property -name {xsim.simulate.runtime} -value {1000us} -objects [get_filesets sim_1]
+launch_simulation
+source FSM_tb.tcl
+close_sim
+close_design
 update_compile_order -fileset sources_1

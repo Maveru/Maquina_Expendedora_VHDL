@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Mon Dec 20 09:19:13 2021
+# Process ID: 2896
+# Current directory: C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3380 C:\Users\Propietario\Documents\GitHub\Maquina_Expendedora_VHDL\MaquinaExpendedora\MaquinaExpendedora.xpr
+# Log file: C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/vivado.log
+# Journal file: C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.xpr
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse C:/Users/Propietario/Desktop/GIT/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.srcs/sim_1/new/FSM_tb.vhd
+update_compile_order -fileset sim_1

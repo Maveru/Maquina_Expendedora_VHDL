@@ -2,23 +2,286 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Sun Dec 19 21:02:55 2021
-# Process ID: 4388
-# Current directory: C:/Users/Propietario/Desktop/GIT/Maquina_Expendedora_VHDL/MaquinaExpendedora
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15872 C:\Users\Propietario\Desktop\GIT\Maquina_Expendedora_VHDL\MaquinaExpendedora\MaquinaExpendedora.xpr
-# Log file: C:/Users/Propietario/Desktop/GIT/Maquina_Expendedora_VHDL/MaquinaExpendedora/vivado.log
-# Journal file: C:/Users/Propietario/Desktop/GIT/Maquina_Expendedora_VHDL/MaquinaExpendedora\vivado.jou
+# Start of session at: Mon Dec 20 09:30:03 2021
+# Process ID: 14060
+# Current directory: C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13616 C:\Users\Propietario\Documents\GitHub\Maquina_Expendedora_VHDL\MaquinaExpendedora\MaquinaExpendedora.xpr
+# Log file: C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/vivado.log
+# Journal file: C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project C:/Users/Propietario/Desktop/GIT/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.xpr
+open_project C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.xpr
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora'
 WARNING: [filemgmt 56-3] Board Part Repository Path: Could not find the directory 'C:/Users/Markv/AppData/Roaming/Xilinx/Vivado/2021.1/xhub/board_store/xilinx_board_store'.
-WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/Propietario/Desktop/GIT/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.gen/sources_1'.
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.gen/sources_1'.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Vivado/2021.1/data/ip'.
-open_project: Time (s): cpu = 00:00:22 ; elapsed = 00:00:10 . Memory (MB): peak = 1242.812 ; gain = 0.000
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:05 . Memory (MB): peak = 1246.500 ; gain = 0.000
 update_compile_order -fileset sources_1
-exit
-INFO: [Common 17-206] Exiting Vivado at Sun Dec 19 21:07:45 2021...
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.srcs/sim_1/new/DisplayExit_tb.vhd
+update_compile_order -fileset sim_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+Command: synth_design -rtl -rtl_skip_mlo -name rtl_1
+Starting synth_design
+Using part: xc7a100tcsg324-1
+Top: top
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1741.973 ; gain = 270.059
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:17]
+INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/sincro.vhd:5' bound to instance 'Inst_SYNCHRNZR' of component 'SYNCHRNZR' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:76]
+INFO: [Synth 8-638] synthesizing module 'SYNCHRNZR' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/sincro.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'SYNCHRNZR' (1#1) [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/sincro.vhd:13]
+INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/edgedetector.vhd:24' bound to instance 'Inst_EDGEDTCTR' of component 'EDGEDTCTR' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:83]
+INFO: [Synth 8-638] synthesizing module 'EDGEDTCTR' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/edgedetector.vhd:32]
+INFO: [Synth 8-256] done synthesizing module 'EDGEDTCTR' (2#1) [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/edgedetector.vhd:32]
+INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/sincro.vhd:5' bound to instance 'Inst_SYNCHRNZR' of component 'SYNCHRNZR' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:76]
+INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/edgedetector.vhd:24' bound to instance 'Inst_EDGEDTCTR' of component 'EDGEDTCTR' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:83]
+INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/sincro.vhd:5' bound to instance 'Inst_SYNCHRNZR' of component 'SYNCHRNZR' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:76]
+INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/edgedetector.vhd:24' bound to instance 'Inst_EDGEDTCTR' of component 'EDGEDTCTR' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:83]
+INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/sincro.vhd:5' bound to instance 'Inst_SYNCHRNZR' of component 'SYNCHRNZR' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:76]
+INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/edgedetector.vhd:24' bound to instance 'Inst_EDGEDTCTR' of component 'EDGEDTCTR' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:83]
+INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/sincro.vhd:5' bound to instance 'Inst_SYNCHRNZR' of component 'SYNCHRNZR' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:76]
+INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/edgedetector.vhd:24' bound to instance 'Inst_EDGEDTCTR' of component 'EDGEDTCTR' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:83]
+INFO: [Synth 8-3491] module 'fsm' declared at 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/FSM.vhd:5' bound to instance 'Inst_fsm' of component 'fsm' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:92]
+INFO: [Synth 8-638] synthesizing module 'fsm' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/FSM.vhd:15]
+WARNING: [Synth 8-614] signal 'coste_rest' is read in the process but is not in the sensitivity list [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/FSM.vhd:33]
+INFO: [Synth 8-256] done synthesizing module 'fsm' (3#1) [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/FSM.vhd:15]
+INFO: [Synth 8-256] done synthesizing module 'top' (4#1) [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:17]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1788.008 ; gain = 316.094
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1788.008 ; gain = 316.094
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1788.008 ; gain = 316.094
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1788.008 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.srcs/constrs_1/imports/SED/Nexys-4-DDR-Master.xdc]
+Finished Parsing XDC File [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.srcs/constrs_1/imports/SED/Nexys-4-DDR-Master.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1879.730 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:17 ; elapsed = 00:00:12 . Memory (MB): peak = 1982.914 ; gain = 511.000
+22 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:16 . Memory (MB): peak = 1982.914 ; gain = 736.414
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'top'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'top' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj top_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/FSM.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fsm'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/edgedetector.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'EDGEDTCTR'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/sincro.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'SYNCHRNZR'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'top'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.sim/sim_1/behav/xsim'
+"xelab -wto ea230094c27a4783aed3e4bff623dcc9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot top_behav xil_defaultlib.top -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto ea230094c27a4783aed3e4bff623dcc9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot top_behav xil_defaultlib.top -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.SYNCHRNZR [synchrnzr_default]
+Compiling architecture behavioral of entity xil_defaultlib.EDGEDTCTR [edgedtctr_default]
+Compiling architecture behavioral of entity xil_defaultlib.fsm [fsm_default]
+Compiling architecture behavioral of entity xil_defaultlib.top
+Built simulation snapshot top_behav
+
+****** Webtalk v2021.1 (64-bit)
+  **** SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+  **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.sim/sim_1/behav/xsim/xsim.dir/top_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.sim/sim_1/behav/xsim/xsim.dir/top_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Mon Dec 20 09:51:04 2021. For additional details about this file, please refer to the WebTalk help file at E:/Vivado/2021.1/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Mon Dec 20 09:51:04 2021...
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:10 . Memory (MB): peak = 1983.344 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '10' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "top_behav -key {Behavioral:sim_1:Functional:top} -tclbatch {top.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source top.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:09 ; elapsed = 00:00:18 . Memory (MB): peak = 2019.234 ; gain = 35.891
+set_property top FSM_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'FSM_tb'
+boost::filesystem::remove: El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso: "C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.sim/sim_1/behav/xsim/simulate.log"
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 2019.234 ; gain = 0.000
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'FSM_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'FSM_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj FSM_tb_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Propietario/Desktop/GIT/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.srcs/sim_1/new/FSM_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'FSM_tb'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.sim/sim_1/behav/xsim'
+"xelab -wto ea230094c27a4783aed3e4bff623dcc9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot FSM_tb_behav xil_defaultlib.FSM_tb -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto ea230094c27a4783aed3e4bff623dcc9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot FSM_tb_behav xil_defaultlib.FSM_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.fsm [fsm_default]
+Compiling architecture bench of entity xil_defaultlib.fsm_tb
+Built simulation snapshot FSM_tb_behav
+
+****** Webtalk v2021.1 (64-bit)
+  **** SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+  **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.sim/sim_1/behav/xsim/xsim.dir/FSM_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.sim/sim_1/behav/xsim/xsim.dir/FSM_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Mon Dec 20 09:54:17 2021. For additional details about this file, please refer to the WebTalk help file at E:/Vivado/2021.1/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Mon Dec 20 09:54:17 2021...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 2020.191 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "FSM_tb_behav -key {Behavioral:sim_1:Functional:FSM_tb} -tclbatch {FSM_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source FSM_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'FSM_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 2029.914 ; gain = 9.723
+run all
+run: Time (s): cpu = 00:00:57 ; elapsed = 00:00:49 . Memory (MB): peak = 2032.973 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 2032.973 ; gain = 0.000
+set_property -name {xsim.simulate.runtime} -value {1000us} -objects [get_filesets sim_1]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'FSM_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'E:/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'FSM_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj FSM_tb_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.sim/sim_1/behav/xsim'
+"xelab -wto ea230094c27a4783aed3e4bff623dcc9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot FSM_tb_behav xil_defaultlib.FSM_tb -log elaborate.log"
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: E:/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto ea230094c27a4783aed3e4bff623dcc9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot FSM_tb_behav xil_defaultlib.FSM_tb -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "FSM_tb_behav -key {Behavioral:sim_1:Functional:FSM_tb} -tclbatch {FSM_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source FSM_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000us
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'FSM_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000us
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2032.973 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_design
+update_compile_order -fileset sources_1

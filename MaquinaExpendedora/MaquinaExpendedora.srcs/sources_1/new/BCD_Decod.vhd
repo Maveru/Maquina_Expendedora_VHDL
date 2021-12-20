@@ -41,8 +41,28 @@ begin
       carac5 <= "011101";                                       -- x"87" --> T 
       carac6 <= "011100";                                       -- x"92" --> S 
       carac7 <= "100110";                                       -- x"7F" --> .
-          
-    elsif value = 201 then -- PEPSI
+    
+    elsif value = 251 then -- Estado S0 - menu inicial
+      carac0 <= "010001"; -- x"89" --> H 
+      carac1 <= "011000"; -- x"C0" --> O 
+      carac2 <= "010101"; -- x"C7" --> L 
+      carac3 <= "001010"; -- x"88" --> A 
+      carac4 <= "001010"; -- x"88" --> NADA
+      carac5 <= "111111"; -- x"FF" --> NADA
+      carac6 <= "111111"; -- x"FF" --> NADA
+      carac7 <= "111111"; -- x"FF" --> NADA
+    
+    elsif value = 252 then -- FANTA
+      carac0 <= "001111"; -- x"8E" --> F
+      carac1 <= "001010"; -- x"88" --> A
+      carac2 <= "010111"; -- x"AB" --> N
+      carac3 <= "011101"; -- x"87" --> T
+      carac4 <= "001010"; -- x"88" --> A
+      carac5 <= "111111"; -- x"FF" --> NADA
+      carac6 <= "111111"; -- x"FF" --> NADA
+      carac7 <= "111111"; -- x"FF" --> NADA
+       
+    elsif value = 253 then -- PEPSI
       carac0 <= "011001"; -- x"8C" --> P
       carac1 <= "001110"; -- x"86" --> E 
       carac2 <= "011001"; -- x"8C" --> P 
@@ -52,17 +72,7 @@ begin
       carac6 <= "111111"; -- x"FF" --> NADA 
       carac7 <= "111111"; -- x"FF" --> NADA
         
-    elsif value = 202 then -- FANTA
-      carac0 <= "001111"; -- x"8E" --> F
-      carac1 <= "001010"; -- x"88" --> A
-      carac2 <= "010111"; -- x"AB" --> N
-      carac3 <= "011101"; -- x"87" --> T
-      carac4 <= "001010"; -- x"88" --> A
-      carac5 <= "111111"; -- x"FF" --> NADA
-      carac6 <= "111111"; -- x"FF" --> NADA
-      carac7 <= "111111"; -- x"FF" --> NADA
-        
-    elsif value = 203 then -- AGUA
+    elsif value = 254 then -- AGUA
       carac0 <= "001010"; -- x"88" --> A
       carac1 <= "010000"; -- x"90" --> G
       carac2 <= "011110"; -- x"E3" --> U
@@ -72,7 +82,7 @@ begin
       carac6 <= "111111"; -- x"FF" --> NADA
       carac7 <= "111111"; -- x"FF" --> NADA   
                 
-    elsif value = 204 then -- ERROR (exceso de importe)    
+    elsif value = 255 then -- ERROR (exceso de importe)    
       carac0 <= "001110"; -- x"86" --> E
       carac1 <= "011011"; -- x"AF" --> R       
       carac2 <= "011011"; -- x"AF" --> R 
