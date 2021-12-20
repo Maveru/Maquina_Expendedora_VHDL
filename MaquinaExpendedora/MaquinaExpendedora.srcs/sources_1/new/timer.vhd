@@ -25,6 +25,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity timer is
 -- temporizador usado para contar el tiempo que se tarda en devolver importe 
+
 -- incorrecto o entregar el producto solicitado. En ambos casos, t=5s.
     generic(
         delay	  : integer := 5;        -- Temporizador de 5 segundos    
@@ -34,7 +35,7 @@ entity timer is
         clk          : in std_logic;     -- Entrada de reloj (viene del prescaler)
         reset        : in std_logic;     -- Boton de reset de la placa
         start_temp   : in std_logic;     -- La fsm actica el temporizador al llegar al estado correspondiente
-        end_temp	 : out std_logic     -- Indica fin del temporizador
+        end_temp	 : out std_logic:='0'    -- Indica fin del temporizador
     );
 end timer;
 
@@ -44,8 +45,8 @@ begin
   end_temp <= '1' when ticks = 0 else '0';     
   process(clk, reset, start_temp) is
   begin
-        if reset = '0' then -- ver 0 o 1 !!!!!
-            ticks <=  0;
+        if reset = '1' then -- ver 0 o 1 !!!!!
+            ticks <=  -1; -- Si lo pongo a 0 cumple la condicion de que se ha terminado el temporizador!
         elsif rising_edge(clk) then
             if start_temp = '1' then
        	        ticks <= delay * frec_in;   -- Al ser la frecuencia de entrada 1000Hz y estar contando hasta 5000,
