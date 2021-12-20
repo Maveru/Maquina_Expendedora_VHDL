@@ -9,3 +9,4 @@
 19/12/2021 - Se han añadido los componentes prescaler y timer. Completados todos los ficheros salvo TOP y FSM.
 19/12/2021 - Testbench DisplayExit realizado.
 20/12/2021 - Añadido timer en la fsm. Pendiente la simulación.
+20/12/2021 - Timer actualizado. Timer_tb funciona correctamente.
