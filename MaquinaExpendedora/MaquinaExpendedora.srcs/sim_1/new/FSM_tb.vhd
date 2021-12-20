@@ -1,4 +1,6 @@
 
+--Simulation Time 10000us
+
 
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -13,16 +15,25 @@ architecture Bench of FSM_tb is
    signal Botones       : std_logic_vector(4 downto 0);
    signal clk, RESET    : std_logic;
     
-   signal LIGHT          : std_logic_vector(0 to 15);
+   signal   end_timer  :  std_logic:='0';                  
+   signal   money_ok   :  std_logic;                        
+   signal   delivering :  std_logic;  
+   signal   error      :  std_logic;     
+   
+   signal  LIGHT        : std_logic_vector(0 to 15);
    signal  salida       : std_logic_vector(7 downto 0);
    
     component FSM
         Port(
-             RESET : in std_logic;
-             CLK   : in std_logic;
-             Botones : in std_logic_vector(4 downto 0);
-             LIGHT : out std_logic_vector(0 TO 15);
-             salida : out std_logic_vector(7 downto 0) 
+         RESET      : in std_logic;                         -- Reset de la placa 
+         CLK        : in std_logic;                         -- Señal de reloj de salida del prescaler 
+         Botones    : in std_logic_vector(4 downto 0);      -- Botones para cambiar de estado e introducir monedas 
+         end_timer  : in std_logic:='0';                    -- Entrada que llega del temporizador para indicar que se ha terminado la cuenta
+         money_ok   : out std_logic;                        -- Salida que pone a contar el temporizador cuando se mete el importe correcto o hay que devolverlo
+         delivering : out std_logic;                        -- Led GREEN para indicar que se esta entregando bebida 
+         error      : out std_logic;                        -- Led RED para indicar que se ha excedido el importe. Se devuelve el dinero
+         LIGHT      : out std_logic_vector(0 TO 15);        -- LEDS para saber que bebida se ha seleccionado
+         salida     : out std_logic_vector(7 downto 0)      -- Info que va a los displays
              );
  
 end component;
@@ -40,6 +51,10 @@ begin
       RESET             => RESET,
       Botones           => Botones,
       LIGHT             => LIGHT,
+      delivering        => delivering,
+      money_ok          => money_ok,
+      error             => error,
+      end_timer         => end_timer,
       salida            => salida
     );
 
@@ -83,9 +98,9 @@ tester : process
   -- Pagar
     
      wait for 2*CLK_IN_PERIOD;
-    Botones(0) <= '1'; --Meto moneda 20 cents
-    wait for 0.85*CLK_IN_PERIOD;
-    Botones(0) <= '0';
+--    Botones(0) <= '1'; --Meto moneda 20 cents
+--    wait for 0.85*CLK_IN_PERIOD;
+--    Botones(0) <= '0';
     wait for CLK_IN_PERIOD*3;
     Botones(1) <= '1'; --Meto moneda 50 cents
     wait for 2*CLK_IN_PERIOD;
@@ -102,10 +117,37 @@ tester : process
 --    Botones(0) <= '0';
 
     wait for 5*CLK_IN_PERIOD;
-
-
+    
+    end_timer <= '1';
+    wait for 1.5 *CLK_IN_PERIOD;
+    end_timer <= '0';  -- TERMINA EL CASO DE IMPORTE CORRECTO
+    wait for 5*CLK_IN_PERIOD;
+    
+    Botones(0) <= '1'; -- 80 centimos
+    wait for CLK_IN_PERIOD;
+    Botones(0) <= '0'; -- 80 centimos
+    Botones(4) <= '1'; -- Entro al estado pagar
+    wait for CLK_IN_PERIOD;
+    Botones(4) <= '0';
+    wait for CLK_IN_PERIOD*2;
+    Botones(2) <= '1'; --Meto moneda 50 cents
+    wait for 2*CLK_IN_PERIOD;
+    Botones(2) <= '0';
+    
+     end_timer <= '1';
+    wait for 1.5 *CLK_IN_PERIOD;
+    end_timer <= '0';   -- TERMINA EL CASO IMPORTE INCORRECTO
+    wait for 5*CLK_IN_PERIOD;
+    
+    
     end process;
 end Bench;
+
+
+
+
+
+
 
 
 
