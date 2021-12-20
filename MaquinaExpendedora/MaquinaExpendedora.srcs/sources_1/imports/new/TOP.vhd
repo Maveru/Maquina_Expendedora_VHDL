@@ -22,11 +22,23 @@ ENTITY top IS
 END top;
     
 architecture Behavioral of top is
-  signal boton_edge: std_logic_vector (Boton'range);                    -- se usara para la salida del detector de flanco 
-  signal boton_sinc: std_logic_vector (Boton'range);                    -- se usara para la salida del sincronizador
-  signal S0, S1, S2, S3, S4, S5, S6, S7:  std_logic_vector(7 downto 0); -- codigo en BCD para cada digito del display
-  --signal coste_int: integer;
-  signal coste: std_logic_vector(7 downto 0);                           -- salida de la fsm que ira a los displays
+  signal clk_out_p                      : std_logic;                        -- señal de reloj a la salida del prescaler 
+  signal boton_edge                     : std_logic_vector (Boton'range);   -- se usara para la salida del detector de flanco 
+  signal boton_sinc                     : std_logic_vector (Boton'range);   -- se usara para la salida del sincronizador
+  signal S0, S1, S2, S3, S4, S5, S6, S7 :  std_logic_vector(7 downto 0);    -- codigo en BCD para cada digito del display
+  signal coste                          : std_logic_vector(7 downto 0);     -- salida de la fsm que ira a los displays
+  signal start_timer                    : std_logic;                        -- señal para activar temporizador 
+  signal end_timer                      : std_logic;                        -- señal para fin de temporizador 
+  signal to_BCD_Decod                   : std_logic_vector(7 downto 0);     -- señal para conectar salida de fsm con entrada de BCD_Decod 
+  signal to_BCD_7segm                   : std_logic_vector(5 downto 0);     -- señal para conectar salida de bcd_decod con bcd_to_7segm 
+  signal to_s0                          : std_logic_vector(7 downto 0);     -- señales para conectar salida de bcd_7segm con displays 
+  signal to_s1                          : std_logic_vector(7 downto 0);
+  signal to_s2                          : std_logic_vector(7 downto 0);
+  signal to_s3                          : std_logic_vector(7 downto 0);
+  signal to_s4                          : std_logic_vector(7 downto 0);
+  signal to_s5                          : std_logic_vector(7 downto 0);
+  signal to_s6                          : std_logic_vector(7 downto 0);
+  signal to_s7                          : std_logic_vector(7 downto 0);
   
 component BCD_decoder is
     port (
@@ -123,7 +135,9 @@ synchronizers: for i in Boton'range generate -- Obligatorio que lleve nombre Lo 
       );
   
   end generate;
-  
+--  QUEDAN POR INSTANCIAR EL RESTO DE COMPONENTES 
+
+
 --  Inst_fsm: FSM
 --     PORT MAP(
 --        RESET  => reset,
