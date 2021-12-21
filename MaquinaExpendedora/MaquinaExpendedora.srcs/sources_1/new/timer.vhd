@@ -25,7 +25,6 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity timer is
 -- temporizador usado para contar el tiempo que se tarda en devolver importe 
-
 -- incorrecto o entregar el producto solicitado. En ambos casos, t=5s.
     generic(
         delay	  : integer := 5;        -- Temporizador de 5 segundos    
@@ -45,7 +44,7 @@ begin
   end_temp <= '1' when ticks = 0 else '0';     
   process(clk, reset, start_temp) is
   begin
-        if reset = '1' then -- ver 0 o 1 !!!!!
+        if reset = '0' then -- ver 0 o 1 !!!!!
             ticks <=  -1; -- Si lo pongo a 0 cumple la condicion de que se ha terminado el temporizador!
         elsif rising_edge(clk) then
             if start_temp = '1' then

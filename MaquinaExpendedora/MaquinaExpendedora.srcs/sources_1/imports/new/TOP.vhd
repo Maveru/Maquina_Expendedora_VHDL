@@ -22,16 +22,32 @@ ENTITY top IS
 END top;
     
 architecture Behavioral of top is
-  signal boton_edge: std_logic_vector (Boton'range);                    -- se usara para la salida del detector de flanco 
-  signal boton_sinc: std_logic_vector (Boton'range);                    -- se usara para la salida del sincronizador
-  signal S0, S1, S2, S3, S4, S5, S6, S7:  std_logic_vector(7 downto 0); -- codigo en BCD para cada digito del display
-  --signal coste_int: integer;
+  signal boton_edge: std_logic_vector (Boton'range);                        -- se usara para la salida del detector de flanco 
+  signal boton_sinc: std_logic_vector (Boton'range);                        -- se usara para la salida del sincronizador
+  --signal S0, S1, S2, S3, S4, S5, S6, S7:  std_logic_vector(7 downto 0);     -- codigo en BCD para cada digito del display
+  --signal coste: std_logic_vector(7 downto 0);                               -- salida de la fsm que ira a los displays
+  signal clk_escalado: std_logic;                                           -- señal de reloj a la salida del prescaler 
+  signal T_Fin: std_logic;                                                  -- Va del Timer a la FSM. Indica que ha terminado el temporizador
+  signal T_Inic: std_logic;                                                 -- Va de la FSM al Timer. Pone a contar el temporizador 
+  signal to_BCD_Decod                   : std_logic_vector(7 downto 0);     -- señal para conectar salida de fsm con entrada de BCD_Decod 
   
-  signal coste: std_logic_vector(7 downto 0);                           -- salida de la fsm que ira a los displays
-  signal clk_escalado: std_logic;                                       -- Va del Preescaler al Timer
+  signal to_BCD_7segm0                  : std_logic_vector(5 downto 0);     -- señal para conectar salida de bcd_decod con bcd_to_7segm 
+  signal to_BCD_7segm1                  : std_logic_vector(5 downto 0);
+  signal to_BCD_7segm2                  : std_logic_vector(5 downto 0);
+  signal to_BCD_7segm3                  : std_logic_vector(5 downto 0);
+  signal to_BCD_7segm4                  : std_logic_vector(5 downto 0);
+  signal to_BCD_7segm5                  : std_logic_vector(5 downto 0);
+  signal to_BCD_7segm6                  : std_logic_vector(5 downto 0);
+  signal to_BCD_7segm7                  : std_logic_vector(5 downto 0);
   
-  signal T_Fin: std_logic;                                              -- Va del Timer a la FSM
-  signal T_Inic: std_logic;                                             -- Va de la FSM al Timer
+  signal to_s0                          : std_logic_vector(7 downto 0);     -- señales para conectar salida de bcd_7segm con displays 
+  signal to_s1                          : std_logic_vector(7 downto 0);
+  signal to_s2                          : std_logic_vector(7 downto 0);
+  signal to_s3                          : std_logic_vector(7 downto 0);
+  signal to_s4                          : std_logic_vector(7 downto 0);
+  signal to_s5                          : std_logic_vector(7 downto 0);
+  signal to_s6                          : std_logic_vector(7 downto 0);
+  signal to_s7                          : std_logic_vector(7 downto 0);
   
 component BCD_decoder is
     port (
@@ -40,7 +56,7 @@ component BCD_decoder is
     );
   end component;
   
-  component BCD_to_7seg is
+  component BCD_a_7segments is
     port (
       bcd_in : in  std_logic_vector(5 downto 0); -- Codigo en bcd
       segms  : out std_logic_vector(7 downto 0)  -- Display de 8 segmentos (incluido punto decimal)
@@ -115,14 +131,14 @@ begin
 synchronizers: for i in Boton'range generate -- Obligatorio que lleve nombre Lo hace para TODOS los botones
     Inst_SYNCHRNZR: SYNCHRNZR
       port map (
-        clk      => clk,
+        clk      => clk_escalado,
         async_in => Boton(i),
         sync_out => boton_sinc(i)
       );
 
   Inst_EDGEDTCTR: EDGEDTCTR 
       PORT MAP(
-        CLK     => CLK,
+        CLK     => clk_escalado,
         SYNC_IN => boton_sinc(i),
         EDGE    => boton_edge(i)
       );
@@ -131,15 +147,13 @@ synchronizers: for i in Boton'range generate -- Obligatorio que lleve nombre Lo 
   
   Inst_Prescale: prescaler
         Port Map (
-        
         clk_in  => clk,
         clk_out => clk_escalado
-        
         );
   
   Inst_timer: timer
         PORT MAP(
-         clk =>  clk_escalado, 
+         clk =>  clk, --clk_escalado, 
          reset => RESET,
          start_temp => T_Inic,
          end_temp =>T_Fin
@@ -148,43 +162,84 @@ synchronizers: for i in Boton'range generate -- Obligatorio que lleve nombre Lo 
   Inst_fsm: FSM
      PORT MAP(
         RESET  => reset,
-        CLK    => CLK,
+        CLK    => clk_escalado,
         Botones => boton_edge,
         LIGHT  => LIGHT,
-        salida => coste ,
+        salida => to_BCD_Decod,
         end_timer => T_Fin,
         error => error,
         money_ok => T_Inic,
         delivering => delivering   
   );
   
---  Inst_BCD_Decod: BCD_decoder
---    PORT MAP(
---        entrada => coste,
---        S0 =>  S0, 
---        S1 =>  S1,
---        S2 =>  S2,
---        S3 =>  S3,
---        S4 =>  S4,
---        S5 =>  S5,
---        S6 =>  S6,
---        S7 =>  S7
---    );
---    --Terminar de conectar
---  Inst_DisplayExit: display_exit
---    PORT MAP(
---        CLK    => CLK,
---        S0 =>  S0, 
---        S1 =>  S1,
---        S2 =>  S2,
---        S3 =>  S3,
---        S4 =>  S4,
---        S5 =>  S5,
---        S6 =>  S6,
---        S7 =>  S7,
---        display_number => display_number,
---        display_selection => display_select
---     );  
+  Inst_BCD_Decod: BCD_decoder
+    PORT MAP(
+        code_in => to_BCD_Decod,
+        S0 =>  to_BCD_7segm0, 
+        S1 =>  to_BCD_7segm1,
+        S2 =>  to_BCD_7segm2,
+        S3 =>  to_BCD_7segm3,
+        S4 =>  to_BCD_7segm4,
+        S5 =>  to_BCD_7segm5,
+        S6 =>  to_BCD_7segm6,
+        S7 =>  to_BCD_7segm7
+    );
+  
+  Inst_BCD_a_7segmentos0: BCD_a_7segments
+    PORT MAP(
+        bcd_in => to_BCD_7segm0,
+        segms => to_s0
+    );
+  Inst_BCD_a_7segmentos1: BCD_a_7segments
+    PORT MAP(
+        bcd_in => to_BCD_7segm1,
+        segms => to_s1
+    );
+  Inst_BCD_a_7segmentos2: BCD_a_7segments
+    PORT MAP(
+        bcd_in => to_BCD_7segm2,
+        segms => to_s2 
+    );
+  Inst_BCD_a_7segmentos3: BCD_a_7segments
+    PORT MAP(
+        bcd_in => to_BCD_7segm3,
+        segms => to_s3
+    );
+  Inst_BCD_a_7segmentos4: BCD_a_7segments
+    PORT MAP(
+        bcd_in => to_BCD_7segm4,
+        segms => to_s4
+    );
+  Inst_BCD_a_7segmentos5: BCD_a_7segments
+    PORT MAP(
+        bcd_in => to_BCD_7segm5,
+        segms => to_s5
+    );
+  Inst_BCD_a_7segmentos6: BCD_a_7segments
+    PORT MAP(
+        bcd_in => to_BCD_7segm6,
+        segms => to_s6
+    );
+  Inst_BCD_a_7segmentos7: BCD_a_7segments
+    PORT MAP(
+        bcd_in => to_BCD_7segm7,
+        segms => to_s7
+    );
+
+  Inst_DisplayExit: display_exit
+    PORT MAP(
+        CLK    => clk_escalado, --VER
+        S0 =>  to_s0, 
+        S1 =>  to_s1,
+        S2 =>  to_s2,
+        S3 =>  to_s3,
+        S4 =>  to_s4,
+        S5 =>  to_s5,
+        S6 =>  to_s6,
+        S7 =>  to_s7,
+        display_number => display_number,
+        display_selection => display_select
+     );  
          
 
 end Behavioral;

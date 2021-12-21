@@ -57,12 +57,12 @@ if current_state = S4 then                  -- bebida seleccionada. Hay que intr
 --elsif current_state = S6 then               -- estado para lanzar el temporizador para devolver importe
 --        next_state  <= current_state;
 
-elsif current_state = S5 then               -- estado de espera mientras se devuelve dinero
+elsif current_state = S6 then               -- estado de espera mientras se devuelve dinero
         if end_timer = '1' then             -- se termina de devolver dinero
             next_state <= S0;
         end if;
        
-elsif current_state = S6 then               -- estado de espera mientras se entrega producto
+elsif current_state = S5 then               -- estado de espera mientras se entrega producto
         if end_timer = '1' then             -- se termina de entregar bebida
             next_state <= S0;
         end if;
@@ -173,7 +173,7 @@ elsif    (current_state = S0 OR current_state = S1 OR current_state = S2   OR cu
         
      when S5 =>                             -- Estado para lanzar el temporizador para entregar producto
         LIGHT(5)    <= '1';
-        delivering  <= '1';                 -- No se esta entregando bebida
+        delivering  <= '1';                 -- SI se esta entregando bebida
         error       <= '0';                 -- No se esta devolviendo dinero
         money_ok    <= '1';                 -- SI se lanza temporizador
         salida      <= "11111010";          -- codigo para mostrar en displays "GRACIAS" (250 en binario)   
@@ -182,7 +182,7 @@ elsif    (current_state = S0 OR current_state = S1 OR current_state = S2   OR cu
         LIGHT(6)   <= '1';
         --LIGHT(3)   <= '1';
         delivering  <= '0';                 -- No se esta entregando bebida
-        error       <= '1';                 -- No se esta devolviendo dinero
+        error       <= '1';                 -- SI se esta devolviendo dinero
         money_ok    <= '1';                 -- SI se lanza temporizador
         salida      <= "11111111";          -- codigo para mostrar en displays "ERROR" (255 en binario)   
       
