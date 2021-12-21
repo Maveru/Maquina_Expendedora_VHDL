@@ -22,23 +22,16 @@ ENTITY top IS
 END top;
     
 architecture Behavioral of top is
-  signal clk_out_p                      : std_logic;                        -- señal de reloj a la salida del prescaler 
-  signal boton_edge                     : std_logic_vector (Boton'range);   -- se usara para la salida del detector de flanco 
-  signal boton_sinc                     : std_logic_vector (Boton'range);   -- se usara para la salida del sincronizador
-  signal S0, S1, S2, S3, S4, S5, S6, S7 :  std_logic_vector(7 downto 0);    -- codigo en BCD para cada digito del display
-  signal coste                          : std_logic_vector(7 downto 0);     -- salida de la fsm que ira a los displays
-  signal start_timer                    : std_logic;                        -- señal para activar temporizador 
-  signal end_timer                      : std_logic;                        -- señal para fin de temporizador 
-  signal to_BCD_Decod                   : std_logic_vector(7 downto 0);     -- señal para conectar salida de fsm con entrada de BCD_Decod 
-  signal to_BCD_7segm                   : std_logic_vector(5 downto 0);     -- señal para conectar salida de bcd_decod con bcd_to_7segm 
-  signal to_s0                          : std_logic_vector(7 downto 0);     -- señales para conectar salida de bcd_7segm con displays 
-  signal to_s1                          : std_logic_vector(7 downto 0);
-  signal to_s2                          : std_logic_vector(7 downto 0);
-  signal to_s3                          : std_logic_vector(7 downto 0);
-  signal to_s4                          : std_logic_vector(7 downto 0);
-  signal to_s5                          : std_logic_vector(7 downto 0);
-  signal to_s6                          : std_logic_vector(7 downto 0);
-  signal to_s7                          : std_logic_vector(7 downto 0);
+  signal boton_edge: std_logic_vector (Boton'range);                    -- se usara para la salida del detector de flanco 
+  signal boton_sinc: std_logic_vector (Boton'range);                    -- se usara para la salida del sincronizador
+  signal S0, S1, S2, S3, S4, S5, S6, S7:  std_logic_vector(7 downto 0); -- codigo en BCD para cada digito del display
+  --signal coste_int: integer;
+  
+  signal coste: std_logic_vector(7 downto 0);                           -- salida de la fsm que ira a los displays
+  signal clk_escalado: std_logic;                                       -- Va del Preescaler al Timer
+  
+  signal T_Fin: std_logic;                                              -- Va del Timer a la FSM
+  signal T_Inic: std_logic;                                             -- Va de la FSM al Timer
   
 component BCD_decoder is
     port (
@@ -135,17 +128,36 @@ synchronizers: for i in Boton'range generate -- Obligatorio que lleve nombre Lo 
       );
   
   end generate;
---  QUEDAN POR INSTANCIAR EL RESTO DE COMPONENTES 
-
-
---  Inst_fsm: FSM
---     PORT MAP(
---        RESET  => reset,
---        CLK    => CLK,
---        Botones => boton_edge,
---        LIGHT  => LIGHT,
---        salida => coste    
---  );
+  
+  Inst_Prescale: prescaler
+        Port Map (
+        
+        clk_in  => clk,
+        clk_out => clk_escalado
+        
+        );
+  
+  Inst_timer: timer
+        PORT MAP(
+         clk =>  clk_escalado, 
+         reset => RESET,
+         start_temp => T_Inic,
+         end_temp =>T_Fin
+        );
+  
+  Inst_fsm: FSM
+     PORT MAP(
+        RESET  => reset,
+        CLK    => CLK,
+        Botones => boton_edge,
+        LIGHT  => LIGHT,
+        salida => coste ,
+        end_timer => T_Fin,
+        error => error,
+        money_ok => T_Inic,
+        delivering => delivering   
+  );
+  
 --  Inst_BCD_Decod: BCD_decoder
 --    PORT MAP(
 --        entrada => coste,
