@@ -10,5 +10,5 @@
 19/12/2021 - Testbench DisplayExit realizado.
 20/12/2021 - Añadido timer en la fsm. Pendiente la simulación.
 20/12/2021 - Timer actualizado. Timer_tb funciona correctamente.
-21/12/2021 - FSm y FSM_tb actualizados.
-
+21/12/2021 - FSM y FSM_tb actualizados.
+21/12/2021 - TOP actualizado.
