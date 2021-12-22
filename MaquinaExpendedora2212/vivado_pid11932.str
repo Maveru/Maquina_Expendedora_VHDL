@@ -1,0 +1,589 @@
+/*
+
+Xilinx Vivado v2021.1 (64-bit) [Major: 2021, Minor: 1]
+SW Build: 3247384 on Thu Jun 10 19:36:33 MDT 2021
+IP Build: 3246043 on Fri Jun 11 00:30:35 MDT 2021
+
+Process ID (PID): 11932
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Tue Dec 21 19:58:48 CET 2021
+Time zone: 	Central European Standard Time (Europe/Paris)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 2
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.2 64-bit
+Java home: 	E:/Vivado/2021.1/tps/win64/jre11.0.2
+Java executable: 	E:/Vivado/2021.1/tps/win64/jre11.0.2/bin/java.exe
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	Propietario
+User home directory: C:/Users/Propietario
+User working directory: C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora
+User country: 	ES
+User language: 	es
+User locale: 	es_ES
+
+RDI_BASEROOT: E:/Vivado
+HDI_APPROOT: E:/Vivado/2021.1
+RDI_DATADIR: E:/Vivado/2021.1/data
+RDI_BINDIR: E:/Vivado/2021.1/bin
+
+Vivado preferences file: C:/Users/Propietario/AppData/Roaming/Xilinx/Vivado/2021.1/vivado.xml
+Vivado preferences directory: C:/Users/Propietario/AppData/Roaming/Xilinx/Vivado/2021.1/
+Vivado layouts directory: C:/Users/Propietario/AppData/Roaming/Xilinx/Vivado/2021.1/data/layouts
+PlanAhead jar file: 	E:/Vivado/2021.1/lib/classes/planAhead.jar
+Vivado log file: 	C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/vivado.log
+Vivado journal file: 	C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/vivado.jou
+Engine tmp dir: 	C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/.Xil/Vivado-11932-PACO-GUILLE
+
+Xilinx Environment Variables
+----------------------------
+XILINX: E:/Vivado/2021.1/ids_lite/ISE
+XILINX_DSP: E:/Vivado/2021.1/ids_lite/ISE
+XILINX_HLS: E:/Vitis_HLS/2021.1
+XILINX_PLANAHEAD: E:/Vivado/2021.1
+XILINX_VIVADO: E:/Vivado/2021.1
+XILINX_VIVADO_HLS: E:/Vivado/2021.1
+
+
+GUI allocated memory:	308 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,243 MB
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 108 MB (+110847kb) [00:00:05]
+// [Engine Memory]: 1,243 MB (+1152096kb) [00:00:05]
+// bz (cs):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\Propietario\Documents\GitHub\Maquina_Expendedora_VHDL\MaquinaExpendedora\MaquinaExpendedora.xpr. Version: Vivado v2021.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// Tcl Message: open_project C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.xpr 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora' 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 120 MB (+6911kb) [00:00:10]
+// WARNING: HEventQueue.dispatchEvent() is taking  3085 ms.
+// Tcl Message: open_project C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.xpr 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora' 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Vivado/2021.1/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,243 MB. GUI used memory: 64 MB. Current time: 12/21/21, 7:58:48 PM CET
+// Tcl Message: open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:06 . Memory (MB): peak = 1246.652 ; gain = 0.000 
+// Project name: MaquinaExpendedora; location: C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora; part: xc7a100tcsg324-1
+dismissDialog("Open Project"); // bz
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// [GUI Memory]: 127 MB (+1181kb) [00:00:14]
+// a (cs): Critical Messages: addNotify
+// [GUI Memory]: 140 MB (+6744kb) [00:00:18]
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sim_1 
+// Tcl Message: update_compile_order -fileset sources_1 
+// I (cs): Invalid Top Module: addNotify
+// Elapsed time: 13 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+dismissDialog("Invalid Top Module"); // I
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f
+dismissDialog("Critical Messages"); // a
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sim_1 
+// [GUI Memory]: 161 MB (+14687kb) [00:00:32]
+// Elapsed time: 50 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (TOP.vhd)]", 1); // D
+// Elapsed time: 107 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, display_exit(Behavioral) (DisplayExit.vhd)]", 17, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, display_exit(Behavioral) (DisplayExit.vhd)]", 17, false, false, false, false, false, true); // D - Double Click
+// WARNING: HEventQueue.dispatchEvent() is taking  1215 ms.
+// Elapsed time: 22 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, BCD_decoder(Behavioral) (BCD_Decod.vhd)]", 16, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, BCD_decoder(Behavioral) (BCD_Decod.vhd)]", 16, false, false, false, false, false, true); // D - Double Click
+// WARNING: HEventQueue.dispatchEvent() is taking  1171 ms.
+// Elapsed time: 35 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, BCD_a_7segments(Behavioral) (BCD_a_7segments.vhd)]", 15, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, BCD_a_7segments(Behavioral) (BCD_a_7segments.vhd)]", 15, false, false, false, false, false, true); // D - Double Click
+// WARNING: HEventQueue.dispatchEvent() is taking  1141 ms.
+// Elapsed time: 18 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (TOP.vhd), Inst_Prescale : prescaler(Behavioral) (prescaler.vhd)]", 2, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (TOP.vhd), Inst_Prescale : prescaler(Behavioral) (prescaler.vhd)]", 2, false, false, false, false, false, true); // D - Double Click
+// WARNING: HEventQueue.dispatchEvent() is taking  1132 ms.
+// Elapsed time: 16 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (TOP.vhd), Inst_timer : timer(Behavioral) (timer.vhd)]", 3, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (TOP.vhd), Inst_timer : timer(Behavioral) (timer.vhd)]", 3, false, false, false, false, false, true); // D - Double Click
+// WARNING: HEventQueue.dispatchEvent() is taking  1122 ms.
+// Elapsed time: 20 seconds
+selectCodeEditor("timer.vhd", 46, 299); // bP
+// Elapsed time: 39 seconds
+selectCodeEditor("timer.vhd", 149, 282); // bP
+// Elapsed time: 48 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 11 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (TOP.vhd), Inst_fsm : fsm(behavioral) (FSM.vhd)]", 4, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (TOP.vhd), Inst_fsm : fsm(behavioral) (FSM.vhd)]", 4, false, false, false, false, false, true); // D - Double Click
+// WARNING: HEventQueue.dispatchEvent() is taking  1140 ms.
+// Elapsed time: 279 seconds
+selectCodeEditor("FSM.vhd", 329, 330); // bP
+selectCodeEditor("FSM.vhd", 329, 330, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("FSM.vhd", 167, 248); // bP
+typeControlKey(null, null, 'z');
+// Elapsed time: 64 seconds
+selectCodeEditor("FSM.vhd", 342, 262); // bP
+// Elapsed time: 40 seconds
+selectCodeEditor("FSM.vhd", 344, 418); // bP
+selectCodeEditor("FSM.vhd", 447, 360); // bP
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 24 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (TOP.vhd)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (TOP.vhd)]", 1, true, false, false, false, false, true); // D - Double Click - Node
+// WARNING: HEventQueue.dispatchEvent() is taking  1162 ms.
+// Elapsed time: 227 seconds
+selectCodeEditor("TOP.vhd", 61, 247); // bP
+selectCodeEditor("TOP.vhd", 61, 247, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("TOP.vhd", 160, 211); // bP
+selectCodeEditor("TOP.vhd", 160, 211, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("TOP.vhd", 160, 211); // bP
+selectCodeEditor("TOP.vhd", 153, 329); // bP
+// Elapsed time: 41 seconds
+selectCodeEditor("TOP.vhd", 130, 312); // bP
+selectCodeEditor("TOP.vhd", 54, 347); // bP
+selectCodeEditor("TOP.vhd", 238, 309); // bP
+// Elapsed time: 55 seconds
+selectCodeEditor("TOP.vhd", 66, 245); // bP
+// Elapsed time: 28 seconds
+selectCodeEditor("TOP.vhd", 145, 318); // bP
+// Elapsed time: 10 seconds
+selectCodeEditor("TOP.vhd", 206, 343); // bP
+selectCodeEditor("TOP.vhd", 77, 351); // bP
+// Elapsed time: 11 seconds
+selectCodeEditor("TOP.vhd", 150, 194); // bP
+selectCodeEditor("TOP.vhd", 150, 194, false, false, false, false, true); // bP - Double Click
+// Elapsed time: 88 seconds
+selectCodeEditor("TOP.vhd", 716, 265); // bP
+// Elapsed time: 33 seconds
+selectCodeEditor("TOP.vhd", 36, 229); // bP
+selectCodeEditor("TOP.vhd", 596, 193); // bP
+// Elapsed time: 14 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FSM.vhd", 6); // m
+selectCodeEditor("FSM.vhd", 340, 245); // bP
+selectCodeEditor("FSM.vhd", 340, 245); // bP
+selectCodeEditor("FSM.vhd", 291, 249); // bP
+selectCodeEditor("FSM.vhd", 291, 249, false, false, false, false, true); // bP - Double Click
+// Elapsed time: 15 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "TOP.vhd", 7); // m
+// Elapsed time: 27 seconds
+selectCodeEditor("TOP.vhd", 687, 279); // bP
+// Elapsed time: 13 seconds
+selectCodeEditor("TOP.vhd", 791, 259); // bP
+selectCodeEditor("TOP.vhd", 227, 254); // bP
+selectCodeEditor("TOP.vhd", 944, 264); // bP
+// Elapsed time: 17 seconds
+selectCodeEditor("TOP.vhd", 19, 281); // bP
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+selectCodeEditor("TOP.vhd", 534, 285); // bP
+selectCodeEditor("TOP.vhd", 506, 264); // bP
+selectCodeEditor("TOP.vhd", 531, 284); // bP
+selectCodeEditor("TOP.vhd", 510, 268); // bP
+selectCodeEditor("TOP.vhd", 499, 248); // bP
+selectCodeEditor("TOP.vhd", 503, 249, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("TOP.vhd", 503, 248); // bP
+selectCodeEditor("TOP.vhd", 504, 230); // bP
+selectCodeEditor("TOP.vhd", 504, 230, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("TOP.vhd", 504, 227); // bP
+selectCodeEditor("TOP.vhd", 506, 234); // bP
+selectCodeEditor("TOP.vhd", 503, 215); // bP
+selectCodeEditor("TOP.vhd", 504, 202); // bP
+selectCodeEditor("TOP.vhd", 506, 182); // bP
+selectCodeEditor("TOP.vhd", 505, 164); // bP
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 36 seconds
+selectCodeEditor("TOP.vhd", 144, 348); // bP
+selectCodeEditor("TOP.vhd", 144, 348, false, false, false, false, true); // bP - Double Click
+// HMemoryUtils.trashcanNow. Engine heap size: 1,243 MB. GUI used memory: 103 MB. Current time: 12/21/21, 8:28:52 PM CET
+// Elapsed time: 418 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (TOP.vhd)]", 1); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (TOP.vhd), Inst_Prescale : prescaler(Behavioral) (prescaler.vhd)]", 2, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (TOP.vhd), Inst_Prescale : prescaler(Behavioral) (prescaler.vhd)]", 2, false, false, false, false, false, true); // D - Double Click
+// Elapsed time: 50 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "timer.vhd", 5); // m
+// Elapsed time: 57 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "prescaler.vhd", 4); // m
+// Elapsed time: 91 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FSM.vhd", 6); // m
+// Elapsed time: 18 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "TOP.vhd", 7); // m
+// Elapsed time: 25 seconds
+selectCodeEditor("TOP.vhd", 117, 280); // bP
+// Elapsed time: 34 seconds
+selectCodeEditor("TOP.vhd", 0, 178); // bP
+selectButton(RDIResourceCommand.RDICommands_LINE_COMMENT, (String) null); // E
+selectCodeEditor("TOP.vhd", 152, 176); // bP
+// Elapsed time: 28 seconds
+selectCodeEditor("TOP.vhd", 81, 24); // bP
+selectCodeEditor("TOP.vhd", 81, 24, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("TOP.vhd", 181, 43); // bP
+// Elapsed time: 59 seconds
+selectCodeEditor("TOP.vhd", 135, 265); // bP
+selectCodeEditor("TOP.vhd", 135, 265, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("TOP.vhd", 138, 266); // bP
+selectCodeEditor("TOP.vhd", 138, 266, false, false, false, false, true); // bP - Double Click
+// Elapsed time: 25 seconds
+selectCodeEditor("TOP.vhd", 2, 93); // bP
+typeControlKey((HResource) null, "TOP.vhd", 'c'); // bP
+selectCodeEditor("TOP.vhd", 151, 261); // bP
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+selectCodeEditor("TOP.vhd", 105, 247); // bP
+// Elapsed time: 12 seconds
+selectCodeEditor("TOP.vhd", 120, 206); // bP
+// Elapsed time: 11 seconds
+selectCodeEditor("TOP.vhd", 758, 247); // bP
+// Elapsed time: 15 seconds
+selectCodeEditor("TOP.vhd", 75, 470); // bP
+selectCodeEditor("TOP.vhd", 203, 263); // bP
+// Elapsed time: 14 seconds
+selectCodeEditor("TOP.vhd", 386, 187); // bP
+// Elapsed time: 13 seconds
+selectCodeEditor("TOP.vhd", 44, 142); // bP
+typeControlKey((HResource) null, "TOP.vhd", 'c'); // bP
+selectCodeEditor("TOP.vhd", 124, 198); // bP
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+selectCodeEditor("TOP.vhd", 45, 231); // bP
+// Elapsed time: 28 seconds
+selectCodeEditor("TOP.vhd", 175, 330); // bP
+// Elapsed time: 11 seconds
+selectCodeEditor("TOP.vhd", 205, 330); // bP
+// Elapsed time: 21 seconds
+selectCodeEditor("TOP.vhd", 188, 331); // bP
+selectCodeEditor("TOP.vhd", 188, 331, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("TOP.vhd", 270, 299); // bP
+// Elapsed time: 13 seconds
+selectCodeEditor("TOP.vhd", 248, 431); // bP
+selectCodeEditor("TOP.vhd", 350, 385); // bP
+selectCodeEditor("TOP.vhd", 111, 385); // bP
+selectCodeEditor("TOP.vhd", 307, 322); // bP
+// Elapsed time: 12 seconds
+selectCodeEditor("TOP.vhd", 12, 333); // bP
+selectCodeEditor("TOP.vhd", 14, 124); // bP
+typeControlKey((HResource) null, "TOP.vhd", 'c'); // bP
+selectCodeEditor("TOP.vhd", 32, 336); // bP
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+selectCodeEditor("TOP.vhd", 112, 315); // bP
+// Elapsed time: 11 seconds
+selectCodeEditor("TOP.vhd", 232, 278); // bP
+selectCodeEditor("TOP.vhd", 259, 320); // bP
+// Elapsed time: 23 seconds
+selectCodeEditor("TOP.vhd", 135, 332); // bP
+// Elapsed time: 18 seconds
+selectCodeEditor("TOP.vhd", 189, 359); // bP
+selectCodeEditor("TOP.vhd", 197, 352); // bP
+selectCodeEditor("TOP.vhd", 154, 368); // bP
+// Elapsed time: 55 seconds
+selectCodeEditor("TOP.vhd", 12, 214); // bP
+typeControlKey((HResource) null, "TOP.vhd", 'c'); // bP
+selectCodeEditor("TOP.vhd", 14, 231); // bP
+selectCodeEditor("TOP.vhd", 21, 232); // bP
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+selectCodeEditor("TOP.vhd", 145, 218); // bP
+// Elapsed time: 10 seconds
+selectCodeEditor("TOP.vhd", 288, 297); // bP
+selectCodeEditor("TOP.vhd", 290, 271); // bP
+selectCodeEditor("TOP.vhd", 287, 249); // bP
+selectCodeEditor("TOP.vhd", 287, 231); // bP
+selectCodeEditor("TOP.vhd", 287, 214); // bP
+selectCodeEditor("TOP.vhd", 15, 299); // bP
+typeControlKey((HResource) null, "TOP.vhd", 'c'); // bP
+selectCodeEditor("TOP.vhd", 516, 295); // bP
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+selectCodeEditor("TOP.vhd", 153, 300); // bP
+selectCodeEditor("TOP.vhd", 155, 314); // bP
+selectCodeEditor("TOP.vhd", 154, 328); // bP
+selectCodeEditor("TOP.vhd", 256, 316); // bP
+// Elapsed time: 87 seconds
+selectCodeEditor("TOP.vhd", 12, 213); // bP
+selectCodeEditor("TOP.vhd", 524, 326); // bP
+selectCodeEditor("TOP.vhd", 493, 333); // bP
+selectCodeEditor("TOP.vhd", 515, 331); // bP
+selectCodeEditor("TOP.vhd", 10, 215); // bP
+selectCodeEditor("TOP.vhd", 17, 212); // bP
+selectCodeEditor("TOP.vhd", 75, 105); // bP
+selectCodeEditor("TOP.vhd", 75, 105, false, false, false, false, true); // bP - Double Click
+// Elapsed time: 26 seconds
+selectCodeEditor("TOP.vhd", 47, 182); // bP
+// Elapsed time: 12 seconds
+selectCodeEditor("TOP.vhd", 52, 96); // bP
+selectCodeEditor("TOP.vhd", 52, 96, false, false, false, false, true); // bP - Double Click
+// Elapsed time: 34 seconds
+selectCodeEditor("TOP.vhd", 122, 277); // bP
+// Elapsed time: 207 seconds
+selectCodeEditor("TOP.vhd", 13, 199); // bP
+// Elapsed time: 19 seconds
+selectCodeEditor("TOP.vhd", 29, 300); // bP
+selectCodeEditor("TOP.vhd", 14, 299); // bP
+typeControlKey((HResource) null, "TOP.vhd", 'c'); // bP
+selectCodeEditor("TOP.vhd", 18, 311); // bP
+selectCodeEditor("TOP.vhd", 17, 314); // bP
+selectCodeEditor("TOP.vhd", 23, 311); // bP
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+typeControlKey(null, null, 'z');
+typeControlKey((HResource) null, "TOP.vhd", 'c'); // bP
+selectCodeEditor("TOP.vhd", 82, 295); // bP
+selectCodeEditor("TOP.vhd", 14, 318); // bP
+selectCodeEditor("TOP.vhd", 844, 308); // bP
+selectCodeEditor("TOP.vhd", 959, 312); // bP
+selectCodeEditor("TOP.vhd", 497, 318); // bP
+typeControlKey((HResource) null, "TOP.vhd", 'c'); // bP
+selectCodeEditor("TOP.vhd", 28, 329); // bP
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+selectCodeEditor("TOP.vhd", 15, 298); // bP
+selectCodeEditor("TOP.vhd", 151, 331); // bP
+// Elapsed time: 10 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 11 seconds
+selectCodeEditor("TOP.vhd", 116, 211); // bP
+// Elapsed time: 10 seconds
+selectCodeEditor("TOP.vhd", 117, 232); // bP
+// Elapsed time: 42 seconds
+selectCodeEditor("TOP.vhd", 125, 199); // bP
+selectCodeEditor("TOP.vhd", 125, 199, false, false, false, false, true); // bP - Double Click
+// Elapsed time: 39 seconds
+selectCodeEditor("TOP.vhd", 12, 127); // bP
+selectCodeEditor("TOP.vhd", 96, 128); // bP
+selectCodeEditor("TOP.vhd", 96, 128, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("TOP.vhd", 162, 294); // bP
+// Elapsed time: 10 seconds
+selectCodeEditor("TOP.vhd", 218, 300); // bP
+selectCodeEditor("TOP.vhd", 170, 298); // bP
+selectCodeEditor("TOP.vhd", 170, 298, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "TOP.vhd", 'c'); // bP
+selectCodeEditor("TOP.vhd", 149, 454); // bP
+selectCodeEditor("TOP.vhd", 149, 454, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+selectCodeEditor("TOP.vhd", 204, 265); // bP
+selectCodeEditor("TOP.vhd", 57, 280); // bP
+selectCodeEditor("TOP.vhd", 152, 248); // bP
+selectCodeEditor("TOP.vhd", 139, 247); // bP
+// Elapsed time: 17 seconds
+selectCodeEditor("TOP.vhd", 196, 258); // bP
+// Elapsed time: 17 seconds
+selectCodeEditor("TOP.vhd", 201, 268); // bP
+selectCodeEditor("TOP.vhd", 16, 209); // bP
+typeControlKey((HResource) null, "TOP.vhd", 'c'); // bP
+selectCodeEditor("TOP.vhd", 67, 281); // bP
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+selectCodeEditor("TOP.vhd", 170, 299); // bP
+selectCodeEditor("TOP.vhd", 213, 243); // bP
+selectCodeEditor("TOP.vhd", 219, 334); // bP
+selectCodeEditor("TOP.vhd", 207, 277); // bP
+selectCodeEditor("TOP.vhd", 42, 364); // bP
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+selectCodeEditor("TOP.vhd", 168, 265); // bP
+selectCodeEditor("TOP.vhd", 229, 238); // bP
+selectCodeEditor("TOP.vhd", 217, 301); // bP
+selectCodeEditor("TOP.vhd", 217, 301, false, false, false, false, true); // bP - Double Click
+selectCodeEditor("TOP.vhd", 216, 299); // bP
+selectCodeEditor("TOP.vhd", 240, 295); // bP
+selectCodeEditor("TOP.vhd", 168, 264); // bP
+selectCodeEditor("TOP.vhd", 168, 351); // bP
+selectCodeEditor("TOP.vhd", 156, 258); // bP
+selectCodeEditor("TOP.vhd", 214, 383); // bP
+selectCodeEditor("TOP.vhd", 159, 402); // bP
+selectCodeEditor("TOP.vhd", 194, 383); // bP
+selectCodeEditor("TOP.vhd", 166, 266); // bP
+selectCodeEditor("TOP.vhd", 226, 248); // bP
+selectCodeEditor("TOP.vhd", 216, 298); // bP
+selectCodeEditor("TOP.vhd", 162, 322); // bP
+selectCodeEditor("TOP.vhd", 174, 268); // bP
+selectCodeEditor("TOP.vhd", 166, 349); // bP
+selectCodeEditor("TOP.vhd", 189, 335); // bP
+selectCodeEditor("TOP.vhd", 216, 382); // bP
+selectCodeEditor("TOP.vhd", 178, 406); // bP
+selectCodeEditor("TOP.vhd", 221, 357); // bP
+selectCodeEditor("TOP.vhd", 168, 266); // bP
+selectCodeEditor("TOP.vhd", 254, 241); // bP
+selectCodeEditor("TOP.vhd", 214, 294); // bP
+selectCodeEditor("TOP.vhd", 164, 320); // bP
+selectCodeEditor("TOP.vhd", 163, 353); // bP
+selectCodeEditor("TOP.vhd", 168, 354); // bP
+selectCodeEditor("TOP.vhd", 218, 385); // bP
+selectCodeEditor("TOP.vhd", 193, 397); // bP
+selectCodeEditor("TOP.vhd", 199, 450); // bP
+// Elapsed time: 20 seconds
+selectCodeEditor("TOP.vhd", 149, 248); // bP
+selectCodeEditor("TOP.vhd", 226, 254); // bP
+selectCodeEditor("TOP.vhd", 226, 254); // bP
+selectCodeEditor("TOP.vhd", 237, 264); // bP
+// Elapsed time: 18 seconds
+selectCodeEditor("TOP.vhd", 43, 282); // bP
+typeControlKey((HResource) null, "TOP.vhd", 'c'); // bP
+selectCodeEditor("TOP.vhd", 285, 327); // bP
+selectCodeEditor("TOP.vhd", 102, 361); // bP
+selectCodeEditor("TOP.vhd", 75, 369); // bP
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+selectCodeEditor("TOP.vhd", 57, 196); // bP
+selectCodeEditor("TOP.vhd", 117, 266); // bP
+// Elapsed time: 24 seconds
+selectCodeEditor("TOP.vhd", 103, 348); // bP
+typeControlKey((HResource) null, "TOP.vhd", 'c'); // bP
+selectCodeEditor("TOP.vhd", 112, 367); // bP
+selectCodeEditor("TOP.vhd", 112, 367, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+selectCodeEditor("TOP.vhd", 110, 384); // bP
+selectCodeEditor("TOP.vhd", 110, 384, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+selectCodeEditor("TOP.vhd", 111, 403); // bP
+selectCodeEditor("TOP.vhd", 111, 403, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+selectCodeEditor("TOP.vhd", 112, 414); // bP
+selectCodeEditor("TOP.vhd", 112, 414, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+selectCodeEditor("TOP.vhd", 109, 429); // bP
+selectCodeEditor("TOP.vhd", 109, 429, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+selectCodeEditor("TOP.vhd", 111, 454); // bP
+selectCodeEditor("TOP.vhd", 111, 454, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+selectCodeEditor("TOP.vhd", 113, 465); // bP
+selectCodeEditor("TOP.vhd", 113, 465, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+selectCodeEditor("TOP.vhd", 138, 370); // bP
+// Elapsed time: 15 seconds
+selectCodeEditor("TOP.vhd", 167, 383); // bP
+// Elapsed time: 12 seconds
+selectCodeEditor("TOP.vhd", 140, 253); // bP
+selectCodeEditor("TOP.vhd", 171, 195); // bP
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,243 MB. GUI used memory: 93 MB. Current time: 12/21/21, 8:58:52 PM CET
+// Elapsed time: 27 seconds
+selectCodeEditor("TOP.vhd", 223, 369); // bP
+// Elapsed time: 11 seconds
+selectCodeEditor("TOP.vhd", 324, 263); // bP
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 36 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "BCD_Decod.vhd", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "BCD_a_7segments.vhd", 3); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "TOP.vhd", 7); // m
+selectCodeEditor("TOP.vhd", 142, 210); // bP
+selectCodeEditor("TOP.vhd", 142, 210, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "TOP.vhd", 'c'); // bP
+typeControlKey((HResource) null, "TOP.vhd", 'c'); // bP
+selectCodeEditor("TOP.vhd", 223, 282); // bP
+selectCodeEditor("TOP.vhd", 223, 282, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+selectCodeEditor("TOP.vhd", 247, 194); // bP
+selectCodeEditor("TOP.vhd", 247, 194, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "BCD_Decod.vhd", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "BCD_a_7segments.vhd", 3); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "TOP.vhd", 7); // m
+selectCodeEditor("TOP.vhd", 121, 229); // bP
+selectCodeEditor("TOP.vhd", 181, 272); // bP
+selectCodeEditor("TOP.vhd", 151, 237); // bP
+selectCodeEditor("TOP.vhd", 151, 237, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "TOP.vhd", 'c'); // bP
+selectCodeEditor("TOP.vhd", 217, 378); // bP
+selectCodeEditor("TOP.vhd", 217, 378, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+selectCodeEditor("TOP.vhd", 223, 302); // bP
+selectCodeEditor("TOP.vhd", 223, 302, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+selectCodeEditor("TOP.vhd", 222, 389); // bP
+selectCodeEditor("TOP.vhd", 222, 389, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+selectCodeEditor("TOP.vhd", 219, 464); // bP
+selectCodeEditor("TOP.vhd", 219, 464, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+selectCodeEditor("TOP.vhd", 222, 384); // bP
+selectCodeEditor("TOP.vhd", 222, 384, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+selectCodeEditor("TOP.vhd", 212, 470); // bP
+selectCodeEditor("TOP.vhd", 212, 470, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+selectCodeEditor("TOP.vhd", 232, 377); // bP
+selectCodeEditor("TOP.vhd", 232, 377, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+selectCodeEditor("TOP.vhd", 210, 470); // bP
+selectCodeEditor("TOP.vhd", 210, 470, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE

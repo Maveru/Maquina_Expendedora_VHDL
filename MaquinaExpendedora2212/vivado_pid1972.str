@@ -1,0 +1,223 @@
+/*
+
+Xilinx Vivado v2021.1 (64-bit) [Major: 2021, Minor: 1]
+SW Build: 3247384 on Thu Jun 10 19:36:33 MDT 2021
+IP Build: 3246043 on Fri Jun 11 00:30:35 MDT 2021
+
+Process ID (PID): 1972
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Mon Dec 20 16:01:10 CET 2021
+Time zone: 	Central European Standard Time (Europe/Paris)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 2
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.2 64-bit
+Java home: 	E:/Vivado/2021.1/tps/win64/jre11.0.2
+Java executable: 	E:/Vivado/2021.1/tps/win64/jre11.0.2/bin/java.exe
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	Propietario
+User home directory: C:/Users/Propietario
+User working directory: C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora
+User country: 	ES
+User language: 	es
+User locale: 	es_ES
+
+RDI_BASEROOT: E:/Vivado
+HDI_APPROOT: E:/Vivado/2021.1
+RDI_DATADIR: E:/Vivado/2021.1/data
+RDI_BINDIR: E:/Vivado/2021.1/bin
+
+Vivado preferences file: C:/Users/Propietario/AppData/Roaming/Xilinx/Vivado/2021.1/vivado.xml
+Vivado preferences directory: C:/Users/Propietario/AppData/Roaming/Xilinx/Vivado/2021.1/
+Vivado layouts directory: C:/Users/Propietario/AppData/Roaming/Xilinx/Vivado/2021.1/data/layouts
+PlanAhead jar file: 	E:/Vivado/2021.1/lib/classes/planAhead.jar
+Vivado log file: 	C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/vivado.log
+Vivado journal file: 	C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/vivado.jou
+Engine tmp dir: 	C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/.Xil/Vivado-1972-PACO-GUILLE
+
+Xilinx Environment Variables
+----------------------------
+XILINX: E:/Vivado/2021.1/ids_lite/ISE
+XILINX_DSP: E:/Vivado/2021.1/ids_lite/ISE
+XILINX_HLS: E:/Vitis_HLS/2021.1
+XILINX_PLANAHEAD: E:/Vivado/2021.1
+XILINX_VIVADO: E:/Vivado/2021.1
+XILINX_VIVADO_HLS: E:/Vivado/2021.1
+
+
+GUI allocated memory:	308 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,243 MB
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 89 MB (+90700kb) [00:00:05]
+// [Engine Memory]: 1,243 MB (+1151691kb) [00:00:05]
+// bz (cs):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\Propietario\Documents\GitHub\Maquina_Expendedora_VHDL\MaquinaExpendedora\MaquinaExpendedora.xpr. Version: Vivado v2021.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// Tcl Message: open_project C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.xpr 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora' 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 106 MB (+12763kb) [00:00:09]
+// [GUI Memory]: 113 MB (+1871kb) [00:00:10]
+// [GUI Memory]: 129 MB (+10848kb) [00:00:10]
+// WARNING: HEventQueue.dispatchEvent() is taking  3018 ms.
+// Tcl Message: open_project C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.xpr 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora' 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Vivado/2021.1/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,243 MB. GUI used memory: 67 MB. Current time: 12/20/21, 4:01:10 PM CET
+// Tcl Message: open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:06 . Memory (MB): peak = 1247.270 ; gain = 0.000 
+// Project name: MaquinaExpendedora; location: C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora; part: xc7a100tcsg324-1
+dismissDialog("Open Project"); // bz
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+selectButton(PAResourceQtoS.RunGadget_SHOW_WARNING_AND_ERROR_MESSAGES_IN_MESSAGES, "1 warning"); // h
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+// [GUI Memory]: 139 MB (+3745kb) [00:00:16]
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 22 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (TOP.vhd)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (TOP.vhd), synchronizers[4].Inst_SYNCHRNZR : SYNCHRNZR(BEHAVIORAL) (sincro.vhd)]", 2, false, false, false, false, false, true); // D - Double Click
+// WARNING: HEventQueue.dispatchEvent() is taking  1261 ms.
+// Elapsed time: 109 seconds
+selectCodeEditor("TOP.vhd", 845, 177); // bP
+selectCodeEditor("TOP.vhd", 15, 158); // bP
+selectCodeEditor("TOP.vhd", 39, 160); // bP
+// [GUI Memory]: 149 MB (+4115kb) [00:03:06]
+// Elapsed time: 40 seconds
+selectCodeEditor("TOP.vhd", 303, 162); // bP
+selectCodeEditor("TOP.vhd", 322, 134); // bP
+selectCodeEditor("TOP.vhd", 283, 157); // bP
+selectCodeEditor("TOP.vhd", 276, 214); // bP
+selectCodeEditor("TOP.vhd", 511, 215); // bP
+selectCodeEditor("TOP.vhd", 135, 179); // bP
+selectCodeEditor("TOP.vhd", 135, 196); // bP
+selectCodeEditor("TOP.vhd", 648, 180); // bP
+selectCodeEditor("TOP.vhd", 505, 214); // bP
+selectCodeEditor("TOP.vhd", 651, 179); // bP
+selectCodeEditor("TOP.vhd", 652, 198); // bP
+selectCodeEditor("TOP.vhd", 501, 246); // bP
+selectCodeEditor("TOP.vhd", 236, 228); // bP
+selectCodeEditor("TOP.vhd", 375, 162); // bP
+selectCodeEditor("TOP.vhd", 97, 231); // bP
+selectCodeEditor("TOP.vhd", 311, 157); // bP
+selectCodeEditor("TOP.vhd", 594, 157); // bP
+// Elapsed time: 35 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fsm(behavioral) (FSM.vhd)]", 15, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fsm(behavioral) (FSM.vhd)]", 15, false, false, false, false, false, true); // D - Double Click
+// WARNING: HEventQueue.dispatchEvent() is taking  1165 ms.
+// Elapsed time: 20 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "TOP.vhd", 1); // m
+selectCodeEditor("TOP.vhd", 849, 313); // bP
+// Elapsed time: 20 seconds
+selectCodeEditor("TOP.vhd", 98, 313); // bP
+selectCodeEditor("TOP.vhd", 713, 314); // bP
+selectCodeEditor("TOP.vhd", 198, 334); // bP
+// [GUI Memory]: 159 MB (+2586kb) [00:05:39]
+// Elapsed time: 159 seconds
+selectCodeEditor("TOP.vhd", 158, 383); // bP
+// Elapsed time: 89 seconds
+selectCodeEditor("TOP.vhd", 30, 390); // bP
+selectCodeEditor("TOP.vhd", 36, 400); // bP
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+selectCodeEditor("TOP.vhd", 64, 212); // bP
+// Elapsed time: 29 seconds
+selectCodeEditor("TOP.vhd", 86, 217); // bP
+selectCodeEditor("TOP.vhd", 71, 212); // bP
+selectCodeEditor("TOP.vhd", 71, 212, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "TOP.vhd", 'c'); // bP
+selectCodeEditor("TOP.vhd", 129, 229); // bP
+selectCodeEditor("TOP.vhd", 129, 229, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+selectCodeEditor("TOP.vhd", 135, 247); // bP
+selectCodeEditor("TOP.vhd", 135, 247, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+selectCodeEditor("TOP.vhd", 133, 261); // bP
+selectCodeEditor("TOP.vhd", 133, 261, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+selectCodeEditor("TOP.vhd", 128, 276); // bP
+selectCodeEditor("TOP.vhd", 128, 276, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+selectCodeEditor("TOP.vhd", 127, 296); // bP
+selectCodeEditor("TOP.vhd", 127, 296, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+selectCodeEditor("TOP.vhd", 125, 312); // bP
+selectCodeEditor("TOP.vhd", 125, 312, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+selectCodeEditor("TOP.vhd", 126, 335); // bP
+selectCodeEditor("TOP.vhd", 126, 335, false, false, false, false, true); // bP - Double Click
+typeControlKey((HResource) null, "TOP.vhd", 'v'); // bP
+selectCodeEditor("TOP.vhd", 100, 228); // bP
+selectCodeEditor("TOP.vhd", 112, 214); // bP
+selectCodeEditor("TOP.vhd", 113, 230); // bP
+selectCodeEditor("TOP.vhd", 114, 230); // bP
+selectCodeEditor("TOP.vhd", 109, 253); // bP
+selectCodeEditor("TOP.vhd", 112, 266); // bP
+selectCodeEditor("TOP.vhd", 106, 282); // bP
+selectCodeEditor("TOP.vhd", 288, 279); // bP
+selectCodeEditor("TOP.vhd", 111, 301); // bP
+selectCodeEditor("TOP.vhd", 115, 315); // bP
+selectCodeEditor("TOP.vhd", 113, 335); // bP
+selectCodeEditor("TOP.vhd", 572, 217); // bP
+// Elapsed time: 27 seconds
+selectCodeEditor("TOP.vhd", 589, 213); // bP
+selectCodeEditor("TOP.vhd", 632, 164); // bP
+// Elapsed time: 10 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("TOP.vhd", 44, 287); // bP
+// Elapsed time: 25 seconds
+selectCodeEditor("TOP.vhd", 348, 284); // bP
+// Elapsed time: 14 seconds
+selectButton(RDIResourceCommand.RDICommands_SAVE_FILE, (String) null); // E
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE

@@ -1,0 +1,167 @@
+/*
+
+Xilinx Vivado v2021.1 (64-bit) [Major: 2021, Minor: 1]
+SW Build: 3247384 on Thu Jun 10 19:36:33 MDT 2021
+IP Build: 3246043 on Fri Jun 11 00:30:35 MDT 2021
+
+Process ID (PID): 4516
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Wed Dec 15 20:08:44 CET 2021
+Time zone: 	Central European Standard Time (Europe/Paris)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 2
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.2 64-bit
+Java home: 	E:/Vivado/2021.1/tps/win64/jre11.0.2
+Java executable: 	E:/Vivado/2021.1/tps/win64/jre11.0.2/bin/java.exe
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	Propietario
+User home directory: C:/Users/Propietario
+User working directory: E:/Copia Disco F/4 CARRERA/Sistemas Electrnicos Digitales/trabajo/Maquina_Expendedora_VHDL-main/MaquinaExpendedora
+User country: 	ES
+User language: 	es
+User locale: 	es_ES
+
+RDI_BASEROOT: E:/Vivado
+HDI_APPROOT: E:/Vivado/2021.1
+RDI_DATADIR: E:/Vivado/2021.1/data
+RDI_BINDIR: E:/Vivado/2021.1/bin
+
+Vivado preferences file: C:/Users/Propietario/AppData/Roaming/Xilinx/Vivado/2021.1/vivado.xml
+Vivado preferences directory: C:/Users/Propietario/AppData/Roaming/Xilinx/Vivado/2021.1/
+Vivado layouts directory: C:/Users/Propietario/AppData/Roaming/Xilinx/Vivado/2021.1/data/layouts
+PlanAhead jar file: 	E:/Vivado/2021.1/lib/classes/planAhead.jar
+Vivado log file: 	E:/Copia Disco F/4 CARRERA/Sistemas Electrnicos Digitales/trabajo/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/vivado.log
+Vivado journal file: 	E:/Copia Disco F/4 CARRERA/Sistemas Electrnicos Digitales/trabajo/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/vivado.jou
+Engine tmp dir: 	E:/Copia Disco F/4 CARRERA/Sistemas Electrnicos Digitales/trabajo/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/.Xil/Vivado-4516-PACO-GUILLE
+
+Xilinx Environment Variables
+----------------------------
+XILINX: E:/Vivado/2021.1/ids_lite/ISE
+XILINX_DSP: E:/Vivado/2021.1/ids_lite/ISE
+XILINX_HLS: E:/Vitis_HLS/2021.1
+XILINX_PLANAHEAD: E:/Vivado/2021.1
+XILINX_VIVADO: E:/Vivado/2021.1
+XILINX_VIVADO_HLS: E:/Vivado/2021.1
+
+
+GUI allocated memory:	256 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,253 MB
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 79 MB (+80126kb) [00:00:09]
+// [Engine Memory]: 1,253 MB (+1162885kb) [00:00:09]
+// bz (cs):  Open Project : addNotify
+// Opening Vivado Project: E:\Copia Disco F\4 CARRERA\Sistemas Electrnicos Digitales\trabajo\Maquina_Expendedora_VHDL-main\MaquinaExpendedora\MaquinaExpendedora.xpr. Version: Vivado v2021.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// Tcl Message: open_project {E:/Copia Disco F/4 CARRERA/Sistemas Electrnicos Digitales/trabajo/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.xpr} 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'E:/Copia Disco F/4 CARRERA/Sistemas Electrnicos Digitales/trabajo/Maquina_Expendedora_VHDL-main/MaquinaExpendedora' 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,253 MB. GUI used memory: 61 MB. Current time: 12/15/21, 8:08:45 PM CET
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project {E:/Copia Disco F/4 CARRERA/Sistemas Electrnicos Digitales/trabajo/Maquina_Expendedora_VHDL-main/MaquinaExpendedora/MaquinaExpendedora.xpr} 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'E:/Copia Disco F/4 CARRERA/Sistemas Electrnicos Digitales/trabajo/Maquina_Expendedora_VHDL-main/MaquinaExpendedora' INFO: [Project 1-313] Project file moved from 'S:/Users/Markv/MaquinaExpendedora' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 91 MB (+8833kb) [00:00:28]
+// [GUI Memory]: 104 MB (+8299kb) [00:00:28]
+// [GUI Memory]: 111 MB (+2454kb) [00:00:30]
+// [GUI Memory]: 124 MB (+7248kb) [00:00:30]
+// WARNING: HEventQueue.dispatchEvent() is taking  4749 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Vivado/2021.1/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1248.828 ; gain = 0.000 
+// Project name: MaquinaExpendedora; location: E:/Copia Disco F/4 CARRERA/Sistemas Electrnicos Digitales/trabajo/Maquina_Expendedora_VHDL-main/MaquinaExpendedora; part: xc7a100tcsg324-1
+// [GUI Memory]: 133 MB (+3284kb) [00:00:32]
+dismissDialog("Open Project"); // bz
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 62 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (TOP.vhd)]", 1, true); // D - Node
+// [GUI Memory]: 149 MB (+9224kb) [00:01:35]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (TOP.vhd), Inst_fsm : fsm(behavioral) (FSM.vhd)]", 2, false, false, false, false, false, true); // D - Double Click
+// WARNING: HEventQueue.dispatchEvent() is taking  1271 ms.
+// [GUI Memory]: 157 MB (+863kb) [00:01:37]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (TOP.vhd), Inst_fsm : fsm(behavioral) (FSM.vhd)]", 2, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (TOP.vhd), Inst_fsm : fsm(behavioral) (FSM.vhd)]", 2, false, false, false, false, false, true); // D - Double Click
+// WARNING: HEventQueue.dispatchEvent() is taking  1163 ms.
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "TOP.vhd", 1); // m
+// HMemoryUtils.trashcanNow. Engine heap size: 1,253 MB. GUI used memory: 94 MB. Current time: 12/15/21, 8:38:45 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,253 MB. GUI used memory: 82 MB. Current time: 12/15/21, 9:08:46 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,253 MB. GUI used memory: 82 MB. Current time: 12/15/21, 9:38:46 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,253 MB. GUI used memory: 81 MB. Current time: 12/15/21, 10:08:46 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,253 MB. GUI used memory: 81 MB. Current time: 12/15/21, 10:38:46 PM CET
+// HMemoryUtils.trashcanNow. Engine heap size: 1,253 MB. GUI used memory: 82 MB. Current time: 12/15/21, 11:08:47 PM CET
+// Elapsed time: 11903 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (TOP.vhd)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (TOP.vhd)]", 1, true, false, false, false, false, true); // D - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (TOP.vhd)]", 1, true); // D - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (TOP.vhd), Inst_fsm : fsm(behavioral) (FSM.vhd)]", 2, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top(Behavioral) (TOP.vhd), Inst_fsm : fsm(behavioral) (FSM.vhd)]", 2, false, false, false, false, false, true); // D - Double Click
+// Elapsed time: 362 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints]", 16); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, Nexys-4-DDR-Master.xdc]", 18, false); // D
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Constraints, constrs_1, Nexys-4-DDR-Master.xdc]", 18, false, false, false, false, false, true); // D - Double Click
+// WARNING: HEventQueue.dispatchEvent() is taking  1144 ms.
+// Elapsed time: 20 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "TOP.vhd", 1); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FSM.vhd", 2); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Nexys-4-DDR-Master.xdc", 3); // m
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "TOP.vhd", 1); // m
+// Elapsed time: 126 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FSM.vhd", 2); // m
+// Elapsed time: 12 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "TOP.vhd", 1); // m
+// HMemoryUtils.trashcanNow. Engine heap size: 1,253 MB. GUI used memory: 83 MB. Current time: 12/15/21, 11:38:47 PM CET
+// Elapsed time: 282 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "FSM.vhd", 2); // m
+// Elapsed time: 411 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources]", 19); // D
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1]", 20); // D
+// Elapsed time: 114 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "TOP.vhd", 1); // m
