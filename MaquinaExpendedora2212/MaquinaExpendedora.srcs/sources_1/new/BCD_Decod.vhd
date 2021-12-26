@@ -42,6 +42,16 @@ begin
       carac6 <= "011100";                                       -- x"92" --> S 
       carac7 <= "100110";                                       -- x"7F" --> .
     
+    elsif value = 250 then -- GRACIAS
+      carac0 <= "010000"; -- x"90" --> G  
+      carac1 <= "011011"; -- x"AF" --> R 
+      carac2 <= "001010"; -- x"88" --> A 
+      carac3 <= "001100"; -- x"C6" --> C 
+      carac4 <= "010010"; -- x"CF" --> I 
+      carac5 <= "001010"; -- x"88" --> A 
+      carac6 <= "011100"; -- x"92" --> S 
+      carac7 <= "111111"; -- x"FF" --> NADA
+      
     elsif value = 251 then -- Estado S0 - menu inicial
       carac0 <= "010001"; -- x"89" --> H 
       carac1 <= "011000"; -- x"C0" --> O 

@@ -1,3 +1,5 @@
+-- simular 1200 ns
+
 library IEEE;
 use IEEE.Std_logic_1164.all;
 use IEEE.Numeric_Std.all;
@@ -40,14 +42,14 @@ begin
 
   stimulus: process
   begin
-    s0 <= x"C0";
-    s1 <= x"F9";
-    s2 <= x"A4";
-    s3 <= x"C0";
-    s4 <= x"C0";
-    s5 <= x"C0";
-    s6 <= x"C0";
-    s7 <= x"C0";
+    s0 <= x"C0";    --0
+    s1 <= x"F9";    --1
+    s2 <= x"A4";    --2
+    s3 <= x"C0";    --0 
+    s4 <= x"C0";    --0 
+    s5 <= x"C0";    --0 
+    s6 <= x"C0";    --0 
+    s7 <= x"C0";    --0 
     wait for 1000ns;
 
     PararReloj <= true;

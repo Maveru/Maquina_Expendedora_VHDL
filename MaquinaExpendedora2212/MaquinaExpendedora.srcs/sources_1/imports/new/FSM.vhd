@@ -34,23 +34,29 @@ begin
     end if;
  end process;
  
- nextstate_decod: process (Botones, current_state,coste_rest,end_timer) 
+ nextstate_decod: process (Botones, current_state, end_timer) -- antes estaba coste_rest tambien
  begin
     next_state <= current_state;
---  if (rising_edge(clk))then
+    
+--if (rising_edge(clk))then
     
 if current_state = S4 then                  -- bebida seleccionada. Hay que introducir importe
+  --if (rising_edge(clk))then
     if (coste_rest = 0) then                -- Importe exacto. Se entregara bebida
        next_state <= S5;
     elsif (coste_rest < 0) then             -- Importe en exceso. Se devolvera importe total
        next_state <= S6;
     elsif Botones(0) = '1' then             -- Introducimos moneda 20 centimos
        coste_rest <= coste_rest -20;
+       --next_state <= S4;
     elsif Botones(1) = '1' then             -- Introducimos moneda 50 centimos
        coste_rest <= coste_rest -50;
+       --next_state <= S4;
     elsif Botones(2) = '1' then             -- Introducimos moneda 100 centimos
        coste_rest <= coste_rest -100;
+       --next_state <= S4;
     end if;
+  --end if;
 
 elsif current_state = S5 then               -- estado para lanzar el temporizador para entregar producto
         next_state  <= S8;
@@ -90,12 +96,12 @@ else    --(current_state = S0 OR current_state = S1 OR current_state = S2   OR c
       
     end if;
   end if;
- -- end if;   
+--end if;   
   Coste_i <= coste_rest ;  
    
  end process;
  
- output_decod: process (current_state, Coste_i)
+ output_decod: process (current_state, coste_i)
  begin
     LIGHT <= (OTHERS => '0');               -- se apagan todos los leds para que no se acumulen los de estados anteriores
  case current_state is
@@ -137,7 +143,6 @@ else    --(current_state = S0 OR current_state = S1 OR current_state = S2   OR c
         salida      <= std_logic_vector(to_unsigned(Coste_i, salida'length));   -- Se muestra en los displays el importe restante     
                         -- se convierte Coste_i (integer) en std_logic_vector
 
-
     if (Coste_i = 100) then
         LIGHT(15)   <= '1';
     elsif (Coste_i = 80) then
@@ -158,18 +163,17 @@ else    --(current_state = S0 OR current_state = S1 OR current_state = S2   OR c
         
      when S5 =>                             -- Estado para lanzar el temporizador para entregar producto
         LIGHT(5)    <= '1';
-        delivering  <= '0';                 -- SI se esta entregando bebida
+        delivering  <= '0';                 -- No se esta entregando bebida
         error       <= '0';                 -- No se esta devolviendo dinero
         money_ok    <= '1';                 -- SI se lanza temporizador
         salida      <= "11111010";          -- codigo para mostrar en displays "GRACIAS" (250 en binario)   
         
       when S6 =>                            -- Estado para lanzar el temporizador para devolver importe
         LIGHT(6)   <= '1';
-        --LIGHT(3)   <= '1';
         delivering  <= '0';                 -- No se esta entregando bebida
-        error       <= '1';                 -- SI se esta devolviendo dinero
+        error       <= '0';                 -- No se esta devolviendo dinero
         money_ok    <= '1';                 -- SI se lanza temporizador
-        salida      <= "11111111";          -- codigo para mostrar en displays "ERROR" (255 en b   
+        salida      <= "11111111";          -- codigo para mostrar en displays "ERROR" (255 en binario)   
       when S7 =>
         delivering  <= '0';                 -- No se esta entregando bebida
         error       <= '1';                 -- SI se esta devolviendo dinero. Se enciende LED rojo
@@ -180,7 +184,7 @@ else    --(current_state = S0 OR current_state = S1 OR current_state = S2   OR c
         delivering  <= '1';                 -- SI se esta entregando bebida
         error       <= '0';                 -- No se esta devolviendo dinero
         money_ok    <= '0';                 -- No se lanza temporizador
-        salida      <= "11111010";          -- codigo para mostrar en displays "GRACIAS" (250 en binario)  inario)   
+        salida      <= "11111010";          -- codigo para mostrar en displays "GRACIAS" (250 en binario)   
    
         
      when others =>

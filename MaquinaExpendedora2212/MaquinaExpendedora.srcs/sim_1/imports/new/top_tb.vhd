@@ -1,4 +1,4 @@
-
+--simular 15000ms
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
@@ -83,62 +83,83 @@ tester : process
   
   wait for 5ms;
   
-  Boton(0)<='1';
+  Boton(0)<='1'; --fanta 80cts
   wait for 2ms;
   Boton(0)<='0';
   
   wait for 3ms;
   
-  Boton(1)<='1';
+  Boton(1)<='1'; --pepsi 100cts
   wait for 2ms;
   Boton(1)<='0';
   
   wait for 3ms;
   
-  Boton(2)<='1';
+  Boton(2)<='1'; --agua 50cts
   wait for 2ms;
   Boton(2)<='0';
   
   wait for 3ms;
   
-  Boton(3)<='1';
+  Boton(3)<='1'; --volver a menu inicial
   wait for 2ms;
   Boton(3)<='0';
   
   wait for 3ms;
   
-  Boton(1)<='1'; -- 100 CENTS 
+  Boton(1)<='1'; -- pepsi 100 CENTS 
   wait for 2ms;
   Boton(1)<='0';
   
+  Boton(4)<='1'; -- seleccionar
+  wait for 2ms;
+  Boton(4)<='0';
+  
   wait for 5ms; -- EMPIEZO A PAGAR
   
+  Boton(1)<='1'; --meto 50cts
+  wait for 2ms;
+  Boton(1)<='0';
   
-  Boton(0)<='1';
+  wait for 3ms;
+  
+   Boton(0)<='1'; --meto 20cts
   wait for 2ms;
   Boton(0)<='0';
   
   wait for 3ms;
   
-   Boton(0)<='1';
+  Boton(0)<='1'; --meto 20cts
   wait for 2ms;
   Boton(0)<='0';
   
   wait for 3ms;
   
-  Boton(0)<='1';
+  Boton(0)<='1'; --meto 20cts (me paso)
   wait for 2ms;
   Boton(0)<='0';
   
-  wait for 3ms;
+  wait for 5005ms;
   
-  Boton(0)<='1';
+  
+  
+  Boton(2)<='1'; -- agua 50 cts
   wait for 2ms;
-  Boton(0)<='0';
+  Boton(2)<='0';
   
   wait for 3ms;
   
-  wait for 100ms;
+  Boton(4)<='1'; -- seleccionar
+  wait for 2ms;
+  Boton(4)<='0';
+  
+  wait for 3ms;
+  
+  Boton(1)<='1'; --meto 50cts
+  wait for 2ms;
+  Boton(1)<='0';
+  
+  wait for 5005ms;
 
    end process;
 
