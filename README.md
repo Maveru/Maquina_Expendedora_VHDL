@@ -14,3 +14,4 @@
 21/12/2021 - TOP actualizado.
 21/12/2021 - Top actualizado v2
 22/12/2021 - Implementacion placa 1.0
+26/12/2021 - Se han comprobado los testbench de fsm, bcd_decod, bcd_a_7segm y display_exit.
