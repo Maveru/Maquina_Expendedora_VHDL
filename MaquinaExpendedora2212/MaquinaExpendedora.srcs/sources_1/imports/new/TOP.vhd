@@ -24,7 +24,7 @@ ENTITY top IS
   );
 END top;
     
-architecture Behavioral of top is
+architecture structural of top is
   signal boton_edge: std_logic_vector (Boton'range);                        -- se usara para la salida del detector de flanco 
   signal boton_sinc: std_logic_vector (Boton'range);                        -- se usara para la salida del sincronizador
   --signal S0, S1, S2, S3, S4, S5, S6, S7:  std_logic_vector(7 downto 0);     -- codigo en BCD para cada digito del display
@@ -245,4 +245,4 @@ synchronizers: for i in Boton'range generate -- Obligatorio que lleve nombre Lo 
      );  
          
 
-end Behavioral;
+end structural;

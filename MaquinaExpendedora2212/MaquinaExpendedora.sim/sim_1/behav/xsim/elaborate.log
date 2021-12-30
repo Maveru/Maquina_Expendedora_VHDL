@@ -22,6 +22,6 @@ Compiling architecture behavioral of entity xil_defaultlib.fsm [fsm_default]
 Compiling architecture behavioral of entity xil_defaultlib.BCD_decoder [bcd_decoder_default]
 Compiling architecture behavioral of entity xil_defaultlib.BCD_a_7segments [bcd_a_7segments_default]
 Compiling architecture behavioral of entity xil_defaultlib.display_exit [display_exit_default]
-Compiling architecture behavioral of entity xil_defaultlib.top [top_default]
+Compiling architecture structural of entity xil_defaultlib.top [top_default]
 Compiling architecture behavioral of entity xil_defaultlib.top_tb
 Built simulation snapshot top_tb_behav
