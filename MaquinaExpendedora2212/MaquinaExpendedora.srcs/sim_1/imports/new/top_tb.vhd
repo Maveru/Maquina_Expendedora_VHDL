@@ -1,7 +1,9 @@
 --simular 15000ms
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
-
+use IEEE.NUMERIC_STD.ALL;
+use IEEE.std_logic_arith.all;
+use IEEE.std_logic_signed.all;
 
 entity top_tb is
 end top_tb;
@@ -48,9 +50,13 @@ end component;
 constant CLK_IN_PERIOD  : time := 1 ms; -- Periodo reloj de la placa PREESCALADO
 
 begin
-
+  
     uut : top
-    
+        generic map(
+            CLK_frec_in     => 100e6,
+            CLK_frec_out    => 1000,
+            DELAY           => 5         
+        )
        Port Map (
        
        CLK => CLK,
@@ -80,6 +86,7 @@ tester : process
   Boton <= "00000";
   wait for 2ms;
   RESET <= '1';
+
   
   wait for 5ms;
   
