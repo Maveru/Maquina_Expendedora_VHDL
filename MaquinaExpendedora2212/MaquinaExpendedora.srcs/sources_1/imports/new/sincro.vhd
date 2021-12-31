@@ -21,8 +21,8 @@ begin
     process (CLK)
     begin
         if rising_edge(CLK) then
-            sync_out <= sreg(1);
-            sreg <= sreg(0) & async_in;
+            SYNC_OUT <= sreg(1);
+            sreg <= sreg(0) & ASYNC_IN;
         end if;
     end process;
 end BEHAVIORAL;

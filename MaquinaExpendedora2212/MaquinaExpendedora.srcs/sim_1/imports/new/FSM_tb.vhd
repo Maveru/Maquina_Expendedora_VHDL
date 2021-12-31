@@ -1,5 +1,5 @@
 
---Simulation Time 10000us
+--Simulation Time 12000us
 
 
 library IEEE;
@@ -68,46 +68,67 @@ begin
 
 tester : process
     begin
-   
+   reset <='1','0' after 0.25 * CLK_IN_PERIOD, '1' after 0.75 * CLK_IN_PERIOD;
   -- Seleccion de la bebida   
     Botones <= "00000";
     wait for CLK_IN_PERIOD;
-    Botones(0) <= '1'; -- 80 centimos
+    Botones(0) <= '1'; -- quiero fanta (80 centimos)
     wait for CLK_IN_PERIOD;
-    Botones(0) <= '0'; -- 80 centimos
+    Botones(0) <= '0'; 
     wait for CLK_IN_PERIOD*0.5;
-    Botones(1) <= '1'; -- 100 centimos
+    Botones(1) <= '1'; -- quiero pepsi (100 centimos)
     wait for CLK_IN_PERIOD;
     Botones(1) <= '0';
     wait for CLK_IN_PERIOD*0.5;
-    Botones(2) <= '1'; -- 50 centimos
+    Botones(2) <= '1'; -- quiero agua (50 centimos)
     wait for CLK_IN_PERIOD;
-    Botones(2) <= '0'; -- 50 centimos
+    Botones(2) <= '0'; 
     wait for CLK_IN_PERIOD*0.5;
     Botones(3) <= '1'; -- Vuelvo al inicio
     wait for CLK_IN_PERIOD;
     Botones(3) <= '0';
     wait for CLK_IN_PERIOD*0.5;
-    Botones(1) <= '1'; -- 50 centimos
+    Botones(0) <= '1'; -- quiero fanta (80 centimos)
     wait for CLK_IN_PERIOD;
-    Botones(1) <= '0'; 
+    Botones(0) <= '0'; 
     wait for CLK_IN_PERIOD*0.5;
     Botones(4) <= '1'; -- Entro al estado pagar
     wait for CLK_IN_PERIOD;
     Botones(4) <= '0';
-  -- Pagar
     
+    
+  -- Pagar
 --    Botones(0) <= '1'; --Meto moneda 20 cents
 --    wait for 0.85*CLK_IN_PERIOD;
 --    Botones(0) <= '0';
-    wait for CLK_IN_PERIOD*0.75;
-    Botones(1) <= '1'; --Meto moneda 50 cents
+    wait for CLK_IN_PERIOD*0.25;
+    Botones(0) <= '1'; --Meto moneda 20 cents
     wait for 0.7*CLK_IN_PERIOD;
-    Botones(1) <= '0';
-     wait for CLK_IN_PERIOD*1.25;
-    Botones(1) <= '1'; --Meto moneda 50 cents
-    wait for 1.36*CLK_IN_PERIOD;
-    Botones(1) <= '0';
+    Botones(0) <= '0';
+    wait for CLK_IN_PERIOD*0.25;
+    Botones(0) <= '1'; --Meto moneda 20 cents
+    wait for 0.7*CLK_IN_PERIOD;
+    Botones(0) <= '0';
+    wait for CLK_IN_PERIOD*0.25;
+    Botones(0) <= '1'; --Meto moneda 20 cents
+    wait for 0.7*CLK_IN_PERIOD;
+    Botones(0) <= '0';
+    wait for CLK_IN_PERIOD*0.25;
+    Botones(0) <= '1'; --Meto moneda 20 cents
+    wait for 0.7*CLK_IN_PERIOD;
+    Botones(0) <= '0';
+
+
+--    wait for CLK_IN_PERIOD*0.25;
+--    Botones(1) <= '1'; --Meto moneda 50 cents
+--    wait for 0.7*CLK_IN_PERIOD;
+--    Botones(1) <= '0';
+--     wait for CLK_IN_PERIOD*1.25;
+--    Botones(1) <= '1'; --Meto moneda 50 cents
+--    wait for 1.36*CLK_IN_PERIOD;
+--    Botones(1) <= '0';
+    
+    
 --    Botones(0) <= '1'; --Meto moneda 20 cents
 --    wait for 0.85*CLK_IN_PERIOD;
 --    Botones(0) <= '0';
@@ -124,6 +145,40 @@ tester : process
     end_timer <= '1';
     wait for 1.5 *CLK_IN_PERIOD;
     end_timer <= '0';  -- TERMINA EL CASO DE IMPORTE CORRECTO
+    wait for 5*CLK_IN_PERIOD;
+    
+    -- ahora quiero pepsi
+    wait for CLK_IN_PERIOD*0.5;
+    Botones(1) <= '1'; -- quiero pepsi (100 centimos)
+    wait for CLK_IN_PERIOD;
+    Botones(1) <= '0';
+    wait for CLK_IN_PERIOD*0.5;
+    Botones(4) <= '1'; -- Entro al estado pagar
+    wait for CLK_IN_PERIOD;
+    Botones(4) <= '0';
+    -- pago pepsi (me paso)
+    wait for CLK_IN_PERIOD*0.25;
+    Botones(1) <= '1'; --Meto moneda 50 cents
+    wait for 0.7*CLK_IN_PERIOD;
+    Botones(1) <= '0';
+    wait for CLK_IN_PERIOD*0.25;
+    Botones(0) <= '1'; --Meto moneda 20 cents
+    wait for 0.7*CLK_IN_PERIOD;
+    Botones(0) <= '0';
+    wait for CLK_IN_PERIOD*0.25;
+    Botones(0) <= '1'; --Meto moneda 20 cents
+    wait for 0.7*CLK_IN_PERIOD;
+    Botones(0) <= '0';
+    wait for CLK_IN_PERIOD*0.25;
+    Botones(0) <= '1'; --Meto moneda 20 cents
+    wait for 0.7*CLK_IN_PERIOD;
+    Botones(0) <= '0';
+    
+    wait for 5*CLK_IN_PERIOD;
+    
+    end_timer <= '1';
+    wait for 1.5 *CLK_IN_PERIOD;
+    end_timer <= '0';  -- TERMINA EL CASO DE IMPORTE INCORRECTO
     wait for 5*CLK_IN_PERIOD;
     
     assert false

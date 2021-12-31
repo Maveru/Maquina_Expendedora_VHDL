@@ -47,7 +47,7 @@ begin
     wait for 0.5 * clk_period;
   end process;
 	
-  reset <='0','1' after 0.25 * clk_period, '0' after 0.75 * clk_period,'1' after clk_period*6000,'0' after 6500 * clk_period;
+  reset <='1','0' after 0.25 * clk_period, '1' after 0.75 * clk_period,'0' after clk_period*6000,'1' after 6500 * clk_period;
   
   start_temp <= '0', '1' after 1 * clk_period, '0' after 2 * clk_period,'1' after 7000 * clk_period, '0' after 7500 * clk_period;
   
