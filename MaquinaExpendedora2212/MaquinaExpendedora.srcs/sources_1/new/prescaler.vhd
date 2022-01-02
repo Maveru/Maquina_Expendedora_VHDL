@@ -7,7 +7,7 @@ use IEEE.NUMERIC_STD.ALL;
 entity prescaler is
     generic(
     f_in :positive :=100e6;     -- frecuencia de reloj de entrada
-    f_out:positive :=100e3       -- frecuencia de reloj de salida
+    f_out:positive :=10e3       -- frecuencia de reloj de salida
     );
     Port ( 
     clk_in  :in std_logic;      -- señal de reloj de entrada

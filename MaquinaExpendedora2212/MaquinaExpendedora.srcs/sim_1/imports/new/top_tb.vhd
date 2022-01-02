@@ -82,10 +82,10 @@ begin
 tester : process
     begin
    
-  --RESET <= '0';
+  RESET <= '0';
   Boton <= "00000";
   wait for 2ms;
-  --RESET <= '1';
+  RESET <= '1';
 
   
   wait for 5ms;
@@ -166,7 +166,7 @@ tester : process
   wait for 2ms;
   Boton(1)<='0';
   
-  wait for 5005ms;
+  wait for 7000ms;
 
 assert false
       report "[SUCCESS]: simulation finished."

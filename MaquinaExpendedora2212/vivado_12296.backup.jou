@@ -1,0 +1,59 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Fri Dec 31 17:15:58 2021
+# Process ID: 12296
+# Current directory: C:/Users/Markv/Desktop/MaquinaExpendedora2212
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1552 C:\Users\Markv\Desktop\MaquinaExpendedora2212\MaquinaExpendedora.xpr
+# Log file: C:/Users/Markv/Desktop/MaquinaExpendedora2212/vivado.log
+# Journal file: C:/Users/Markv/Desktop/MaquinaExpendedora2212\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Markv/Desktop/MaquinaExpendedora2212/MaquinaExpendedora.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source top_tb.tcl
+close_sim
+launch_simulation
+source top_tb.tcl
+close_sim
+launch_simulation
+source top_tb.tcl
+close_sim
+launch_simulation
+source top_tb.tcl
+close_sim
+launch_simulation
+source top_tb.tcl
+close_sim
+launch_simulation
+source top_tb.tcl
+close_sim
+launch_simulation
+source top_tb.tcl
+close_sim
+launch_simulation
+source top_tb.tcl
+close_sim
+launch_simulation
+source top_tb.tcl
+close_sim
+launch_simulation
+source top_tb.tcl
+close_sim
+launch_simulation
+source top_tb.tcl
+close_sim
+launch_simulation
+source top_tb.tcl
+close_sim
+launch_simulation
+source top_tb.tcl
+close_sim
+launch_simulation
+source top_tb.tcl
+close_sim
+launch_simulation
+source top_tb.tcl
+close_sim

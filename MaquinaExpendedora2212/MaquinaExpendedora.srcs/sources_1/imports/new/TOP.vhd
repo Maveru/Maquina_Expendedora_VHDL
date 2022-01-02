@@ -134,14 +134,14 @@ begin
 synchronizers: for i in Boton'range generate -- Obligatorio que lleve nombre Lo hace para TODOS los botones
     Inst_SYNCHRNZR: SYNCHRNZR
       port map (
-        clk      => clk_escalado,
+        clk      => clk,
         async_in => Boton(i),
         sync_out => boton_sinc(i)
       );
 
   Inst_EDGEDTCTR: EDGEDTCTR 
       PORT MAP(
-        CLK     => clk_escalado,
+        CLK     => clk,
         SYNC_IN => boton_sinc(i),
         EDGE    => boton_edge(i)
       );
@@ -156,7 +156,7 @@ synchronizers: for i in Boton'range generate -- Obligatorio que lleve nombre Lo 
   
   Inst_timer: timer
         PORT MAP(
-         clk =>  clk_escalado, --clk_escalado, 
+         clk =>  clk, --clk_escalado, 
          reset => RESET,
          start_temp => T_Inic,
          end_temp =>T_Fin
@@ -165,7 +165,7 @@ synchronizers: for i in Boton'range generate -- Obligatorio que lleve nombre Lo 
   Inst_fsm: FSM
      PORT MAP(
         RESET  => reset,
-        CLK    => clk,
+        CLK    => clk, -- con clk_escalado NO FUNCIONA
         Botones => boton_edge,
         LIGHT  => LIGHT,
         salida => to_BCD_Decod,

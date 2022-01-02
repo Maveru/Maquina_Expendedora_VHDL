@@ -15,5 +15,6 @@
 21/12/2021 - Top actualizado v2
 22/12/2021 - Implementacion placa 1.0
 26/12/2021 - Se han comprobado los testbench de fsm, bcd_decod, bcd_a_7segm y display_exit.
-30/12/2021 - Incluidas librerias restantes en ficheros. Queda pendiente el tb de top
-31/12/2021 - Testbench prescale, EdgeDetector y Syncronizer realizados. Funcionan correctamente
+30/12/2021 - Incluidas librerias restantes en ficheros. Queda pendiente el tb de top.
+31/12/2021 - Testbench prescale, EdgeDetector y Syncronizer realizados. Funcionan correctamente.
+02/01/2022 - Solucionado problema top_tb. Funciona todo correctamenta a priori, falta probar en placa.

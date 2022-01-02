@@ -1,0 +1,154 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Thu Dec 30 23:23:34 2021
+# Process ID: 14128
+# Current directory: C:/Users/Markv/Desktop/Maquina_Expendedora_VHDL-main/MaquinaExpendedora2212
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12472 C:\Users\Markv\Desktop\Maquina_Expendedora_VHDL-main\MaquinaExpendedora2212\MaquinaExpendedora.xpr
+# Log file: C:/Users/Markv/Desktop/Maquina_Expendedora_VHDL-main/MaquinaExpendedora2212/vivado.log
+# Journal file: C:/Users/Markv/Desktop/Maquina_Expendedora_VHDL-main/MaquinaExpendedora2212\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Markv/Desktop/Maquina_Expendedora_VHDL-main/MaquinaExpendedora2212/MaquinaExpendedora.xpr
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/Markv/Desktop/Maquina_Expendedora_VHDL-main/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sim_1/new/prescaler_tb.vhd w ]
+add_files -fileset sim_1 C:/Users/Markv/Desktop/Maquina_Expendedora_VHDL-main/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sim_1/new/prescaler_tb.vhd
+update_compile_order -fileset sim_1
+set_property top prescaler_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+set_property -name {xsim.simulate.runtime} -value {15000ns} -objects [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+launch_simulation
+source prescaler_tb.tcl
+close_sim
+launch_simulation
+source prescaler_tb.tcl
+close_sim
+launch_simulation
+source prescaler_tb.tcl
+close_sim
+launch_simulation
+source prescaler_tb.tcl
+run all
+close_sim
+set_property -name {xsim.simulate.runtime} -value {1500ns} -objects [get_filesets sim_1]
+launch_simulation
+source prescaler_tb.tcl
+close_sim
+set_property -name {xsim.simulate.runtime} -value {5000ns} -objects [get_filesets sim_1]
+launch_simulation
+source prescaler_tb.tcl
+set_property -name {xsim.simulate.runtime} -value {15000ns} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+source prescaler_tb.tcl
+set_property -name {xsim.simulate.runtime} -value {40000ns} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+source prescaler_tb.tcl
+close_sim
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/Markv/Desktop/Maquina_Expendedora_VHDL-main/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sim_1/new/sincro_tb.vhd w ]
+add_files -fileset sim_1 C:/Users/Markv/Desktop/Maquina_Expendedora_VHDL-main/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sim_1/new/sincro_tb.vhd
+update_compile_order -fileset sim_1
+set_property top sincro_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+source sincro_tb.tcl
+set_property -name {xsim.simulate.runtime} -value {400ns} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+source sincro_tb.tcl
+close_sim
+launch_simulation
+source sincro_tb.tcl
+close_sim
+set_property top top_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+set_property -name {xsim.simulate.runtime} -value {40000ms} -objects [get_filesets sim_1]
+launch_simulation
+source top_tb.tcl
+update_compile_order -fileset sim_1
+close_sim
+launch_simulation
+source top_tb.tcl
+close_sim
+launch_simulation
+source top_tb.tcl
+close_sim
+set_property top sincro_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+set_property -name {xsim.simulate.runtime} -value {400ms} -objects [get_filesets sim_1]
+launch_simulation
+source sincro_tb.tcl
+update_compile_order -fileset sim_1
+set_property -name {xsim.simulate.runtime} -value {4ms} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+source sincro_tb.tcl
+close_sim
+launch_simulation
+source sincro_tb.tcl
+close_sim
+launch_simulation
+source sincro_tb.tcl
+close_sim
+launch_simulation
+source sincro_tb.tcl
+close_sim
+launch_simulation
+source sincro_tb.tcl
+close_sim
+update_compile_order -fileset sources_1
+launch_simulation
+source sincro_tb.tcl
+update_compile_order -fileset sources_1
+close_sim
+launch_simulation
+source sincro_tb.tcl
+set_property -name {xsim.simulate.runtime} -value {10ms} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+source sincro_tb.tcl
+run all
+close_sim
+launch_simulation
+source sincro_tb.tcl
+close_sim
+close_project
+open_project C:/Users/Markv/Desktop/Maquina_Expendedora_VHDL-main/MaquinaExpendedora2212/MaquinaExpendedora.xpr
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/Markv/Desktop/Maquina_Expendedora_VHDL-main/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sim_1/new/edgedetector_tb.vhd w ]
+add_files -fileset sim_1 C:/Users/Markv/Desktop/Maquina_Expendedora_VHDL-main/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sim_1/new/edgedetector_tb.vhd
+update_compile_order -fileset sim_1
+set_property top edgedetector_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+source edgedetector_tb.tcl
+close_sim
+launch_simulation
+source edgedetector_tb.tcl
+close_sim
+set_property top top_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+set_property -name {xsim.simulate.runtime} -value {15000ms} -objects [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+source top_tb.tcl
+close_sim
+launch_simulation
+source top_tb.tcl
+close_sim
+launch_simulation
+source top_tb.tcl
+close_sim
+launch_simulation
+source top_tb.tcl
+close_sim

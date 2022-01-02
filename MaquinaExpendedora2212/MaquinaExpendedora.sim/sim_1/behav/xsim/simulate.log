@@ -1,4 +1,4 @@
 Time resolution is 1 ps
 Failure: [SUCCESS]: simulation finished.
-Time: 10075 ms  Iteration: 0  Process: /top_tb/tester  File: C:/Users/Markv/Desktop/Maquina_Expendedora_VHDL-main/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sim_1/imports/new/top_tb.vhd
-$finish called at time : 10075 ms : File "C:/Users/Markv/Desktop/Maquina_Expendedora_VHDL-main/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sim_1/imports/new/top_tb.vhd" Line 173
+Time: 12070 ms  Iteration: 0  Process: /top_tb/tester  File: C:/Users/Markv/Desktop/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sim_1/imports/new/top_tb.vhd
+$finish called at time : 12070 ms : File "C:/Users/Markv/Desktop/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sim_1/imports/new/top_tb.vhd" Line 173
