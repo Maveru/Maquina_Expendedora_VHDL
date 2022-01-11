@@ -37,7 +37,7 @@ begin
  nextstate_decod: process (Botones, current_state, end_timer) -- antes estaba coste_rest tambien
  begin
     next_state <= current_state;
-    
+    -- coste_rest <= coste_rest; --probar esto
 --if (rising_edge(clk))then
     
 if current_state = S4 then                  -- bebida seleccionada. Hay que introducir importe
@@ -103,7 +103,11 @@ else    --(current_state = S0 OR current_state = S1 OR current_state = S2   OR c
  
  output_decod: process (current_state, coste_i)
  begin
-    LIGHT <= (OTHERS => '0');               -- se apagan todos los leds para que no se acumulen los de estados anteriores
+    LIGHT       <= (OTHERS => '0');               -- se apagan todos los leds para que no se acumulen los de estados anteriores
+    money_ok    <='0';
+    error       <= '0';
+    delivering  <= '0';
+    salida      <= (OTHERS => '0');
  case current_state is
      when S0 =>                             -- Menu inicio
         LIGHT(0)    <= '1';             

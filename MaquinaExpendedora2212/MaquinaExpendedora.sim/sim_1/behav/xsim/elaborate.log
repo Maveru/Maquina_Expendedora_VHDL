@@ -1,6 +1,6 @@
 Vivado Simulator v2021.1
 Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
-Running: S:/Xilinx/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto ea230094c27a4783aed3e4bff623dcc9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot top_tb_behav xil_defaultlib.top_tb -log elaborate.log 
+Running: E:/Vivado/2021.1/bin/unwrapped/win64.o/xelab.exe -wto ea230094c27a4783aed3e4bff623dcc9 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot FSM_tb_behav xil_defaultlib.FSM_tb -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Completed static elaboration
@@ -11,17 +11,6 @@ Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
 Compiling package ieee.numeric_std
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_signed
-Compiling package ieee.std_logic_unsigned
-Compiling architecture behavioral of entity xil_defaultlib.SYNCHRNZR [synchrnzr_default]
-Compiling architecture behavioral of entity xil_defaultlib.EDGEDTCTR [edgedtctr_default]
-Compiling architecture behavioral of entity xil_defaultlib.prescaler [\prescaler(f_out=1000)\]
-Compiling architecture behavioral of entity xil_defaultlib.timer [timer_default]
 Compiling architecture behavioral of entity xil_defaultlib.fsm [fsm_default]
-Compiling architecture behavioral of entity xil_defaultlib.BCD_decoder [bcd_decoder_default]
-Compiling architecture behavioral of entity xil_defaultlib.BCD_a_7segments [bcd_a_7segments_default]
-Compiling architecture behavioral of entity xil_defaultlib.display_exit [display_exit_default]
-Compiling architecture structural of entity xil_defaultlib.top [top_default]
-Compiling architecture behavioral of entity xil_defaultlib.top_tb
-Built simulation snapshot top_tb_behav
+Compiling architecture bench of entity xil_defaultlib.fsm_tb
+Built simulation snapshot FSM_tb_behav
