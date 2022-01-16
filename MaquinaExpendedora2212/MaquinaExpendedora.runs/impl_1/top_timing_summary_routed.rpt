@@ -1,8 +1,8 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Wed Dec 22 12:12:21 2021
-| Host         : LAPTOP-T044LQ5T running 64-bit major release  (build 9200)
+| Date         : Sun Jan 16 13:36:51 2022
+| Host         : PACO-GUILLE running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -file top_timing_summary_routed.rpt -pb top_timing_summary_routed.pb -rpx top_timing_summary_routed.rpx -warn_on_violation
 | Design       : top
 | Device       : 7a100t-csg324
@@ -39,10 +39,11 @@ Timing Summary Report
 | ------------------
 ------------------------------------------------------------------------------------------------
 
-Rule       Severity          Description                  Violations  
----------  ----------------  ---------------------------  ----------  
-TIMING-17  Critical Warning  Non-clocked sequential cell  87          
-TIMING-20  Warning           Non-clocked latch            43          
+Rule       Severity          Description                   Violations  
+---------  ----------------  ----------------------------  ----------  
+TIMING-17  Critical Warning  Non-clocked sequential cell   84          
+LUTAR-1    Warning           LUT drives async reset alert  7           
+TIMING-20  Warning           Non-clocked latch             5           
 
 Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
 
@@ -52,10 +53,10 @@ check_timing report
 
 Table of Contents
 -----------------
-1. checking no_clock (634)
+1. checking no_clock (121)
 2. checking constant_clock (0)
 3. checking pulse_width_clock (0)
-4. checking unconstrained_internal_endpoints (229)
+4. checking unconstrained_internal_endpoints (182)
 5. checking no_input_delay (6)
 6. checking no_output_delay (28)
 7. checking multiple_clock (0)
@@ -63,49 +64,29 @@ Table of Contents
 9. checking loops (0)
 10. checking partial_input_delay (0)
 11. checking partial_output_delay (0)
-12. checking latch_loops (32)
+12. checking latch_loops (0)
 
-1. checking no_clock (634)
+1. checking no_clock (121)
 --------------------------
- There are 17 register/latch pins with no clock driven by root clock pin: CLK (HIGH)
+ There are 81 register/latch pins with no clock driven by root clock pin: CLK (HIGH)
 
- There are 70 register/latch pins with no clock driven by root clock pin: Inst_Prescale/clk_i_reg/Q (HIGH)
+ There are 3 register/latch pins with no clock driven by root clock pin: Inst_Prescale/clk_i_reg/Q (HIGH)
 
- There are 11 register/latch pins with no clock driven by root clock pin: Inst_fsm/FSM_onehot_current_state_reg[0]/Q (HIGH)
+ There are 5 register/latch pins with no clock driven by root clock pin: Inst_fsm/current_state_reg[1]/Q (HIGH)
 
- There are 11 register/latch pins with no clock driven by root clock pin: Inst_fsm/FSM_onehot_current_state_reg[1]/Q (HIGH)
+ There are 5 register/latch pins with no clock driven by root clock pin: Inst_fsm/current_state_reg[2]/Q (HIGH)
 
- There are 11 register/latch pins with no clock driven by root clock pin: Inst_fsm/FSM_onehot_current_state_reg[2]/Q (HIGH)
+ There are 5 register/latch pins with no clock driven by root clock pin: synchronizers[0].Inst_EDGEDTCTR/sreg_reg[0]/Q (HIGH)
 
- There are 11 register/latch pins with no clock driven by root clock pin: Inst_fsm/FSM_onehot_current_state_reg[3]/Q (HIGH)
+ There are 5 register/latch pins with no clock driven by root clock pin: synchronizers[0].Inst_EDGEDTCTR/sreg_reg[1]/Q (HIGH)
 
- There are 43 register/latch pins with no clock driven by root clock pin: Inst_fsm/FSM_onehot_current_state_reg[4]/Q (HIGH)
+ There are 5 register/latch pins with no clock driven by root clock pin: synchronizers[0].Inst_EDGEDTCTR/sreg_reg[2]/Q (HIGH)
 
- There are 43 register/latch pins with no clock driven by root clock pin: Inst_fsm/FSM_onehot_current_state_reg[5]/Q (HIGH)
+ There are 4 register/latch pins with no clock driven by root clock pin: synchronizers[1].Inst_EDGEDTCTR/sreg_reg[0]/Q (HIGH)
 
- There are 43 register/latch pins with no clock driven by root clock pin: Inst_fsm/FSM_onehot_current_state_reg[6]/Q (HIGH)
+ There are 4 register/latch pins with no clock driven by root clock pin: synchronizers[1].Inst_EDGEDTCTR/sreg_reg[1]/Q (HIGH)
 
- There are 43 register/latch pins with no clock driven by root clock pin: Inst_fsm/FSM_onehot_current_state_reg[7]/Q (HIGH)
-
- There are 43 register/latch pins with no clock driven by root clock pin: Inst_fsm/FSM_onehot_current_state_reg[8]/Q (HIGH)
-
- There are 32 register/latch pins with no clock driven by root clock pin: synchronizers[0].Inst_EDGEDTCTR/sreg_reg[0]/Q (HIGH)
-
- There are 32 register/latch pins with no clock driven by root clock pin: synchronizers[0].Inst_EDGEDTCTR/sreg_reg[1]/Q (HIGH)
-
- There are 32 register/latch pins with no clock driven by root clock pin: synchronizers[0].Inst_EDGEDTCTR/sreg_reg[2]/Q (HIGH)
-
- There are 32 register/latch pins with no clock driven by root clock pin: synchronizers[1].Inst_EDGEDTCTR/sreg_reg[0]/Q (HIGH)
-
- There are 32 register/latch pins with no clock driven by root clock pin: synchronizers[1].Inst_EDGEDTCTR/sreg_reg[1]/Q (HIGH)
-
- There are 32 register/latch pins with no clock driven by root clock pin: synchronizers[1].Inst_EDGEDTCTR/sreg_reg[2]/Q (HIGH)
-
- There are 32 register/latch pins with no clock driven by root clock pin: synchronizers[2].Inst_EDGEDTCTR/sreg_reg[0]/Q (HIGH)
-
- There are 32 register/latch pins with no clock driven by root clock pin: synchronizers[2].Inst_EDGEDTCTR/sreg_reg[1]/Q (HIGH)
-
- There are 32 register/latch pins with no clock driven by root clock pin: synchronizers[2].Inst_EDGEDTCTR/sreg_reg[2]/Q (HIGH)
+ There are 4 register/latch pins with no clock driven by root clock pin: synchronizers[1].Inst_EDGEDTCTR/sreg_reg[2]/Q (HIGH)
 
 
 2. checking constant_clock (0)
@@ -118,9 +99,9 @@ Table of Contents
  There are 0 register/latch pins which need pulse_width check
 
 
-4. checking unconstrained_internal_endpoints (229)
+4. checking unconstrained_internal_endpoints (182)
 --------------------------------------------------
- There are 229 pins that are not constrained for maximum delay. (HIGH)
+ There are 182 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
@@ -166,9 +147,9 @@ Table of Contents
  There are 0 ports with partial output delay specified.
 
 
-12. checking latch_loops (32)
------------------------------
- There are 32 combinational latch loops in the design through latch input (HIGH)
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
 
 
 

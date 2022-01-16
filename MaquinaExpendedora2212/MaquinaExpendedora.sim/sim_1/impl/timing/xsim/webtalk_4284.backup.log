@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Webtalk v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Sun Jan 16 13:57:02 2022
+# Process ID: 4284
+# Current directory: C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.sim/sim_1/impl/timing/xsim
+# Command line: wbtcv.exe -mode batch -source C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.sim/sim_1/impl/timing/xsim/xsim.dir/FSM_tb_time_impl/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.sim/sim_1/impl/timing/xsim/webtalk.log
+# Journal file: C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.sim/sim_1/impl/timing/xsim\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.sim/sim_1/impl/timing/xsim/xsim.dir/FSM_tb_time_impl/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sun Jan 16 13:57:03 2022...

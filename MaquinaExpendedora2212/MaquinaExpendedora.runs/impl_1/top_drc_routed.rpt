@@ -1,8 +1,8 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Wed Dec 22 12:12:19 2021
-| Host         : LAPTOP-T044LQ5T running 64-bit major release  (build 9200)
+| Date         : Sun Jan 16 13:36:49 2022
+| Host         : PACO-GUILLE running 64-bit major release  (build 9200)
 | Command      : report_drc -file top_drc_routed.rpt -pb top_drc_routed.pb -rpx top_drc_routed.rpx
 | Design       : top
 | Device       : xc7a100tcsg324-1
@@ -24,12 +24,12 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 2
+             Violations found: 6
 +----------+----------+-----------------------------------------------------+------------+
 | Rule     | Severity | Description                                         | Violations |
 +----------+----------+-----------------------------------------------------+------------+
 | CFGBVS-1 | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
-| PDRC-153 | Warning  | Gated clock check                                   | 1          |
+| PDRC-153 | Warning  | Gated clock check                                   | 5          |
 +----------+----------+-----------------------------------------------------+------------+
 
 2. REPORT DETAILS
@@ -49,7 +49,27 @@ Related violations: <none>
 
 PDRC-153#1 Warning
 Gated clock check  
-Net Inst_fsm/money_ok_reg_i_2_n_1 is a gated clock net sourced by a combinational pin Inst_fsm/money_ok_reg_i_2/O, cell Inst_fsm/money_ok_reg_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net Inst_fsm/coste_rest_reg[5]_LDC_i_1_n_0 is a gated clock net sourced by a combinational pin Inst_fsm/coste_rest_reg[5]_LDC_i_1/O, cell Inst_fsm/coste_rest_reg[5]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net synchronizers[1].Inst_EDGEDTCTR/sreg_reg[0]_2 is a gated clock net sourced by a combinational pin synchronizers[1].Inst_EDGEDTCTR/coste_rest_reg[4]_LDC_i_1/O, cell synchronizers[1].Inst_EDGEDTCTR/coste_rest_reg[4]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#3 Warning
+Gated clock check  
+Net synchronizers[1].Inst_EDGEDTCTR/sreg_reg[0]_3 is a gated clock net sourced by a combinational pin synchronizers[1].Inst_EDGEDTCTR/coste_rest_reg[6]_LDC_i_1/O, cell synchronizers[1].Inst_EDGEDTCTR/coste_rest_reg[6]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#4 Warning
+Gated clock check  
+Net synchronizers[1].Inst_EDGEDTCTR/sreg_reg[1]_0 is a gated clock net sourced by a combinational pin synchronizers[1].Inst_EDGEDTCTR/coste_rest_reg[6]_LDC_i_2/O, cell synchronizers[1].Inst_EDGEDTCTR/coste_rest_reg[6]_LDC_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#5 Warning
+Gated clock check  
+Net synchronizers[1].Inst_EDGEDTCTR/sreg_reg[1]_1 is a gated clock net sourced by a combinational pin synchronizers[1].Inst_EDGEDTCTR/coste_rest_reg[4]_LDC_i_2/O, cell synchronizers[1].Inst_EDGEDTCTR/coste_rest_reg[4]_LDC_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 

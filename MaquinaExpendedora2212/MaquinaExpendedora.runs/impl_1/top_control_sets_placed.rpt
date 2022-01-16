@@ -1,8 +1,8 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Wed Dec 22 12:11:45 2021
-| Host         : LAPTOP-T044LQ5T running 64-bit major release  (build 9200)
+| Date         : Sun Jan 16 13:36:24 2022
+| Host         : PACO-GUILLE running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
 | Device       : xc7a100t
@@ -23,11 +23,11 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |     7 |
-|    Minimum number of control sets                        |     7 |
+| Total control sets                                       |    16 |
+|    Minimum number of control sets                        |    16 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
-| Unused register locations in slices containing registers |    19 |
+| Unused register locations in slices containing registers |    92 |
 +----------------------------------------------------------+-------+
 * Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
 ** Run report_qor_suggestions for automated merging and remapping suggestions
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |     7 |
-| >= 0 to < 4        |     1 |
+| Total control sets |    16 |
+| >= 0 to < 4        |    13 |
 | >= 4 to < 6        |     0 |
 | >= 6 to < 8        |     0 |
 | >= 8 to < 10       |     0 |
-| >= 10 to < 12      |     2 |
+| >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     1 |
-| >= 16              |     3 |
+| >= 16              |     2 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,11 +58,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              68 |           24 |
+| No           | No                    | No                     |              25 |           11 |
 | No           | No                    | Yes                    |               0 |            0 |
-| No           | Yes                   | No                     |              15 |            4 |
+| No           | Yes                   | No                     |              20 |            9 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |              42 |           13 |
+| Yes          | No                    | Yes                    |              39 |           17 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -70,16 +70,25 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+--------------------------------+----------------------------------------------+---------------------+------------------+----------------+--------------+
-|          Clock Signal          |                 Enable Signal                |   Set/Reset Signal  | Slice Load Count | Bel Load Count | Bels / Slice |
-+--------------------------------+----------------------------------------------+---------------------+------------------+----------------+--------------+
-|  CLK_IBUF_BUFG                 |                                              |                     |                1 |              2 |         2.00 |
-|  clk_escalado_BUFG             | Inst_fsm/FSM_onehot_current_state[8]_i_1_n_1 | Inst_timer/RESET    |                5 |             10 |         2.00 |
-|  Inst_fsm/money_ok_reg_i_2_n_1 |                                              |                     |                4 |             11 |         2.75 |
-|  CLK_IBUF_BUFG                 |                                              | Inst_Prescale/clk_i |                4 |             15 |         3.75 |
-|  clk_escalado_BUFG             |                                              |                     |                7 |             28 |         4.00 |
-|  clk_escalado_BUFG             | Inst_timer/ticks[0]_i_1_n_1                  | Inst_timer/RESET    |                8 |             32 |         4.00 |
-|  n_0_326_BUFG                  |                                              |                     |               12 |             32 |         2.67 |
-+--------------------------------+----------------------------------------------+---------------------+------------------+----------------+--------------+
++------------------------------------------------+-----------------------------------+-----------------------------------------------+------------------+----------------+--------------+
+|                  Clock Signal                  |           Enable Signal           |                Set/Reset Signal               | Slice Load Count | Bel Load Count | Bels / Slice |
++------------------------------------------------+-----------------------------------+-----------------------------------------------+------------------+----------------+--------------+
+|  synchronizers[1].Inst_EDGEDTCTR/sreg_reg[1]_1 |                                   | synchronizers[1].Inst_EDGEDTCTR/sreg_reg[0]_2 |                1 |              1 |         1.00 |
+|  synchronizers[1].Inst_EDGEDTCTR/sreg_reg[0]_2 |                                   | synchronizers[1].Inst_EDGEDTCTR/sreg_reg[1]_1 |                1 |              1 |         1.00 |
+|  synchronizers[1].Inst_EDGEDTCTR/sreg_reg[0]_3 |                                   | synchronizers[1].Inst_EDGEDTCTR/sreg_reg[1]_0 |                1 |              1 |         1.00 |
+|  synchronizers[1].Inst_EDGEDTCTR/sreg_reg[1]_0 |                                   | synchronizers[1].Inst_EDGEDTCTR/sreg_reg[0]_3 |                1 |              1 |         1.00 |
+|  Inst_fsm/coste_rest_reg[5]_LDC_i_1_n_0        |                                   | synchronizers[0].Inst_EDGEDTCTR/sreg_reg[1]_1 |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG                                 | Inst_fsm/coste_rest0              | synchronizers[0].Inst_EDGEDTCTR/sreg_reg[1]_1 |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG                                 | Inst_fsm/coste_rest0              | Inst_fsm/coste_rest_reg[5]_LDC_i_1_n_0        |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG                                 | Inst_fsm/coste_rest0              | synchronizers[1].Inst_EDGEDTCTR/sreg_reg[1]_1 |                2 |              2 |         1.00 |
+|  CLK_IBUF_BUFG                                 | Inst_fsm/coste_rest0              | synchronizers[1].Inst_EDGEDTCTR/sreg_reg[0]_2 |                2 |              2 |         1.00 |
+|  CLK_IBUF_BUFG                                 | Inst_fsm/coste_rest0              | synchronizers[1].Inst_EDGEDTCTR/sreg_reg[0]_3 |                2 |              2 |         1.00 |
+|  CLK_IBUF_BUFG                                 | Inst_fsm/coste_rest0              | synchronizers[1].Inst_EDGEDTCTR/sreg_reg[1]_0 |                2 |              2 |         1.00 |
+|  Inst_Prescale/CLK                             |                                   |                                               |                1 |              3 |         3.00 |
+|  CLK_IBUF_BUFG                                 | Inst_fsm/current_state[2]_i_1_n_0 | Inst_fsm/current_state[2]_i_3_n_0             |                1 |              3 |         3.00 |
+|  CLK_IBUF_BUFG                                 |                                   | Inst_Prescale/clk_i                           |                4 |             15 |         3.75 |
+|  CLK_IBUF_BUFG                                 | Inst_fsm/coste_rest0              | Inst_fsm/coste_rest[31]_i_3_n_0               |                6 |             26 |         4.33 |
+|  CLK_IBUF_BUFG                                 |                                   |                                               |               10 |             27 |         2.70 |
++------------------------------------------------+-----------------------------------+-----------------------------------------------+------------------+----------------+--------------+
 
 

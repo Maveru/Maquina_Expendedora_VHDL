@@ -125,7 +125,7 @@ component BCD_decoder is
     );
     Port ( 
         clk_in  :in std_logic;      -- señal de reloj de entrada
-        clk_out:out std_logic       -- señal de reloj de salida
+        clk_out :out std_logic      -- señal de reloj de salida
     );
  END component;
   
@@ -134,14 +134,14 @@ begin
 synchronizers: for i in Boton'range generate -- Obligatorio que lleve nombre Lo hace para TODOS los botones
     Inst_SYNCHRNZR: SYNCHRNZR
       port map (
-        clk      => clk,
+        clk      => clk, -- ver clk_escalado
         async_in => Boton(i),
         sync_out => boton_sinc(i)
       );
 
   Inst_EDGEDTCTR: EDGEDTCTR 
       PORT MAP(
-        CLK     => clk,
+        CLK     => clk, -- ver clk_escalado
         SYNC_IN => boton_sinc(i),
         EDGE    => boton_edge(i)
       );
@@ -231,7 +231,7 @@ synchronizers: for i in Boton'range generate -- Obligatorio que lleve nombre Lo 
 
   Inst_DisplayExit: display_exit
     PORT MAP(
-        CLK    => clk_escalado, --VER
+        CLK    => clk_escalado, -- ver clk
         S0 =>  to_s0, 
         S1 =>  to_s1,
         S2 =>  to_s2,

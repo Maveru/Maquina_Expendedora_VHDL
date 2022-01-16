@@ -1,0 +1,32 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Wed Jan 12 00:13:16 2022
+# Process ID: 15344
+# Current directory: C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4912 C:\Users\Propietario\Documents\GitHub\Maquina_Expendedora_VHDL\MaquinaExpendedora2212\MaquinaExpendedora.xpr
+# Log file: C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/vivado.log
+# Journal file: C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.xpr
+update_compile_order -fileset sources_1
+set_property top FSM_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+config_ip_cache -import_from_project -use_cache_location C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/ip
+update_ip_catalog
+update_compile_order -fileset sim_1
+set_property -name {xsim.simulate.runtime} -value {12000us} -objects [get_filesets sim_1]
+launch_simulation
+source FSM_tb.tcl
+relaunch_sim
+close_sim
+launch_simulation
+source FSM_tb.tcl
+close_sim
+launch_simulation
+source FSM_tb.tcl
+relaunch_sim
+relaunch_sim
+close_sim

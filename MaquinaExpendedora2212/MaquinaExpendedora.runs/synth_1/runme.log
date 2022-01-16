@@ -17,125 +17,101 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100
 INFO: [Device 21-403] Loading part xc7a100tcsg324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 3276
+INFO: [Synth 8-7075] Helper process launched with PID 11000
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1143.348 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1246.770 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'top' [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:24]
-INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/sincro.vhd:5' bound to instance 'Inst_SYNCHRNZR' of component 'SYNCHRNZR' [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:132]
-INFO: [Synth 8-638] synthesizing module 'SYNCHRNZR' [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/sincro.vhd:13]
-INFO: [Synth 8-256] done synthesizing module 'SYNCHRNZR' (1#1) [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/sincro.vhd:13]
-INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/edgedetector.vhd:24' bound to instance 'Inst_EDGEDTCTR' of component 'EDGEDTCTR' [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:139]
-INFO: [Synth 8-638] synthesizing module 'EDGEDTCTR' [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/edgedetector.vhd:32]
-INFO: [Synth 8-256] done synthesizing module 'EDGEDTCTR' (2#1) [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/edgedetector.vhd:32]
-INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/sincro.vhd:5' bound to instance 'Inst_SYNCHRNZR' of component 'SYNCHRNZR' [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:132]
-INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/edgedetector.vhd:24' bound to instance 'Inst_EDGEDTCTR' of component 'EDGEDTCTR' [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:139]
-INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/sincro.vhd:5' bound to instance 'Inst_SYNCHRNZR' of component 'SYNCHRNZR' [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:132]
-INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/edgedetector.vhd:24' bound to instance 'Inst_EDGEDTCTR' of component 'EDGEDTCTR' [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:139]
-INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/sincro.vhd:5' bound to instance 'Inst_SYNCHRNZR' of component 'SYNCHRNZR' [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:132]
-INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/edgedetector.vhd:24' bound to instance 'Inst_EDGEDTCTR' of component 'EDGEDTCTR' [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:139]
-INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/sincro.vhd:5' bound to instance 'Inst_SYNCHRNZR' of component 'SYNCHRNZR' [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:132]
-INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/edgedetector.vhd:24' bound to instance 'Inst_EDGEDTCTR' of component 'EDGEDTCTR' [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:139]
-INFO: [Synth 8-3491] module 'prescaler' declared at 'S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/prescaler.vhd:26' bound to instance 'Inst_Prescale' of component 'prescaler' [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:148]
-INFO: [Synth 8-638] synthesizing module 'prescaler' [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/prescaler.vhd:37]
+INFO: [Synth 8-638] synthesizing module 'top' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:27]
+INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/sincro.vhd:5' bound to instance 'Inst_SYNCHRNZR' of component 'SYNCHRNZR' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:135]
+INFO: [Synth 8-638] synthesizing module 'SYNCHRNZR' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/sincro.vhd:13]
+INFO: [Synth 8-256] done synthesizing module 'SYNCHRNZR' (1#1) [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/sincro.vhd:13]
+INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/edgedetector.vhd:24' bound to instance 'Inst_EDGEDTCTR' of component 'EDGEDTCTR' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:142]
+INFO: [Synth 8-638] synthesizing module 'EDGEDTCTR' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/edgedetector.vhd:32]
+INFO: [Synth 8-256] done synthesizing module 'EDGEDTCTR' (2#1) [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/edgedetector.vhd:32]
+INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/sincro.vhd:5' bound to instance 'Inst_SYNCHRNZR' of component 'SYNCHRNZR' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:135]
+INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/edgedetector.vhd:24' bound to instance 'Inst_EDGEDTCTR' of component 'EDGEDTCTR' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:142]
+INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/sincro.vhd:5' bound to instance 'Inst_SYNCHRNZR' of component 'SYNCHRNZR' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:135]
+INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/edgedetector.vhd:24' bound to instance 'Inst_EDGEDTCTR' of component 'EDGEDTCTR' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:142]
+INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/sincro.vhd:5' bound to instance 'Inst_SYNCHRNZR' of component 'SYNCHRNZR' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:135]
+INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/edgedetector.vhd:24' bound to instance 'Inst_EDGEDTCTR' of component 'EDGEDTCTR' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:142]
+INFO: [Synth 8-3491] module 'SYNCHRNZR' declared at 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/sincro.vhd:5' bound to instance 'Inst_SYNCHRNZR' of component 'SYNCHRNZR' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:135]
+INFO: [Synth 8-3491] module 'EDGEDTCTR' declared at 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/edgedetector.vhd:24' bound to instance 'Inst_EDGEDTCTR' of component 'EDGEDTCTR' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:142]
+INFO: [Synth 8-3491] module 'prescaler' declared at 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/prescaler.vhd:7' bound to instance 'Inst_Prescale' of component 'prescaler' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:151]
+INFO: [Synth 8-638] synthesizing module 'prescaler' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/prescaler.vhd:18]
 	Parameter f_in bound to: 100000000 - type: integer 
 	Parameter f_out bound to: 1000 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'prescaler' (3#1) [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/prescaler.vhd:37]
-INFO: [Synth 8-3491] module 'timer' declared at 'S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/timer.vhd:26' bound to instance 'Inst_timer' of component 'timer' [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:154]
-INFO: [Synth 8-638] synthesizing module 'timer' [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/timer.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'prescaler' (3#1) [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/prescaler.vhd:18]
+INFO: [Synth 8-3491] module 'timer' declared at 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/timer.vhd:26' bound to instance 'Inst_timer' of component 'timer' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:157]
+INFO: [Synth 8-638] synthesizing module 'timer' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/timer.vhd:41]
 	Parameter delay bound to: 5 - type: integer 
 	Parameter frec_in bound to: 1000 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'timer' (4#1) [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/timer.vhd:41]
-INFO: [Synth 8-3491] module 'fsm' declared at 'S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/FSM.vhd:5' bound to instance 'Inst_fsm' of component 'fsm' [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:162]
-INFO: [Synth 8-638] synthesizing module 'fsm' [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/FSM.vhd:19]
-WARNING: [Synth 8-614] signal 'coste_rest' is read in the process but is not in the sensitivity list [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/FSM.vhd:37]
-WARNING: [Synth 8-614] signal 'Coste_i' is read in the process but is not in the sensitivity list [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/FSM.vhd:37]
-WARNING: [Synth 8-614] signal 'end_timer' is read in the process but is not in the sensitivity list [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/FSM.vhd:37]
-INFO: [Synth 8-256] done synthesizing module 'fsm' (5#1) [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/FSM.vhd:19]
-INFO: [Synth 8-3491] module 'BCD_decoder' declared at 'S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/BCD_Decod.vhd:5' bound to instance 'Inst_BCD_Decod' of component 'BCD_decoder' [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:175]
-INFO: [Synth 8-638] synthesizing module 'BCD_decoder' [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/BCD_Decod.vhd:20]
-INFO: [Synth 8-256] done synthesizing module 'BCD_decoder' (6#1) [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/BCD_Decod.vhd:20]
-INFO: [Synth 8-3491] module 'BCD_a_7segments' declared at 'S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/BCD_a_7segments.vhd:6' bound to instance 'Inst_BCD_a_7segmentos0' of component 'BCD_a_7segments' [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:188]
-INFO: [Synth 8-638] synthesizing module 'BCD_a_7segments' [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/BCD_a_7segments.vhd:14]
-INFO: [Synth 8-256] done synthesizing module 'BCD_a_7segments' (7#1) [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/BCD_a_7segments.vhd:14]
-INFO: [Synth 8-3491] module 'BCD_a_7segments' declared at 'S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/BCD_a_7segments.vhd:6' bound to instance 'Inst_BCD_a_7segmentos1' of component 'BCD_a_7segments' [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:193]
-INFO: [Synth 8-3491] module 'BCD_a_7segments' declared at 'S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/BCD_a_7segments.vhd:6' bound to instance 'Inst_BCD_a_7segmentos2' of component 'BCD_a_7segments' [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:198]
-INFO: [Synth 8-3491] module 'BCD_a_7segments' declared at 'S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/BCD_a_7segments.vhd:6' bound to instance 'Inst_BCD_a_7segmentos3' of component 'BCD_a_7segments' [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:203]
-INFO: [Synth 8-3491] module 'BCD_a_7segments' declared at 'S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/BCD_a_7segments.vhd:6' bound to instance 'Inst_BCD_a_7segmentos4' of component 'BCD_a_7segments' [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:208]
-INFO: [Synth 8-3491] module 'BCD_a_7segments' declared at 'S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/BCD_a_7segments.vhd:6' bound to instance 'Inst_BCD_a_7segmentos5' of component 'BCD_a_7segments' [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:213]
-INFO: [Synth 8-3491] module 'BCD_a_7segments' declared at 'S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/BCD_a_7segments.vhd:6' bound to instance 'Inst_BCD_a_7segmentos6' of component 'BCD_a_7segments' [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:218]
-INFO: [Synth 8-3491] module 'BCD_a_7segments' declared at 'S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/BCD_a_7segments.vhd:6' bound to instance 'Inst_BCD_a_7segmentos7' of component 'BCD_a_7segments' [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:223]
-INFO: [Synth 8-3491] module 'display_exit' declared at 'S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/DisplayExit.vhd:4' bound to instance 'Inst_DisplayExit' of component 'display_exit' [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:229]
-INFO: [Synth 8-638] synthesizing module 'display_exit' [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/DisplayExit.vhd:17]
-INFO: [Synth 8-256] done synthesizing module 'display_exit' (8#1) [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/DisplayExit.vhd:17]
-INFO: [Synth 8-256] done synthesizing module 'top' (9#1) [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'timer' (4#1) [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/timer.vhd:41]
+INFO: [Synth 8-3491] module 'fsm' declared at 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/FSM.vhd:5' bound to instance 'Inst_fsm' of component 'fsm' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:165]
+INFO: [Synth 8-638] synthesizing module 'fsm' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/FSM.vhd:19]
+INFO: [Synth 8-256] done synthesizing module 'fsm' (5#1) [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/FSM.vhd:19]
+INFO: [Synth 8-3491] module 'BCD_decoder' declared at 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/BCD_Decod.vhd:5' bound to instance 'Inst_BCD_Decod' of component 'BCD_decoder' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:178]
+INFO: [Synth 8-638] synthesizing module 'BCD_decoder' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/BCD_Decod.vhd:20]
+INFO: [Synth 8-256] done synthesizing module 'BCD_decoder' (6#1) [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/BCD_Decod.vhd:20]
+INFO: [Synth 8-3491] module 'BCD_a_7segments' declared at 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/BCD_a_7segments.vhd:6' bound to instance 'Inst_BCD_a_7segmentos0' of component 'BCD_a_7segments' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:191]
+INFO: [Synth 8-638] synthesizing module 'BCD_a_7segments' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/BCD_a_7segments.vhd:14]
+INFO: [Synth 8-256] done synthesizing module 'BCD_a_7segments' (7#1) [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/BCD_a_7segments.vhd:14]
+INFO: [Synth 8-3491] module 'BCD_a_7segments' declared at 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/BCD_a_7segments.vhd:6' bound to instance 'Inst_BCD_a_7segmentos1' of component 'BCD_a_7segments' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:196]
+INFO: [Synth 8-3491] module 'BCD_a_7segments' declared at 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/BCD_a_7segments.vhd:6' bound to instance 'Inst_BCD_a_7segmentos2' of component 'BCD_a_7segments' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:201]
+INFO: [Synth 8-3491] module 'BCD_a_7segments' declared at 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/BCD_a_7segments.vhd:6' bound to instance 'Inst_BCD_a_7segmentos3' of component 'BCD_a_7segments' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:206]
+INFO: [Synth 8-3491] module 'BCD_a_7segments' declared at 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/BCD_a_7segments.vhd:6' bound to instance 'Inst_BCD_a_7segmentos4' of component 'BCD_a_7segments' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:211]
+INFO: [Synth 8-3491] module 'BCD_a_7segments' declared at 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/BCD_a_7segments.vhd:6' bound to instance 'Inst_BCD_a_7segmentos5' of component 'BCD_a_7segments' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:216]
+INFO: [Synth 8-3491] module 'BCD_a_7segments' declared at 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/BCD_a_7segments.vhd:6' bound to instance 'Inst_BCD_a_7segmentos6' of component 'BCD_a_7segments' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:221]
+INFO: [Synth 8-3491] module 'BCD_a_7segments' declared at 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/BCD_a_7segments.vhd:6' bound to instance 'Inst_BCD_a_7segmentos7' of component 'BCD_a_7segments' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:226]
+INFO: [Synth 8-3491] module 'display_exit' declared at 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/DisplayExit.vhd:4' bound to instance 'Inst_DisplayExit' of component 'display_exit' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:232]
+INFO: [Synth 8-638] synthesizing module 'display_exit' [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/DisplayExit.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'display_exit' (8#1) [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/DisplayExit.vhd:17]
+INFO: [Synth 8-256] done synthesizing module 'top' (9#1) [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd:27]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1143.348 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1246.770 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1143.348 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1246.770 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1143.348 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1246.770 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1143.348 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1246.770 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/constrs_1/imports/SED/Nexys-4-DDR-Master.xdc]
-Finished Parsing XDC File [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/constrs_1/imports/SED/Nexys-4-DDR-Master.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/constrs_1/imports/SED/Nexys-4-DDR-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Parsing XDC File [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/constrs_1/imports/SED/Nexys-4-DDR-Master.xdc]
+Finished Parsing XDC File [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/constrs_1/imports/SED/Nexys-4-DDR-Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/constrs_1/imports/SED/Nexys-4-DDR-Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1143.754 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1257.754 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1143.754 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1257.754 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1143.754 ; gain = 0.406
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1257.754 ; gain = 10.984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1143.754 ; gain = 0.406
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1257.754 ; gain = 10.984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1143.754 ; gain = 0.406
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1257.754 ; gain = 10.984
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'fsm'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                 iSTATE3 |                        000000001 |                             0000
-*
-                 iSTATE2 |                        000000010 |                             0001
-                 iSTATE1 |                        000000100 |                             0010
-                 iSTATE0 |                        000001000 |                             0011
-                  iSTATE |                        000010000 |                             0100
-                 iSTATE7 |                        000100000 |                             0101
-                 iSTATE6 |                        001000000 |                             1000
-                 iSTATE5 |                        010000000 |                             0110
-                 iSTATE4 |                        100000000 |                             0111
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'fsm'
-WARNING: [Synth 8-327] inferring latch for variable 'money_ok_reg' [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/FSM.vhd:105]
-WARNING: [Synth 8-327] inferring latch for variable 'delivering_reg' [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/FSM.vhd:103]
-WARNING: [Synth 8-327] inferring latch for variable 'error_reg' [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/FSM.vhd:104]
-WARNING: [Synth 8-327] inferring latch for variable 'coste_rest_reg' [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/FSM.vhd:42]
-WARNING: [Synth 8-327] inferring latch for variable 'salida_reg' [S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/FSM.vhd:106]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1143.754 ; gain = 0.406
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1257.754 ; gain = 10.984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -146,30 +122,30 @@ Detailed RTL Component Info :
 	   2 Input   16 Bit       Adders := 1     
 	   2 Input    3 Bit       Adders := 1     
 +---Registers : 
+	               32 Bit    Registers := 1     
 	               16 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
 	                3 Bit    Registers := 6     
 	                2 Bit    Registers := 5     
 	                1 Bit    Registers := 6     
 +---Muxes : 
-	   2 Input   32 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 4     
 	   2 Input   16 Bit        Muxes := 1     
-	  10 Input   16 Bit        Muxes := 1     
 	   5 Input   15 Bit        Muxes := 1     
 	   2 Input    9 Bit        Muxes := 1     
-	  11 Input    9 Bit        Muxes := 1     
-	   3 Input    8 Bit        Muxes := 1     
 	   2 Input    8 Bit        Muxes := 1     
+	   3 Input    8 Bit        Muxes := 1     
 	  10 Input    8 Bit        Muxes := 1     
 	   8 Input    8 Bit        Muxes := 1     
-	   7 Input    6 Bit        Muxes := 2     
-	   2 Input    6 Bit        Muxes := 11    
-	   5 Input    6 Bit        Muxes := 3     
-	   6 Input    6 Bit        Muxes := 1     
-	   5 Input    3 Bit        Muxes := 1     
-	   2 Input    3 Bit        Muxes := 1     
+	   8 Input    6 Bit        Muxes := 2     
+	   2 Input    6 Bit        Muxes := 14    
+	   6 Input    6 Bit        Muxes := 4     
+	   2 Input    4 Bit        Muxes := 1     
+	   5 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 2     
+	   5 Input    3 Bit        Muxes := 2     
 	   2 Input    1 Bit        Muxes := 10    
-	   5 Input    1 Bit        Muxes := 1     
-	   6 Input    1 Bit        Muxes := 2     
+	   5 Input    1 Bit        Muxes := 2     
 	  10 Input    1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -187,7 +163,7 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1143.754 ; gain = 0.406
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1257.754 ; gain = 10.984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -215,19 +191,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1143.754 ; gain = 0.406
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1257.754 ; gain = 10.984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1143.754 ; gain = 0.406
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1257.754 ; gain = 10.984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1143.754 ; gain = 0.406
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1257.754 ; gain = 10.984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -245,37 +221,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1143.754 ; gain = 0.406
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1264.668 ; gain = 17.898
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1143.754 ; gain = 0.406
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1264.668 ; gain = 17.898
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1143.754 ; gain = 0.406
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1264.668 ; gain = 17.898
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1143.754 ; gain = 0.406
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1264.668 ; gain = 17.898
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1143.754 ; gain = 0.406
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1264.668 ; gain = 17.898
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1143.754 ; gain = 0.406
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1264.668 ; gain = 17.898
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -305,46 +281,46 @@ Report Cell Usage:
 +------+-------+------+
 |      |Cell   |Count |
 +------+-------+------+
-|1     |BUFG   |     3|
-|2     |CARRY4 |    24|
-|3     |LUT1   |    68|
-|4     |LUT2   |    85|
-|5     |LUT3   |    37|
-|6     |LUT4   |    19|
+|1     |BUFG   |     1|
+|2     |CARRY4 |    16|
+|3     |LUT1   |    28|
+|4     |LUT2   |     8|
+|5     |LUT3   |    42|
+|6     |LUT4   |    20|
 |7     |LUT5   |    33|
-|8     |LUT6   |   104|
-|9     |MUXF7  |    26|
-|10    |MUXF8  |     6|
+|8     |LUT6   |   107|
+|9     |MUXF7  |    27|
+|10    |MUXF8  |     5|
 |11    |SRL16E |     5|
-|12    |FDCE   |     8|
-|13    |FDPE   |    33|
+|12    |FDCE   |    34|
+|13    |FDPE   |     5|
 |14    |FDRE   |    40|
-|15    |LD     |    43|
+|15    |LDC    |     5|
 |16    |IBUF   |     7|
 |17    |OBUF   |    34|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1143.754 ; gain = 0.406
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1264.668 ; gain = 17.898
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 5 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:30 . Memory (MB): peak = 1143.754 ; gain = 0.000
-Synthesis Optimization Complete : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 1143.754 ; gain = 0.406
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 1264.668 ; gain = 6.914
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1264.668 ; gain = 17.898
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 1143.754 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 99 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1276.719 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 53 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1153.859 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1282.402 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 43 instances were transformed.
-  LD => LDCE: 43 instances
+  A total of 5 instances were transformed.
+  LDC => LDCE: 5 instances
 
-Synth Design complete, checksum: 93ab2afd
+Synth Design complete, checksum: 4f93c018
 INFO: [Common 17-83] Releasing license: Synthesis
-58 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
+56 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:00:39 . Memory (MB): peak = 1153.859 ; gain = 10.512
-INFO: [Common 17-1381] The checkpoint 'S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.runs/synth_1/top.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 1282.402 ; gain = 35.633
+INFO: [Common 17-1381] The checkpoint 'C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Dec 22 12:11:04 2021...
+INFO: [Common 17-206] Exiting Vivado at Sun Jan 16 13:35:19 2022...

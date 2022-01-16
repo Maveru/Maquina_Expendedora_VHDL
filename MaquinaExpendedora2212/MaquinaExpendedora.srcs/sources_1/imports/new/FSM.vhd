@@ -21,7 +21,7 @@ architecture behavioral of fsm is
                                                             -- S5 IMPORTE CORRECTO / S6 EXCESO DE DINERO / S7 DEVOLVIENDO DINERO / S8 ENTREGANDO PROD
      signal current_state: STATES := S0;                    -- Estado actual
      signal next_state: STATES;                             -- Estado siguiente
-     signal Coste_i: integer:=0;                            -- Señal auxiliar para guardar importe restante por introducir
+     --signal Coste_i: integer:=0;                            -- Señal auxiliar para guardar importe restante por introducir
      signal coste_rest: integer:=0;                         -- Varia al meter monedas
 begin
     state_register: process (RESET, CLK)
@@ -34,7 +34,7 @@ begin
     end if;
  end process;
  
- nextstate_decod: process (Botones, current_state, end_timer) -- antes estaba coste_rest tambien
+ nextstate_decod: process (Botones, current_state, end_timer, coste_rest, clk) -- antes estaba coste_rest tambien
  begin
     next_state <= current_state;
     -- coste_rest <= coste_rest; --probar esto
@@ -46,18 +46,21 @@ if current_state = S4 then                  -- bebida seleccionada. Hay que intr
        next_state <= S5;
     elsif (coste_rest < 0) then             -- Importe en exceso. Se devolvera importe total
        next_state <= S6;
-    elsif Botones(0) = '1' then             -- Introducimos moneda 20 centimos
-       coste_rest <= coste_rest -20;
-       --next_state <= S4;
-    elsif Botones(1) = '1' then             -- Introducimos moneda 50 centimos
-       coste_rest <= coste_rest -50;
-       --next_state <= S4;
-    elsif Botones(2) = '1' then             -- Introducimos moneda 100 centimos
-       coste_rest <= coste_rest -100;
-       --next_state <= S4;
+    else
+        if (rising_edge(clk))then
+            if Botones(0) = '1' then             -- Introducimos moneda 20 centimos
+                coste_rest <= coste_rest -20;
+                --next_state <= S4;
+            elsif Botones(1) = '1' then             -- Introducimos moneda 50 centimos
+                coste_rest <= coste_rest -50;
+                --next_state <= S4;
+            elsif Botones(2) = '1' then             -- Introducimos moneda 100 centimos
+                coste_rest <= coste_rest -100;
+                --next_state <= S4;
+            end if;
+        end if;
     end if;
-  --end if;
-
+    
 elsif current_state = S5 then               -- estado para lanzar el temporizador para entregar producto
         next_state  <= S8;
        
@@ -97,11 +100,11 @@ else    --(current_state = S0 OR current_state = S1 OR current_state = S2   OR c
     end if;
   end if;
 --end if;   
-  Coste_i <= coste_rest ;  
+  --Coste_i <= coste_rest ;  
    
  end process;
  
- output_decod: process (current_state, coste_i)
+ output_decod: process (current_state, coste_rest)
  begin
     LIGHT       <= (OTHERS => '0');               -- se apagan todos los leds para que no se acumulen los de estados anteriores
     money_ok    <='0';
@@ -144,22 +147,22 @@ else    --(current_state = S0 OR current_state = S1 OR current_state = S2   OR c
         delivering  <= '0';                                                     -- No se esta entregando bebida
         error       <= '0';                                                     -- No se esta devolviendo dinero
         money_ok    <= '0';                                                     -- No se lanza temporizador
-        salida      <= std_logic_vector(to_unsigned(Coste_i, salida'length));   -- Se muestra en los displays el importe restante     
-                        -- se convierte Coste_i (integer) en std_logic_vector
+        salida      <= std_logic_vector(to_unsigned(coste_rest, salida'length));   -- Se muestra en los displays el importe restante     
+                        -- se convierte coste_rest (integer) en std_logic_vector
 
-    if (Coste_i = 100) then
+    if (coste_rest = 100) then
         LIGHT(15)   <= '1';
-    elsif (Coste_i = 80) then
+    elsif (coste_rest = 80) then
         LIGHT(14)   <= '1';
-    elsif (Coste_i = 50) then
+    elsif (coste_rest = 50) then
         LIGHT(13)   <= '1';
-     elsif (Coste_i = 0) then
+     elsif (coste_rest = 0) then
         LIGHT(12)   <= '1';
      else
          LIGHT(15)   <= '1';
-          LIGHT(14)   <= '1';
-           LIGHT(13)   <= '1';
-            LIGHT(12)   <= '1';
+         LIGHT(14)   <= '1';
+         LIGHT(13)   <= '1';
+         LIGHT(12)   <= '1';
       end if;
 
 
@@ -179,12 +182,14 @@ else    --(current_state = S0 OR current_state = S1 OR current_state = S2   OR c
         money_ok    <= '1';                 -- SI se lanza temporizador
         salida      <= "11111111";          -- codigo para mostrar en displays "ERROR" (255 en binario)   
       when S7 =>
+        LIGHT(7)   <= '1';
         delivering  <= '0';                 -- No se esta entregando bebida
         error       <= '1';                 -- SI se esta devolviendo dinero. Se enciende LED rojo
         money_ok    <= '0';                 -- No se lanza temporizador
         salida      <= "11111111";          -- codigo para mostrar en displays "ERROR" (255 en binario)   
         
       when S8 => 
+        LIGHT(8)   <= '1';
         delivering  <= '1';                 -- SI se esta entregando bebida
         error       <= '0';                 -- No se esta devolviendo dinero
         money_ok    <= '0';                 -- No se lanza temporizador

@@ -1,0 +1,4 @@
+Time resolution is 1 ps
+Failure: [SUCCESS]: simulation finished.
+Time: 430 ns  Iteration: 0  Process: /FSM_tb/tester  File: C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sim_1/imports/new/FSM_tb.vhd
+$finish called at time : 430 ns : File "C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sim_1/imports/new/FSM_tb.vhd" Line 186

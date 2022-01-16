@@ -1,8 +1,8 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Wed Dec 22 12:12:21 2021
-| Host         : LAPTOP-T044LQ5T running 64-bit major release  (build 9200)
+| Date         : Sun Jan 16 13:36:51 2022
+| Host         : PACO-GUILLE running 64-bit major release  (build 9200)
 | Command      : report_bus_skew -warn_on_violation -file top_bus_skew_routed.rpt -pb top_bus_skew_routed.pb -rpx top_bus_skew_routed.rpx
 | Design       : top
 | Device       : 7a100t-csg324

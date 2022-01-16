@@ -11,9 +11,9 @@ echo "Please update the PATH and LD_LIBRARY_PATH variables below, before executi
 exit
 
 if [ -z "$PATH" ]; then
-  PATH=S:/Xilinx/Vivado/2021.1/ids_lite/ISE/bin/nt64;S:/Xilinx/Vivado/2021.1/ids_lite/ISE/lib/nt64:S:/Xilinx/Vivado/2021.1/bin
+  PATH=E:/Vivado/2021.1/ids_lite/ISE/bin/nt64;E:/Vivado/2021.1/ids_lite/ISE/lib/nt64:E:/Vivado/2021.1/bin
 else
-  PATH=S:/Xilinx/Vivado/2021.1/ids_lite/ISE/bin/nt64;S:/Xilinx/Vivado/2021.1/ids_lite/ISE/lib/nt64:S:/Xilinx/Vivado/2021.1/bin:$PATH
+  PATH=E:/Vivado/2021.1/ids_lite/ISE/bin/nt64;E:/Vivado/2021.1/ids_lite/ISE/lib/nt64:E:/Vivado/2021.1/bin:$PATH
 fi
 export PATH
 
@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.runs/synth_1'
+HD_PWD='C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

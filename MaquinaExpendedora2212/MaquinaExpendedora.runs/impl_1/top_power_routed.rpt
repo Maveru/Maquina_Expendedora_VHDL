@@ -1,8 +1,8 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date             : Wed Dec 22 12:12:21 2021
-| Host             : LAPTOP-T044LQ5T running 64-bit major release  (build 9200)
+| Date             : Sun Jan 16 13:36:51 2022
+| Host             : PACO-GUILLE running 64-bit major release  (build 9200)
 | Command          : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 | Design           : top
 | Device           : xc7a100tcsg324-1
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 34.604 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 30.238 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                     |
 | Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 33.807                           |
+| Dynamic (W)              | 29.441                           |
 | Device Static (W)        | 0.797                            |
 | Effective TJA (C/W)      | 4.6                              |
 | Max Ambient (C)          | 0.0                              |
@@ -52,18 +52,18 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Slice Logic             |     0.363 |      565 |       --- |             --- |
-|   LUT as Logic          |     0.306 |      267 |     63400 |            0.42 |
-|   F7/F8 Muxes           |     0.027 |       29 |     63400 |            0.05 |
-|   Register              |     0.013 |      125 |    126800 |            0.10 |
-|   CARRY4                |     0.011 |       24 |     15850 |            0.15 |
-|   BUFG                  |     0.006 |        3 |        32 |            9.38 |
+| Slice Logic             |     0.563 |      406 |       --- |             --- |
+|   LUT as Logic          |     0.418 |      213 |     63400 |            0.34 |
+|   CARRY4                |     0.074 |       16 |     15850 |            0.10 |
+|   F7/F8 Muxes           |     0.033 |       29 |     63400 |            0.05 |
+|   Register              |     0.022 |       84 |    126800 |            0.07 |
+|   LUT as Shift Register |     0.010 |        4 |     19000 |            0.02 |
+|   BUFG                  |     0.006 |        1 |        32 |            3.13 |
 |   Others                |     0.000 |       30 |       --- |             --- |
-|   LUT as Shift Register |     0.000 |        4 |     19000 |            0.02 |
-| Signals                 |     0.812 |      387 |       --- |             --- |
-| I/O                     |    32.633 |       41 |       210 |           19.52 |
+| Signals                 |     1.038 |      278 |       --- |             --- |
+| I/O                     |    27.840 |       41 |       210 |           19.52 |
 | Static Power            |     0.797 |          |           |                 |
-| Total                   |    34.604 |          |           |                 |
+| Total                   |    30.238 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,9 +73,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     1.761 |       1.198 |      0.563 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     1.288 |       1.195 |      0.093 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     9.234 |       9.230 |      0.004 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     2.188 |       1.625 |      0.563 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     1.112 |       1.019 |      0.093 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     7.877 |       7.873 |      0.004 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -137,13 +137,24 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+--------------------+-----------+
-| Name               | Power (W) |
-+--------------------+-----------+
-| top                |    33.807 |
-|   Inst_DisplayExit |     0.730 |
-|   Inst_Prescale    |     0.110 |
-|   Inst_fsm         |     0.308 |
-+--------------------+-----------+
++-----------------------------------+-----------+
+| Name                              | Power (W) |
++-----------------------------------+-----------+
+| top                               |    29.441 |
+|   Inst_BCD_Decod                  |     0.018 |
+|   Inst_DisplayExit                |     0.658 |
+|   Inst_Prescale                   |     0.131 |
+|   Inst_fsm                        |     0.618 |
+|   synchronizers[0].Inst_EDGEDTCTR |     0.025 |
+|   synchronizers[0].Inst_SYNCHRNZR |     0.004 |
+|   synchronizers[1].Inst_EDGEDTCTR |     0.059 |
+|   synchronizers[1].Inst_SYNCHRNZR |     0.004 |
+|   synchronizers[2].Inst_EDGEDTCTR |     0.020 |
+|   synchronizers[2].Inst_SYNCHRNZR |     0.004 |
+|   synchronizers[3].Inst_EDGEDTCTR |     0.014 |
+|   synchronizers[3].Inst_SYNCHRNZR |     0.004 |
+|   synchronizers[4].Inst_EDGEDTCTR |     0.007 |
+|   synchronizers[4].Inst_SYNCHRNZR |     0.003 |
++-----------------------------------+-----------+
 
 

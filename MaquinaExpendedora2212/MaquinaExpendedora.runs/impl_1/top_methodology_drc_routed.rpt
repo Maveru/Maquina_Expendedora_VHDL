@@ -1,8 +1,8 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Wed Dec 22 12:12:20 2021
-| Host         : LAPTOP-T044LQ5T running 64-bit major release  (build 9200)
+| Date         : Sun Jan 16 13:36:50 2022
+| Host         : PACO-GUILLE running 64-bit major release  (build 9200)
 | Command      : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
 | Design       : top
 | Device       : xc7a100tcsg324-1
@@ -23,13 +23,14 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 130
-+-----------+------------------+-----------------------------+------------+
-| Rule      | Severity         | Description                 | Violations |
-+-----------+------------------+-----------------------------+------------+
-| TIMING-17 | Critical Warning | Non-clocked sequential cell | 87         |
-| TIMING-20 | Warning          | Non-clocked latch           | 43         |
-+-----------+------------------+-----------------------------+------------+
+             Violations found: 96
++-----------+------------------+------------------------------+------------+
+| Rule      | Severity         | Description                  | Violations |
++-----------+------------------+------------------------------+------------+
+| TIMING-17 | Critical Warning | Non-clocked sequential cell  | 84         |
+| LUTAR-1   | Warning          | LUT drives async reset alert | 7          |
+| TIMING-20 | Warning          | Non-clocked latch            | 5          |
++-----------+------------------+------------------------------+------------+
 
 2. REPORT DETAILS
 -----------------
@@ -135,552 +136,393 @@ Related violations: <none>
 
 TIMING-17#21 Critical Warning
 Non-clocked sequential cell  
-The clock pin Inst_fsm/FSM_onehot_current_state_reg[0]/C is not reached by a timing clock
+The clock pin Inst_fsm/coste_rest_reg[10]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#22 Critical Warning
 Non-clocked sequential cell  
-The clock pin Inst_fsm/FSM_onehot_current_state_reg[0]_lopt_replica/C is not reached by a timing clock
+The clock pin Inst_fsm/coste_rest_reg[11]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#23 Critical Warning
 Non-clocked sequential cell  
-The clock pin Inst_fsm/FSM_onehot_current_state_reg[1]/C is not reached by a timing clock
+The clock pin Inst_fsm/coste_rest_reg[12]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#24 Critical Warning
 Non-clocked sequential cell  
-The clock pin Inst_fsm/FSM_onehot_current_state_reg[2]/C is not reached by a timing clock
+The clock pin Inst_fsm/coste_rest_reg[13]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#25 Critical Warning
 Non-clocked sequential cell  
-The clock pin Inst_fsm/FSM_onehot_current_state_reg[3]/C is not reached by a timing clock
+The clock pin Inst_fsm/coste_rest_reg[14]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#26 Critical Warning
 Non-clocked sequential cell  
-The clock pin Inst_fsm/FSM_onehot_current_state_reg[4]/C is not reached by a timing clock
+The clock pin Inst_fsm/coste_rest_reg[15]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#27 Critical Warning
 Non-clocked sequential cell  
-The clock pin Inst_fsm/FSM_onehot_current_state_reg[5]/C is not reached by a timing clock
+The clock pin Inst_fsm/coste_rest_reg[16]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#28 Critical Warning
 Non-clocked sequential cell  
-The clock pin Inst_fsm/FSM_onehot_current_state_reg[6]/C is not reached by a timing clock
+The clock pin Inst_fsm/coste_rest_reg[17]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#29 Critical Warning
 Non-clocked sequential cell  
-The clock pin Inst_fsm/FSM_onehot_current_state_reg[7]/C is not reached by a timing clock
+The clock pin Inst_fsm/coste_rest_reg[18]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#30 Critical Warning
 Non-clocked sequential cell  
-The clock pin Inst_fsm/FSM_onehot_current_state_reg[8]/C is not reached by a timing clock
+The clock pin Inst_fsm/coste_rest_reg[19]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#31 Critical Warning
 Non-clocked sequential cell  
-The clock pin Inst_timer/ticks_reg[0]/C is not reached by a timing clock
+The clock pin Inst_fsm/coste_rest_reg[1]_C/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#32 Critical Warning
 Non-clocked sequential cell  
-The clock pin Inst_timer/ticks_reg[10]/C is not reached by a timing clock
+The clock pin Inst_fsm/coste_rest_reg[1]_P/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#33 Critical Warning
 Non-clocked sequential cell  
-The clock pin Inst_timer/ticks_reg[11]/C is not reached by a timing clock
+The clock pin Inst_fsm/coste_rest_reg[20]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#34 Critical Warning
 Non-clocked sequential cell  
-The clock pin Inst_timer/ticks_reg[12]/C is not reached by a timing clock
+The clock pin Inst_fsm/coste_rest_reg[21]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#35 Critical Warning
 Non-clocked sequential cell  
-The clock pin Inst_timer/ticks_reg[13]/C is not reached by a timing clock
+The clock pin Inst_fsm/coste_rest_reg[22]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#36 Critical Warning
 Non-clocked sequential cell  
-The clock pin Inst_timer/ticks_reg[14]/C is not reached by a timing clock
+The clock pin Inst_fsm/coste_rest_reg[23]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#37 Critical Warning
 Non-clocked sequential cell  
-The clock pin Inst_timer/ticks_reg[15]/C is not reached by a timing clock
+The clock pin Inst_fsm/coste_rest_reg[24]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#38 Critical Warning
 Non-clocked sequential cell  
-The clock pin Inst_timer/ticks_reg[16]/C is not reached by a timing clock
+The clock pin Inst_fsm/coste_rest_reg[25]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#39 Critical Warning
 Non-clocked sequential cell  
-The clock pin Inst_timer/ticks_reg[17]/C is not reached by a timing clock
+The clock pin Inst_fsm/coste_rest_reg[26]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#40 Critical Warning
 Non-clocked sequential cell  
-The clock pin Inst_timer/ticks_reg[18]/C is not reached by a timing clock
+The clock pin Inst_fsm/coste_rest_reg[27]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#41 Critical Warning
 Non-clocked sequential cell  
-The clock pin Inst_timer/ticks_reg[19]/C is not reached by a timing clock
+The clock pin Inst_fsm/coste_rest_reg[28]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#42 Critical Warning
 Non-clocked sequential cell  
-The clock pin Inst_timer/ticks_reg[1]/C is not reached by a timing clock
+The clock pin Inst_fsm/coste_rest_reg[29]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#43 Critical Warning
 Non-clocked sequential cell  
-The clock pin Inst_timer/ticks_reg[20]/C is not reached by a timing clock
+The clock pin Inst_fsm/coste_rest_reg[2]_C/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#44 Critical Warning
 Non-clocked sequential cell  
-The clock pin Inst_timer/ticks_reg[21]/C is not reached by a timing clock
+The clock pin Inst_fsm/coste_rest_reg[2]_P/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#45 Critical Warning
 Non-clocked sequential cell  
-The clock pin Inst_timer/ticks_reg[22]/C is not reached by a timing clock
+The clock pin Inst_fsm/coste_rest_reg[30]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#46 Critical Warning
 Non-clocked sequential cell  
-The clock pin Inst_timer/ticks_reg[23]/C is not reached by a timing clock
+The clock pin Inst_fsm/coste_rest_reg[31]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#47 Critical Warning
 Non-clocked sequential cell  
-The clock pin Inst_timer/ticks_reg[24]/C is not reached by a timing clock
+The clock pin Inst_fsm/coste_rest_reg[3]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#48 Critical Warning
 Non-clocked sequential cell  
-The clock pin Inst_timer/ticks_reg[25]/C is not reached by a timing clock
+The clock pin Inst_fsm/coste_rest_reg[4]_C/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#49 Critical Warning
 Non-clocked sequential cell  
-The clock pin Inst_timer/ticks_reg[26]/C is not reached by a timing clock
+The clock pin Inst_fsm/coste_rest_reg[4]_P/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#50 Critical Warning
 Non-clocked sequential cell  
-The clock pin Inst_timer/ticks_reg[27]/C is not reached by a timing clock
+The clock pin Inst_fsm/coste_rest_reg[5]_C/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#51 Critical Warning
 Non-clocked sequential cell  
-The clock pin Inst_timer/ticks_reg[28]/C is not reached by a timing clock
+The clock pin Inst_fsm/coste_rest_reg[5]_P/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#52 Critical Warning
 Non-clocked sequential cell  
-The clock pin Inst_timer/ticks_reg[29]/C is not reached by a timing clock
+The clock pin Inst_fsm/coste_rest_reg[6]_C/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#53 Critical Warning
 Non-clocked sequential cell  
-The clock pin Inst_timer/ticks_reg[2]/C is not reached by a timing clock
+The clock pin Inst_fsm/coste_rest_reg[6]_P/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#54 Critical Warning
 Non-clocked sequential cell  
-The clock pin Inst_timer/ticks_reg[30]/C is not reached by a timing clock
+The clock pin Inst_fsm/coste_rest_reg[7]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#55 Critical Warning
 Non-clocked sequential cell  
-The clock pin Inst_timer/ticks_reg[31]/C is not reached by a timing clock
+The clock pin Inst_fsm/coste_rest_reg[8]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#56 Critical Warning
 Non-clocked sequential cell  
-The clock pin Inst_timer/ticks_reg[3]/C is not reached by a timing clock
+The clock pin Inst_fsm/coste_rest_reg[9]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#57 Critical Warning
 Non-clocked sequential cell  
-The clock pin Inst_timer/ticks_reg[4]/C is not reached by a timing clock
+The clock pin Inst_fsm/current_state_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#58 Critical Warning
 Non-clocked sequential cell  
-The clock pin Inst_timer/ticks_reg[5]/C is not reached by a timing clock
+The clock pin Inst_fsm/current_state_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#59 Critical Warning
 Non-clocked sequential cell  
-The clock pin Inst_timer/ticks_reg[6]/C is not reached by a timing clock
+The clock pin Inst_fsm/current_state_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#60 Critical Warning
 Non-clocked sequential cell  
-The clock pin Inst_timer/ticks_reg[7]/C is not reached by a timing clock
+The clock pin synchronizers[0].Inst_EDGEDTCTR/sreg_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#61 Critical Warning
 Non-clocked sequential cell  
-The clock pin Inst_timer/ticks_reg[8]/C is not reached by a timing clock
+The clock pin synchronizers[0].Inst_EDGEDTCTR/sreg_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#62 Critical Warning
 Non-clocked sequential cell  
-The clock pin Inst_timer/ticks_reg[9]/C is not reached by a timing clock
+The clock pin synchronizers[0].Inst_EDGEDTCTR/sreg_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#63 Critical Warning
 Non-clocked sequential cell  
-The clock pin synchronizers[0].Inst_EDGEDTCTR/sreg_reg[0]/C is not reached by a timing clock
+The clock pin synchronizers[0].Inst_SYNCHRNZR/SYNC_OUT_reg_srl2/CLK is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#64 Critical Warning
 Non-clocked sequential cell  
-The clock pin synchronizers[0].Inst_EDGEDTCTR/sreg_reg[1]/C is not reached by a timing clock
+The clock pin synchronizers[0].Inst_SYNCHRNZR/sreg_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#65 Critical Warning
 Non-clocked sequential cell  
-The clock pin synchronizers[0].Inst_EDGEDTCTR/sreg_reg[2]/C is not reached by a timing clock
+The clock pin synchronizers[1].Inst_EDGEDTCTR/sreg_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#66 Critical Warning
 Non-clocked sequential cell  
-The clock pin synchronizers[0].Inst_SYNCHRNZR/SYNC_OUT_reg_srl2/CLK is not reached by a timing clock
+The clock pin synchronizers[1].Inst_EDGEDTCTR/sreg_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#67 Critical Warning
 Non-clocked sequential cell  
-The clock pin synchronizers[0].Inst_SYNCHRNZR/sreg_reg[0]/C is not reached by a timing clock
+The clock pin synchronizers[1].Inst_EDGEDTCTR/sreg_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#68 Critical Warning
 Non-clocked sequential cell  
-The clock pin synchronizers[1].Inst_EDGEDTCTR/sreg_reg[0]/C is not reached by a timing clock
+The clock pin synchronizers[1].Inst_SYNCHRNZR/SYNC_OUT_reg_srl2/CLK is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#69 Critical Warning
 Non-clocked sequential cell  
-The clock pin synchronizers[1].Inst_EDGEDTCTR/sreg_reg[1]/C is not reached by a timing clock
+The clock pin synchronizers[1].Inst_SYNCHRNZR/sreg_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#70 Critical Warning
 Non-clocked sequential cell  
-The clock pin synchronizers[1].Inst_EDGEDTCTR/sreg_reg[2]/C is not reached by a timing clock
+The clock pin synchronizers[2].Inst_EDGEDTCTR/sreg_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#71 Critical Warning
 Non-clocked sequential cell  
-The clock pin synchronizers[1].Inst_SYNCHRNZR/SYNC_OUT_reg_srl2/CLK is not reached by a timing clock
+The clock pin synchronizers[2].Inst_EDGEDTCTR/sreg_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#72 Critical Warning
 Non-clocked sequential cell  
-The clock pin synchronizers[1].Inst_SYNCHRNZR/sreg_reg[0]/C is not reached by a timing clock
+The clock pin synchronizers[2].Inst_EDGEDTCTR/sreg_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#73 Critical Warning
 Non-clocked sequential cell  
-The clock pin synchronizers[2].Inst_EDGEDTCTR/sreg_reg[0]/C is not reached by a timing clock
+The clock pin synchronizers[2].Inst_SYNCHRNZR/SYNC_OUT_reg_srl2/CLK is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#74 Critical Warning
 Non-clocked sequential cell  
-The clock pin synchronizers[2].Inst_EDGEDTCTR/sreg_reg[1]/C is not reached by a timing clock
+The clock pin synchronizers[2].Inst_SYNCHRNZR/sreg_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#75 Critical Warning
 Non-clocked sequential cell  
-The clock pin synchronizers[2].Inst_EDGEDTCTR/sreg_reg[2]/C is not reached by a timing clock
+The clock pin synchronizers[3].Inst_EDGEDTCTR/sreg_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#76 Critical Warning
 Non-clocked sequential cell  
-The clock pin synchronizers[2].Inst_SYNCHRNZR/SYNC_OUT_reg_srl2/CLK is not reached by a timing clock
+The clock pin synchronizers[3].Inst_EDGEDTCTR/sreg_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#77 Critical Warning
 Non-clocked sequential cell  
-The clock pin synchronizers[2].Inst_SYNCHRNZR/sreg_reg[0]/C is not reached by a timing clock
+The clock pin synchronizers[3].Inst_EDGEDTCTR/sreg_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#78 Critical Warning
 Non-clocked sequential cell  
-The clock pin synchronizers[3].Inst_EDGEDTCTR/sreg_reg[0]/C is not reached by a timing clock
+The clock pin synchronizers[3].Inst_SYNCHRNZR/SYNC_OUT_reg_srl2/CLK is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#79 Critical Warning
 Non-clocked sequential cell  
-The clock pin synchronizers[3].Inst_EDGEDTCTR/sreg_reg[1]/C is not reached by a timing clock
+The clock pin synchronizers[3].Inst_SYNCHRNZR/sreg_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#80 Critical Warning
 Non-clocked sequential cell  
-The clock pin synchronizers[3].Inst_EDGEDTCTR/sreg_reg[2]/C is not reached by a timing clock
+The clock pin synchronizers[4].Inst_EDGEDTCTR/sreg_reg[0]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#81 Critical Warning
 Non-clocked sequential cell  
-The clock pin synchronizers[3].Inst_SYNCHRNZR/SYNC_OUT_reg_srl2/CLK is not reached by a timing clock
+The clock pin synchronizers[4].Inst_EDGEDTCTR/sreg_reg[1]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#82 Critical Warning
 Non-clocked sequential cell  
-The clock pin synchronizers[3].Inst_SYNCHRNZR/sreg_reg[0]/C is not reached by a timing clock
+The clock pin synchronizers[4].Inst_EDGEDTCTR/sreg_reg[2]/C is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#83 Critical Warning
 Non-clocked sequential cell  
-The clock pin synchronizers[4].Inst_EDGEDTCTR/sreg_reg[0]/C is not reached by a timing clock
+The clock pin synchronizers[4].Inst_SYNCHRNZR/SYNC_OUT_reg_srl2/CLK is not reached by a timing clock
 Related violations: <none>
 
 TIMING-17#84 Critical Warning
 Non-clocked sequential cell  
-The clock pin synchronizers[4].Inst_EDGEDTCTR/sreg_reg[1]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#85 Critical Warning
-Non-clocked sequential cell  
-The clock pin synchronizers[4].Inst_EDGEDTCTR/sreg_reg[2]/C is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#86 Critical Warning
-Non-clocked sequential cell  
-The clock pin synchronizers[4].Inst_SYNCHRNZR/SYNC_OUT_reg_srl2/CLK is not reached by a timing clock
-Related violations: <none>
-
-TIMING-17#87 Critical Warning
-Non-clocked sequential cell  
 The clock pin synchronizers[4].Inst_SYNCHRNZR/sreg_reg[0]/C is not reached by a timing clock
+Related violations: <none>
+
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell Inst_fsm/coste_rest[31]_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) Inst_fsm/coste_rest_reg[10]/CLR, Inst_fsm/coste_rest_reg[11]/CLR,
+Inst_fsm/coste_rest_reg[12]/CLR, Inst_fsm/coste_rest_reg[13]/CLR,
+Inst_fsm/coste_rest_reg[14]/CLR, Inst_fsm/coste_rest_reg[15]/CLR,
+Inst_fsm/coste_rest_reg[16]/CLR, Inst_fsm/coste_rest_reg[17]/CLR,
+Inst_fsm/coste_rest_reg[18]/CLR, Inst_fsm/coste_rest_reg[19]/CLR,
+Inst_fsm/coste_rest_reg[20]/CLR, Inst_fsm/coste_rest_reg[21]/CLR,
+Inst_fsm/coste_rest_reg[22]/CLR, Inst_fsm/coste_rest_reg[23]/CLR,
+Inst_fsm/coste_rest_reg[24]/CLR (the first 15 of 26 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#2 Warning
+LUT drives async reset alert  
+LUT cell Inst_fsm/coste_rest_reg[5]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) Inst_fsm/coste_rest_reg[5]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#3 Warning
+LUT drives async reset alert  
+LUT cell synchronizers[0].Inst_EDGEDTCTR/coste_rest_reg[5]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) Inst_fsm/coste_rest_reg[5]_C/CLR, Inst_fsm/coste_rest_reg[5]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#4 Warning
+LUT drives async reset alert  
+LUT cell synchronizers[1].Inst_EDGEDTCTR/coste_rest_reg[4]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) Inst_fsm/coste_rest_reg[2]_C/CLR, Inst_fsm/coste_rest_reg[2]_LDC/CLR
+Inst_fsm/coste_rest_reg[4]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#5 Warning
+LUT drives async reset alert  
+LUT cell synchronizers[1].Inst_EDGEDTCTR/coste_rest_reg[4]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) Inst_fsm/coste_rest_reg[2]_P/PRE, Inst_fsm/coste_rest_reg[4]_C/CLR
+Inst_fsm/coste_rest_reg[4]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#6 Warning
+LUT drives async reset alert  
+LUT cell synchronizers[1].Inst_EDGEDTCTR/coste_rest_reg[6]_LDC_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) Inst_fsm/coste_rest_reg[1]_C/CLR, Inst_fsm/coste_rest_reg[1]_LDC/CLR
+Inst_fsm/coste_rest_reg[6]_P/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#7 Warning
+LUT drives async reset alert  
+LUT cell synchronizers[1].Inst_EDGEDTCTR/coste_rest_reg[6]_LDC_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) Inst_fsm/coste_rest_reg[1]_P/PRE, Inst_fsm/coste_rest_reg[6]_C/CLR
+Inst_fsm/coste_rest_reg[6]_LDC/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 TIMING-20#1 Warning
 Non-clocked latch  
-The latch Inst_fsm/coste_rest_reg[0] cannot be properly analyzed as its control pin Inst_fsm/coste_rest_reg[0]/G is not reached by a timing clock
+The latch Inst_fsm/coste_rest_reg[1]_LDC cannot be properly analyzed as its control pin Inst_fsm/coste_rest_reg[1]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#2 Warning
 Non-clocked latch  
-The latch Inst_fsm/coste_rest_reg[10] cannot be properly analyzed as its control pin Inst_fsm/coste_rest_reg[10]/G is not reached by a timing clock
+The latch Inst_fsm/coste_rest_reg[2]_LDC cannot be properly analyzed as its control pin Inst_fsm/coste_rest_reg[2]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#3 Warning
 Non-clocked latch  
-The latch Inst_fsm/coste_rest_reg[11] cannot be properly analyzed as its control pin Inst_fsm/coste_rest_reg[11]/G is not reached by a timing clock
+The latch Inst_fsm/coste_rest_reg[4]_LDC cannot be properly analyzed as its control pin Inst_fsm/coste_rest_reg[4]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#4 Warning
 Non-clocked latch  
-The latch Inst_fsm/coste_rest_reg[12] cannot be properly analyzed as its control pin Inst_fsm/coste_rest_reg[12]/G is not reached by a timing clock
+The latch Inst_fsm/coste_rest_reg[5]_LDC cannot be properly analyzed as its control pin Inst_fsm/coste_rest_reg[5]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 TIMING-20#5 Warning
 Non-clocked latch  
-The latch Inst_fsm/coste_rest_reg[13] cannot be properly analyzed as its control pin Inst_fsm/coste_rest_reg[13]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#6 Warning
-Non-clocked latch  
-The latch Inst_fsm/coste_rest_reg[14] cannot be properly analyzed as its control pin Inst_fsm/coste_rest_reg[14]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#7 Warning
-Non-clocked latch  
-The latch Inst_fsm/coste_rest_reg[15] cannot be properly analyzed as its control pin Inst_fsm/coste_rest_reg[15]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#8 Warning
-Non-clocked latch  
-The latch Inst_fsm/coste_rest_reg[16] cannot be properly analyzed as its control pin Inst_fsm/coste_rest_reg[16]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#9 Warning
-Non-clocked latch  
-The latch Inst_fsm/coste_rest_reg[17] cannot be properly analyzed as its control pin Inst_fsm/coste_rest_reg[17]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#10 Warning
-Non-clocked latch  
-The latch Inst_fsm/coste_rest_reg[18] cannot be properly analyzed as its control pin Inst_fsm/coste_rest_reg[18]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#11 Warning
-Non-clocked latch  
-The latch Inst_fsm/coste_rest_reg[19] cannot be properly analyzed as its control pin Inst_fsm/coste_rest_reg[19]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#12 Warning
-Non-clocked latch  
-The latch Inst_fsm/coste_rest_reg[1] cannot be properly analyzed as its control pin Inst_fsm/coste_rest_reg[1]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#13 Warning
-Non-clocked latch  
-The latch Inst_fsm/coste_rest_reg[20] cannot be properly analyzed as its control pin Inst_fsm/coste_rest_reg[20]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#14 Warning
-Non-clocked latch  
-The latch Inst_fsm/coste_rest_reg[21] cannot be properly analyzed as its control pin Inst_fsm/coste_rest_reg[21]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#15 Warning
-Non-clocked latch  
-The latch Inst_fsm/coste_rest_reg[22] cannot be properly analyzed as its control pin Inst_fsm/coste_rest_reg[22]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#16 Warning
-Non-clocked latch  
-The latch Inst_fsm/coste_rest_reg[23] cannot be properly analyzed as its control pin Inst_fsm/coste_rest_reg[23]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#17 Warning
-Non-clocked latch  
-The latch Inst_fsm/coste_rest_reg[24] cannot be properly analyzed as its control pin Inst_fsm/coste_rest_reg[24]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#18 Warning
-Non-clocked latch  
-The latch Inst_fsm/coste_rest_reg[25] cannot be properly analyzed as its control pin Inst_fsm/coste_rest_reg[25]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#19 Warning
-Non-clocked latch  
-The latch Inst_fsm/coste_rest_reg[26] cannot be properly analyzed as its control pin Inst_fsm/coste_rest_reg[26]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#20 Warning
-Non-clocked latch  
-The latch Inst_fsm/coste_rest_reg[27] cannot be properly analyzed as its control pin Inst_fsm/coste_rest_reg[27]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#21 Warning
-Non-clocked latch  
-The latch Inst_fsm/coste_rest_reg[28] cannot be properly analyzed as its control pin Inst_fsm/coste_rest_reg[28]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#22 Warning
-Non-clocked latch  
-The latch Inst_fsm/coste_rest_reg[29] cannot be properly analyzed as its control pin Inst_fsm/coste_rest_reg[29]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#23 Warning
-Non-clocked latch  
-The latch Inst_fsm/coste_rest_reg[2] cannot be properly analyzed as its control pin Inst_fsm/coste_rest_reg[2]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#24 Warning
-Non-clocked latch  
-The latch Inst_fsm/coste_rest_reg[30] cannot be properly analyzed as its control pin Inst_fsm/coste_rest_reg[30]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#25 Warning
-Non-clocked latch  
-The latch Inst_fsm/coste_rest_reg[31] cannot be properly analyzed as its control pin Inst_fsm/coste_rest_reg[31]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#26 Warning
-Non-clocked latch  
-The latch Inst_fsm/coste_rest_reg[3] cannot be properly analyzed as its control pin Inst_fsm/coste_rest_reg[3]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#27 Warning
-Non-clocked latch  
-The latch Inst_fsm/coste_rest_reg[4] cannot be properly analyzed as its control pin Inst_fsm/coste_rest_reg[4]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#28 Warning
-Non-clocked latch  
-The latch Inst_fsm/coste_rest_reg[5] cannot be properly analyzed as its control pin Inst_fsm/coste_rest_reg[5]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#29 Warning
-Non-clocked latch  
-The latch Inst_fsm/coste_rest_reg[6] cannot be properly analyzed as its control pin Inst_fsm/coste_rest_reg[6]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#30 Warning
-Non-clocked latch  
-The latch Inst_fsm/coste_rest_reg[7] cannot be properly analyzed as its control pin Inst_fsm/coste_rest_reg[7]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#31 Warning
-Non-clocked latch  
-The latch Inst_fsm/coste_rest_reg[8] cannot be properly analyzed as its control pin Inst_fsm/coste_rest_reg[8]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#32 Warning
-Non-clocked latch  
-The latch Inst_fsm/coste_rest_reg[9] cannot be properly analyzed as its control pin Inst_fsm/coste_rest_reg[9]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#33 Warning
-Non-clocked latch  
-The latch Inst_fsm/delivering_reg cannot be properly analyzed as its control pin Inst_fsm/delivering_reg/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#34 Warning
-Non-clocked latch  
-The latch Inst_fsm/error_reg cannot be properly analyzed as its control pin Inst_fsm/error_reg/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#35 Warning
-Non-clocked latch  
-The latch Inst_fsm/money_ok_reg cannot be properly analyzed as its control pin Inst_fsm/money_ok_reg/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#36 Warning
-Non-clocked latch  
-The latch Inst_fsm/salida_reg[0] cannot be properly analyzed as its control pin Inst_fsm/salida_reg[0]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#37 Warning
-Non-clocked latch  
-The latch Inst_fsm/salida_reg[1] cannot be properly analyzed as its control pin Inst_fsm/salida_reg[1]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#38 Warning
-Non-clocked latch  
-The latch Inst_fsm/salida_reg[2] cannot be properly analyzed as its control pin Inst_fsm/salida_reg[2]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#39 Warning
-Non-clocked latch  
-The latch Inst_fsm/salida_reg[3] cannot be properly analyzed as its control pin Inst_fsm/salida_reg[3]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#40 Warning
-Non-clocked latch  
-The latch Inst_fsm/salida_reg[4] cannot be properly analyzed as its control pin Inst_fsm/salida_reg[4]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#41 Warning
-Non-clocked latch  
-The latch Inst_fsm/salida_reg[5] cannot be properly analyzed as its control pin Inst_fsm/salida_reg[5]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#42 Warning
-Non-clocked latch  
-The latch Inst_fsm/salida_reg[6] cannot be properly analyzed as its control pin Inst_fsm/salida_reg[6]/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#43 Warning
-Non-clocked latch  
-The latch Inst_fsm/salida_reg[7] cannot be properly analyzed as its control pin Inst_fsm/salida_reg[7]/G is not reached by a timing clock
+The latch Inst_fsm/coste_rest_reg[6]_LDC cannot be properly analyzed as its control pin Inst_fsm/coste_rest_reg[6]_LDC/G is not reached by a timing clock
 Related violations: <none>
 
 

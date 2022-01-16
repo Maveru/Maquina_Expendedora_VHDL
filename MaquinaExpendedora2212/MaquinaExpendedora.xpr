@@ -63,7 +63,7 @@
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="nexys4_ddr"/>
-    <Option Name="WTXSimLaunchSim" Val="174"/>
+    <Option Name="WTXSimLaunchSim" Val="217"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -178,19 +178,19 @@
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1" RelGenDir="$PGENDIR/sim_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sim_1/imports/new/FSM_tb.vhd">
+      <File Path="$PSRCDIR/sim_1/imports/new/top_tb.vhd">
         <FileInfo>
-          <Attr Name="ImportPath" Val="$PSRCDIR/sim_1/new/FSM_tb.vhd"/>
-          <Attr Name="ImportTime" Val="1640117241"/>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sim_1/new/top_tb.vhd"/>
+          <Attr Name="ImportTime" Val="1640080181"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sim_1/imports/new/top_tb.vhd">
+      <File Path="$PSRCDIR/sim_1/imports/new/FSM_tb.vhd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PSRCDIR/sim_1/new/top_tb.vhd"/>
-          <Attr Name="ImportTime" Val="1640080181"/>
+          <Attr Name="ImportPath" Val="$PSRCDIR/sim_1/new/FSM_tb.vhd"/>
+          <Attr Name="ImportTime" Val="1640117241"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -246,7 +246,7 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="FSM_tb"/>
+        <Option Name="TopModule" Val="top_tb"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>
@@ -256,7 +256,7 @@
         <Option Name="PamSignalDriverFile" Val="xil_bypass_driver"/>
         <Option Name="PamPseudoTop" Val="pseudo_tb"/>
         <Option Name="SrcSet" Val="sources_1"/>
-        <Option Name="xsim.simulate.runtime" Val="12000us"/>
+        <Option Name="xsim.simulate.runtime" Val="15000ms"/>
       </Config>
     </FileSet>
     <FileSet Name="utils_1" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">

@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.runs/synth_1/top.tcl"
+  variable script "C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.runs/synth_1/top.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,34 +70,31 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 1
-set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a100tcsg324-1
 
 set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
-set_property webtalk.parent_dir S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.cache/wt [current_project]
-set_property parent.project_path S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.cache/wt [current_project]
+set_property parent.project_path C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
-set_property board_part_repo_paths {C:/Users/Markv/AppData/Roaming/Xilinx/Vivado/2021.1/xhub/board_store/xilinx_board_store} [current_project]
 set_property board_part digilentinc.com:nexys4_ddr:part0:1.1 [current_project]
-set_property ip_output_repo c:/Users/Propietario/Desktop/GIT/Maquina_Expendedora_VHDL/MaquinaExpendedora/MaquinaExpendedora.cache/ip [current_project]
+set_property ip_output_repo c:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib {
-  S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/BCD_Decod.vhd
-  S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/BCD_a_7segments.vhd
-  S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/DisplayExit.vhd
-  S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/FSM.vhd
-  S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/edgedetector.vhd
-  S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/prescaler.vhd
-  S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/sincro.vhd
-  S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/timer.vhd
-  S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd
+  C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/BCD_Decod.vhd
+  C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/BCD_a_7segments.vhd
+  C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/DisplayExit.vhd
+  C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/FSM.vhd
+  C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/edgedetector.vhd
+  C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/prescaler.vhd
+  C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/sincro.vhd
+  C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/new/timer.vhd
+  C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/sources_1/imports/new/TOP.vhd
 }
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -108,8 +105,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/constrs_1/imports/SED/Nexys-4-DDR-Master.xdc
-set_property used_in_implementation false [get_files S:/Users/Markv/MaquinaExpendedora2212/MaquinaExpendedora.srcs/constrs_1/imports/SED/Nexys-4-DDR-Master.xdc]
+read_xdc C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/constrs_1/imports/SED/Nexys-4-DDR-Master.xdc
+set_property used_in_implementation false [get_files C:/Users/Propietario/Documents/GitHub/Maquina_Expendedora_VHDL/MaquinaExpendedora2212/MaquinaExpendedora.srcs/constrs_1/imports/SED/Nexys-4-DDR-Master.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
