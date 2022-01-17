@@ -47,7 +47,7 @@ component top
 
 end component;
 
-constant CLK_IN_PERIOD  : time := 10 us; -- Periodo reloj de la placa 10 ns
+constant CLK_IN_PERIOD  : time := 1 ms; -- Periodo reloj de la placa PREESCALADO
 
 begin
   
@@ -84,67 +84,66 @@ tester : process
    
   RESET <= '0';
   Boton <= "00000";
-  wait for CLK_IN_PERIOD * 0.75;
+  wait for 2ms;
   RESET <= '1';
 
   
-  wait for CLK_IN_PERIOD;
+  wait for 5ms;
   
   Boton(0)<='1'; --fanta 80cts
-  wait for CLK_IN_PERIOD;
+  wait for 2ms;
   Boton(0)<='0';
   
-  wait for CLK_IN_PERIOD * 0.5;
+  wait for 3ms;
   
   Boton(1)<='1'; --pepsi 100cts
-  wait for CLK_IN_PERIOD;
+  wait for 2ms;
   Boton(1)<='0';
   
-  wait for CLK_IN_PERIOD * 0.5;
+  wait for 3ms;
   
   Boton(2)<='1'; --agua 50cts
-  wait for CLK_IN_PERIOD;
+  wait for 2ms;
   Boton(2)<='0';
   
-  wait for CLK_IN_PERIOD * 0.5;
+  wait for 3ms;
   
   Boton(3)<='1'; --volver a menu inicial
-  wait for CLK_IN_PERIOD;
+  wait for 2ms;
   Boton(3)<='0';
   
-  wait for CLK_IN_PERIOD * 0.5;
+  wait for 3ms;
   
   Boton(1)<='1'; -- pepsi 100 CENTS 
-  wait for CLK_IN_PERIOD;
+  wait for 2ms;
   Boton(1)<='0';
- wait for CLK_IN_PERIOD * 0.5;
   
   Boton(4)<='1'; -- seleccionar
-  wait for CLK_IN_PERIOD;
+  wait for 2ms;
   Boton(4)<='0';
   
-  wait for CLK_IN_PERIOD * 0.5; -- EMPIEZO A PAGAR
+  wait for 5ms; -- EMPIEZO A PAGAR
   
   Boton(1)<='1'; --meto 50cts
-  wait for CLK_IN_PERIOD;
+  wait for 2ms;
   Boton(1)<='0';
   
-  wait for CLK_IN_PERIOD * 0.5;
+  wait for 3ms;
   
    Boton(0)<='1'; --meto 20cts
-  wait for CLK_IN_PERIOD;
+  wait for 2ms;
   Boton(0)<='0';
   
-  wait for CLK_IN_PERIOD * 0.5;
+  wait for 3ms;
   
   Boton(0)<='1'; --meto 20cts
-  wait for CLK_IN_PERIOD;
+  wait for 2ms;
   Boton(0)<='0';
   
-  wait for CLK_IN_PERIOD * 0.5;
+  wait for 3ms;
   
   Boton(0)<='1'; --meto 20cts (me paso)
-  wait for CLK_IN_PERIOD;
+  wait for 2ms;
   Boton(0)<='0';
   
   wait for 5005ms;
@@ -152,19 +151,19 @@ tester : process
   
   
   Boton(2)<='1'; -- agua 50 cts
-  wait for CLK_IN_PERIOD;
+  wait for 2ms;
   Boton(2)<='0';
   
-  wait for CLK_IN_PERIOD * 0.5;
+  wait for 3ms;
   
   Boton(4)<='1'; -- seleccionar
-  wait for CLK_IN_PERIOD;
+  wait for 2ms;
   Boton(4)<='0';
   
-  wait for CLK_IN_PERIOD * 0.5;
+  wait for 3ms;
   
   Boton(1)<='1'; --meto 50cts
-  wait for CLK_IN_PERIOD;
+  wait for 2ms;
   Boton(1)<='0';
   
   wait for 7000ms;

@@ -1,5 +1,5 @@
 
---Simulation Time 1200ns
+--Simulation Time 12000us
 
 
 library IEEE;
@@ -38,7 +38,7 @@ architecture Bench of FSM_tb is
  
 end component;
 
- constant CLK_IN_PERIOD  : time := 10 ns; -- Periodo reloj de la placa antes estaba 100us
+ constant CLK_IN_PERIOD  : time := 100 us; -- Periodo reloj de la placa
 
 begin
   -- Unit Under Test
@@ -157,7 +157,7 @@ tester : process
     wait for CLK_IN_PERIOD;
     Botones(4) <= '0';
     -- pago pepsi (me paso)
-    wait for CLK_IN_PERIOD*0.15;
+    wait for CLK_IN_PERIOD*0.25;
     Botones(1) <= '1'; --Meto moneda 50 cents
     wait for 0.7*CLK_IN_PERIOD;
     Botones(1) <= '0';
